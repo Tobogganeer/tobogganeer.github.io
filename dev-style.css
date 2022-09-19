@@ -2,7 +2,7 @@
 
 body {
     font-family: Roboto, sans-serif;
-    background-color: palegoldenrod;
+    background-color: rgb(43, 22, 54);
     text-align: center;
     align-items: center;
 }
@@ -10,8 +10,11 @@ body {
 /* https://developers.google.com/fonts/docs/getting_started */
 
 h1 {
-    color: rgb(43, 22, 54);
-    margin-left: 20px;
+    color: palegoldenrod;
+}
+
+h2 {
+    color: palegoldenrod;
 }
 
 .weatherData {
