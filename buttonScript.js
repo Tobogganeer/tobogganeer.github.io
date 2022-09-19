@@ -3,8 +3,8 @@
 
 async function getData() {
     const req = await fetch('https://httpbin.org/get');
-    const json = await response.json()
-    document.getElementById("weatherData").innerHTML = json;
+    const json = await req.json()
+    document.getElementById("weatherData").innerHTML = JSON.stringify(json);
 }
 
 // IP: http://checkip.dyndns.org/
