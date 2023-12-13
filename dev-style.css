@@ -52,6 +52,22 @@ body {
     transition: all 100ms ease-in, all 100ms ease-in;
 }
 
+#pee-button {
+    position: relative;
+    left: 10px;
+    font-family: Roboto, sans-serif;
+    color: palegoldenrod;
+    background-color: transparent;
+    width: 500px;
+    height: 50px;
+    font-size: 32px;
+    border: 3px solid palegoldenrod;
+    border-radius: 5px;
+    -webkit-transition: all 100ms ease-in, all 100ms ease-in;
+    -o-transition: all 100ms ease-in, all 100ms ease-in;
+    transition: all 100ms ease-in, all 100ms ease-in;
+}
+
 a {
     font-family: Roboto, sans-serif;
     color: palegoldenrod;
@@ -70,6 +86,20 @@ a {
 }
 
 #download-button:active {
+    background-color: palegoldenrod;
+    color: rgb(43, 22, 54);
+}
+
+#pee-button:hover {
+    border-color:white;
+    background-color:#f4fad021;
+    -webkit-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    color: palegoldenrod;
+}
+
+#pee-button:active {
     background-color: palegoldenrod;
     color: rgb(43, 22, 54);
 }
