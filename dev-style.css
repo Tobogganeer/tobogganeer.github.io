@@ -103,3 +103,39 @@ a {
     background-color: palegoldenrod;
     color: rgb(43, 22, 54);
 }
+
+
+.hidden {
+    height: 200px;
+    position: relative;
+	top: -120px;
+  }
+  
+#hidden-button {
+    position: relative;
+    font-family: Roboto, sans-serif;
+    color: transparent;
+    background-color: transparent;
+    width: 500px;
+    height: 50px;
+    font-size: 32px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    -webkit-transition: all 100ms ease-in, all 100ms ease-in;
+    -o-transition: all 100ms ease-in, all 100ms ease-in;
+    transition: all 100ms ease-in, all 100ms ease-in;
+}
+  
+#hidden-button:hover {
+    border-color:white;
+    background-color:#f4fad021;
+    -webkit-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    color: palegoldenrod;
+}
+
+#hidden-button:active {
+    background-color: palegoldenrod;
+    color: rgb(43, 22, 54);
+}
