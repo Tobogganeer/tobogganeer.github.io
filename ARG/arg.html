@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="sidepanel.css">
+	<script type="text/javascript">
+		/* Set the width of the sidebar to 250px (show it) */
+		function openNav() {
+		  document.getElementById("accompliceSidepanel").style.width = "250px";
+		}
+
+		/* Set the width of the sidebar to 0 (hide it) */
+		function closeNav() {
+		  document.getElementById("accompliceSidepanel").style.width = "0";
+		}
+	</script>
+	<title>ARG Landing Page</title>
+</head>
+
+<body>
+	<div id="accompliceSidepanel" class="sidepanel">
+	  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<h3>Accomplice</h3>
+	  	<p>Some helpful text here or smth</p>
+	</div>
+	
+	<button class="openbtn" onclick="openNav()">&#9776; Accomplice</button>
+	<h2>Other stuff can go here</h2>
+	<p>Content...</p>
+	
+</body>
+</html>
