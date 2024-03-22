@@ -1,11 +1,10 @@
-/* CSS Document */
+/* Accomplice Sidepanel */
 
-
-/* ====================================== ACCOMPLICE SIDEPANEL ====================================== */
+/* https://www.w3schools.com/howto/howto_js_collapse_sidepanel.asp */
 
 /* The sidepanel menu */
 .sidepanel {
-	height: 250px; /* Specify a height */
+	height: 500px; /* Specify a height */
 	width: 0; /* 0 width - change this with JavaScript */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Stay on top */
@@ -35,23 +34,31 @@
 
 /* Position and style the close button (top right corner) */
 .sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
 }
 
 /* Style the button that is used to open the sidepanel */
 .openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 5px 5px;
+  	border: none;
+	position: fixed;
+	writing-mode: tb;
+	text-orientation: upright;
+}
+
+.openbtn img {
+	width: 50px;
+	height: 50px;
 }
 
 .openbtn:hover {
-  background-color: #444;
+	background-color: #444;
 }
