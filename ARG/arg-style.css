@@ -14,11 +14,14 @@ p {
 	background-position: center;
 	background-size: cover;
 	min-height: 300px;
-	padding: 10px;
 }
 
-h3 {
+h1, h2, h3 {
 	font-weight: 600;
+}
+
+section {
+	padding: 40px 30px 40px 30px;
 }
 
 .text-light {
@@ -26,7 +29,7 @@ h3 {
 }
 
 .text-shadow {
-	filter: drop-shadow(2px 2px 1px #111111);
+	filter: drop-shadow(2px 2px 1px #111);
 }
 
 .content {
@@ -37,4 +40,13 @@ h3 {
 
 .center {
 	margin: auto;
+}
+.row {
+	display: inline-flex;
+}
+
+
+.column {
+	padding-left: 0;
+    padding-right: 0;
 }
