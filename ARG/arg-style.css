@@ -6,7 +6,7 @@ body {
 	font-family: Roboto, sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	line-height: 1.2;
+	line-height: 1.3em;
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -27,8 +27,12 @@ h1, h2, h3 {
 	font-weight: 600;
 }
 
+h1 {
+	font-size: 40pt;
+}
+
 section {
-	padding: 40px 30px 40px 30px;
+	padding: 30px;
 }
 
 .text-light {
@@ -50,10 +54,53 @@ section {
 }
 .row {
 	display: inline-flex;
+	margin-bottom: 16px;
 }
 
 
 .column {
 	padding-left: 0;
     padding-right: 0;
+}
+
+.third-col {
+	width: 33.33%;
+	float: left;
+}
+
+.quarter-col {
+	width: 25%;
+	float: left;
+}
+
+.half-col {
+	width: 50%;
+	float: left;
+}
+
+.fit-image {
+	width: 100%;
+    max-width: inherit;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-block {
+    float: none;
+    box-sizing: border-box;
+}
+
+.news-box {
+	border: 5px solid #555;
+	border-width: 3px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: #1a1a1a;
+	transition: 0.1s ease-in-out;
+	top: 0px;
+	position: relative;
+}
+.news-box:hover {
+	opacity: 70%;
+	top: -2px;
 }
