@@ -2,10 +2,35 @@
 
 body {
 	background: #BBB;
+	font-family: Roboto, sans-serif;
+}
+
+p {
+	font-size: 14pt;
+}
+
+#hero {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/Hero.webp');
+	background-position: center;
+	background-size: cover;
+	min-height: 300px;
+	padding: 10px;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+.text-light {
+	color: #F7F7F7;
+}
+
+.text-shadow {
+	filter: drop-shadow(2px 2px 1px #111111);
 }
 
 .content {
-	width: min(60%, 100% - 400px); /* Open button is 180px */
+	width: min(70%, 100% - 400px); /* Open button is 180px */
 	height: 100%;
 	background: #FFF;
 }
