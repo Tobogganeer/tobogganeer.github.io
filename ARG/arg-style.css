@@ -1,8 +1,15 @@
 /* CSS Document */
 
 body {
-	background: #BBB;
+	background: #eaeaed;
+	color: #1a1a1a;
 	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	position: relative;
 }
 
 p {

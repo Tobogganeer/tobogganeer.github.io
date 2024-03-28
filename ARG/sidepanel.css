@@ -10,11 +10,12 @@
 	z-index: 1; /* Stay on top */
 	top: 0;
 	left: 0;
-	color: antiquewhite;
 	background-color: #111; /* Black*/
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 60px; /* Place content 60px from the top */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+	
+	
 }
 
 /* The sidepanel links */
@@ -30,6 +31,22 @@
 /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
 	color: #f1f1f1;
+}
+
+#accompliceContent {
+	/* Super 1337 hacker font */
+	font-family: "Source Code Pro", monospace;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	
+	color: #65f07c; /* Green text */
+	
+	filter: drop-shadow(0 0 4px #65f07c); /* Add a green glow */
+}
+
+#accompliceContent p {
+	font-size: 16px;
 }
 
 /* Position and style the close button (top right corner) */

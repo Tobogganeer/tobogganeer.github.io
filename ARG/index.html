@@ -21,6 +21,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="arg-style.css">
 	<link rel="stylesheet" href="../RobotoStyles.css">
@@ -32,13 +33,17 @@
 	
 	<!-- ACCOMPLICE SIDEPANEL -->
 	<div id="accompliceSidepanel" class="sidepanel">
-	  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<h3>Accomplice</h3>
-	  	<p>Some helpful text here or smth</p>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div id="accompliceContent" style="padding: 10px; position: relative; top:-20px;">
+			<h3 style="font-size: 20px;">Accomplice</h3>
+			<p>Some helpful text here or smth</p>
+		</div>
 	</div>
 	
 	<!-- <button class="openbtn" onclick="openNav()">&#9776; Accomplice</button> -->
-	<button class="openbtn" onclick="openNav()"><img src="images/Accomplice.svg" alt="A suspicious looking icon">?</button>
+	<button class="openbtn" onclick="openNav()" style="margin-left: 10px">
+		<img src="images/Accomplice.svg" alt="A suspicious looking icon">?
+	</button>
 	<!-- END ACCOMPLICE SIDEPANEL -->
 	
 	<div class="content center">
