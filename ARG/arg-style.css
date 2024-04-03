@@ -35,6 +35,14 @@ section {
 	padding: 30px;
 }
 
+header {
+	font-size: 16pt;
+}
+
+header a {
+	color: black;
+}
+
 .text-light {
 	color: #F7F7F7;
 }
