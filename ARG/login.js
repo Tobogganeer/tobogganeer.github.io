@@ -4,11 +4,23 @@ const usernameHash = 1761534973;
 const passwordHash = 1521057635;
 
 function login(form) {
+	var cookie = getCookie("mainlogin");
+	
+	setCookie("test", "hi", 10);
+	
+	alert(document.cookie);
+	
+	if (cookie != "")
+		alert("Cookie is " + cookie);
+	
     var username = generateHash(form.username.value);
 	var password = generateHash(form.password.value);
 	
 	if (username === usernameHash && password === passwordHash)
+	{
+		setCookie("mainlogin", "soreal", 5);
     	window.location.replace("http://tobo.games/ARG/employee/index.html");
+	}
 	else
 	{
 		// Be a bit nice and tell them what parts are wrong
