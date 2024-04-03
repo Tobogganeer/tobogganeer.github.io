@@ -5,9 +5,10 @@ const passwordHash = 1521057635;
 
 function login(form) {
     var username = generateHash(form.username.value);
-	var password = generateHash(form.password.value.toUpperCase());
+	var password = generateHash(form.password.value);
+	
 	if (username === usernameHash && password === passwordHash)
-    	window.pathname.replace("http://tobo.games/ARG/employee/index.html");
+    	window.location.replace("http://tobo.games/ARG/employee/index.html");
 	else
 	{
 		// Be a bit nice and tell them what parts are wrong
