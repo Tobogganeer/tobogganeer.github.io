@@ -1,17 +1,19 @@
 
-const passwordHash = 1521057635;
+const passwordHash = -667920564;
+
 
 function login(form) {
-	var password = generateHash(form.password.value.toUpperCase());
-	if (password === passwordHash)
-    	window.pathname.replace("http://tobo.games/ARG/employee/index.html");
-	else
-	{
-		// Be a bit nice and tell them what parts are wrong
-		if (password !== passwordHash)
-        alert("username is " + username + " password is " + password)
-			//alert("Unknown username and password.");
-	}
+	 var password = generateHash(form.password.value.toUpperCase());
+	 if (password === passwordHash)
+     	window.location.replace("http://tobo.games/ARG/employee/index.html");
+	 else
+	 {
+	    //   Be a bit nice and tell them what parts are wrong
+	 	if (password !== passwordHash)
+         //alert(" password is " + password)
+			alert("Unknown username and password.");
+	 }
+
 }
 
 function generateHash(str) {
