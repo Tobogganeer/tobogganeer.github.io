@@ -3,23 +3,21 @@
 const usernameHash = 1761534973;
 const passwordHash = 1521057635;
 
-function login(form) {
+function checkCookies()
+{
 	var cookie = getCookie("mainlogin");
 	
-	setCookie("test", "hi", 10);
-	
-	alert(document.cookie);
-	
-	if (cookie != "")
-		alert("Cookie is " + cookie);
-	
+	if (cookie == "loggedin")
+		advance();
+}
+
+function login(form) {
     var username = generateHash(form.username.value);
 	var password = generateHash(form.password.value);
 	
 	if (username === usernameHash && password === passwordHash)
 	{
-		setCookie("mainlogin", "soreal", 5);
-    	window.location.replace("http://tobo.games/ARG/employee/index.html");
+		advance();
 	}
 	else
 	{
@@ -31,6 +29,12 @@ function login(form) {
 		else if (password !== passwordHash)
 			alert("Incorrect password.")
 	}
+}
+
+function advance()
+{
+	setCookie("mainlogin", "loggedin", 5);
+	window.location.replace("http://tobo.games/ARG/employee/index.html");
 }
 
 function generateHash(str) {
