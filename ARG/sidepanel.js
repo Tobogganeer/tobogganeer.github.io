@@ -26,5 +26,5 @@ function setAccompliceMessage(msg) {
 
 function addAccompliceMessage(msg) {
 	showNotification();
-	document.getElementById("accompliceMessage").innerHTML += "\n" + msg;
+	document.getElementById("accompliceMessage").innerHTML += "<br>" + msg;
 }
