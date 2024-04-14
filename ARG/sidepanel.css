@@ -80,12 +80,13 @@
 	background-color: #444;
 }
 
-#accomplice-notification {
-	font-size: 80px;
+#accompliceNotification {
+	font-size: 60px;
 	color: #0B310C; /* Green text */
 	filter: drop-shadow(0 0 4px #56CB55); /* Add a green glow */
-	padding: 5px 100px;
+	padding: 0;
   	border: none;
 	position: fixed;
-	top: -60px;
+	top: -30px;
+	left: 100px;
 }
