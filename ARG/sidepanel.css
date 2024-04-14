@@ -90,3 +90,7 @@
 	top: -30px;
 	left: 100px;
 }
+
+#accompliceMessage {
+	overflow-y: scroll;
+}
