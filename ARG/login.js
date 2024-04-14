@@ -15,8 +15,6 @@ function login(form) {
     var username = generateHash(form.username.value.toLowerCase());
 	var password = generateHash(form.password.value.toLowerCase());
 	
-	alert("user " + username + " pass " + password);
-	
 	if (username === usernameHash && password === passwordHash)
 	{
 		advance();
