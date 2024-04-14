@@ -1,7 +1,7 @@
 // Login stuff
 
-const usernameHash = 1761534973;
-const passwordHash = 1521057635;
+const usernameHash = -242402243;
+const passwordHash = 1034980195;
 
 function checkCookies()
 {
@@ -12,8 +12,10 @@ function checkCookies()
 }
 
 function login(form) {
-    var username = generateHash(form.username.value);
-	var password = generateHash(form.password.value);
+    var username = generateHash(form.username.value.toLowerCase());
+	var password = generateHash(form.password.value.toLowerCase());
+	
+	alert("user " + username + " pass " + password);
 	
 	if (username === usernameHash && password === passwordHash)
 	{
