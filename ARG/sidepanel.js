@@ -23,3 +23,8 @@ function setAccompliceMessage(msg) {
 	showNotification();
 	document.getElementById("accompliceMessage").innerHTML = msg;
 }
+
+function addAccompliceMessage(msg) {
+	showNotification();
+	document.getElementById("accompliceMessage").innerHTML += "\n" + msg;
+}
