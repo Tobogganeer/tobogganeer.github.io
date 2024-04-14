@@ -44,19 +44,18 @@
 			|
 			<a href="/ARG/login.html">Login</a>
 		</header>
-		<div class = "parent">
-		<img src="Puzzle2Images/Puzzle2Map.jpg" alt="This is part of the puzzle" height="726" width="590">
+		<div class="parent">
+			<img class="fit-image" src="Puzzle2Images/Puzzle2Map.jpg" alt="This is part of the puzzle">
 		</div>
-	</div>
-		<div class = "content center" style="background-color:black;color:chartreuse;height:300px;width:1070px;overflow:scroll;border:10px solid black;padding:3%;padding-left: 10%">
-			<pre>
+		<div style="background-color:black;color:chartreuse;height:400px;overflow-y:scroll;">
+			<pre style="padding:3%;padding-left: 10%">
 | CONFIDENTAL | SECLVL 01 |
 The following is archived internal memos recorded 10/04/24
 ...
 ...
 ...
 ...
-DR. M. Maguire -> I. Jeane MARKED URGENT.
+DR. M. Maguire -&gt; I. Jeane MARKED URGENT.
 ---------------------------------------------------
 Morning.
 You told me there was another one brought in last night? What were they digging for? I'll carry the news to the Chairman.
@@ -65,7 +64,7 @@ You told me there was another one brought in last night? What were they digging 
 
 ...
 ...
-T. Reily -> M. Hakim
+T. Reily -&gt; M. Hakim
 ---------------------------------------------------
 The journalist in '06 is yelling again, it's interfering with my work. Can you send someone to quiet her down?
 
@@ -77,7 +76,7 @@ Reily
 ...
 ...
 ...
-J. Kidman -> Y. Perry
+J. Kidman -&gt; Y. Perry
 ---------------------------------------------------
 Sorry, I thought I was clear the first time. I can't pass your'space ship' idea up the chain of command. I don't
 want to jeopardize my career. Please don't ask me again.
@@ -86,8 +85,8 @@ Have a nice day!
 
 ...
 ...
-RE: DR. M. Maguire -> I. Jeane MARKED URGENT.
-I. Jeane -> DR. M. Maguire
+RE: DR. M. Maguire -&gt; I. Jeane MARKED URGENT.
+I. Jeane -&gt; DR. M. Maguire
 ---------------------------------------------------
 I apologize for the delay, Mary. Our new guest is who we believe is behind the recent security breach.We think he's
 a white-hat hacker, or something of that nature. He's volatile, and will need to be held in Cell 03 for a bit longer, 
@@ -101,7 +100,7 @@ Ivan
 ...
 ...
 ...
-W. Jamison -> T. Vu
+W. Jamison -&gt; T. Vu
 ---------------------------------------------------
 Hi Tom, 
 I sorry I'm just a little confused about how I'm supposed to read door codes, is it in rows or columns? And is it supposed
@@ -109,16 +108,18 @@ to be letter-number-letter or letter-number-number
 Ivan
 
 THAT CONCLUDES THE ARCHIVED TEXT. HAVE A NICE DAY.
-</pre>
-</div>
-	<form style="margin-bottom: 20px">
-		<div class="content center">
-		<label for="password">Password:</label><br>
-		<input type="text" id="password" name="password"><br>
-		<input type="button" name="button" value="Login" onClick="login(this.form)">
-	  </form>
+			</pre>
+		</div>
+	
+		<form style="margin-top: 20px; padding-bottom: 40px; text-align: center">
+			<label for="password" style="font-size: 28px;">Door Code:</label><br>
+			<input type="text" id="password" name="password"
+				   style="margin-top: 10px; font-size: 20px; width: 250px"><br>
+			<input type="button" name="button" value="Unlock Door" onClick="login(this.form)"
+				   style="margin-top: 10px; font-size: 24px; width: 180px">
+		</form>
 	</div>
-
+		
 	<script src="Puzzle2password.js"></script>
 
 </body>
