@@ -17,6 +17,7 @@ function login(form) {
 	
 	if (username === usernameHash && password === passwordHash)
 	{
+		setCookie("mainlogin", "loggedin", 20); // Stay logged in for 20 mins
 		advance();
 	}
 	else
@@ -33,7 +34,6 @@ function login(form) {
 
 function advance()
 {
-	setCookie("mainlogin", "loggedin", 5);
 	window.location.replace("http://tobo.games/ARG/employee/index.html");
 }
 
