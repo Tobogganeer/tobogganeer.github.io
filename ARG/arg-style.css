@@ -16,8 +16,7 @@ p {
 	font-size: 14pt;
 }
 
-#hero {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/Hero.webp');
+.hero {
 	background-position: center;
 	background-size: cover;
 	min-height: 300px;
@@ -108,6 +107,7 @@ header a {
 	transition: 0.1s ease-in-out;
 	top: 0px;
 	position: relative;
+	cursor: pointer;
 }
 .news-box:hover {
 	opacity: 70%;
