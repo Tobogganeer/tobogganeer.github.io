@@ -19,7 +19,7 @@
 	<title>Mireson - Employee Portal</title>
 </head>
 
-<body>
+<body onLoad="sendMessages()">
 	
 	<!-- ACCOMPLICE SIDEPANEL -->
 	<div id="accompliceSidepanel" class="sidepanel">
@@ -29,15 +29,15 @@
 			<p id="accompliceMessage">You're in! sick. I've already got some good stuff here
 				<script>
 					function sendMessages()
-        {
-            setTimeout(() => addAccompliceMessage("Wait"), 2000);
-            setTimeout(() => addAccompliceMessage("I think there's someone in my house"), 4000);
-			setTimeout(() => addAccompliceMessage("i think they figured out how to get my ip"), 6000);
-			setTimeout(() => addAccompliceMessage("oh my god"), 7000);
-			setTimeout(() => addAccompliceMessage("...."), 8000);
-			setTimeout(() => addAccompliceMessage("okay, listen to me, I found data for some kind of containment facility. If i stop responding look there, okay?"), 10000);
-			setTimeout(() => addAccompliceMessage("COMMUNICATION FORCIBLY TERMINATED."), 13000);
-		}
+					{
+						setTimeout(() => addAccompliceMessage("Wait"), 2000);
+						setTimeout(() => addAccompliceMessage("I think there's someone in my house"), 4000);
+						setTimeout(() => addAccompliceMessage("i think they figured out how to get my ip"), 6000);
+						setTimeout(() => addAccompliceMessage("oh my god"), 7000);
+						setTimeout(() => addAccompliceMessage("...."), 8000);
+						setTimeout(() => addAccompliceMessage("okay, listen to me, I found data for some kind of containment facility. If i stop responding look there, okay?"), 10000);
+						setTimeout(() => addAccompliceMessage("COMMUNICATION FORCIBLY TERMINATED."), 13000);
+					}
 				</script>
 				</p>
 				
@@ -46,7 +46,7 @@
 	
 	<!-- <button class="openbtn" onclick="openNav()">&#9776; Accomplice</button> -->
 	<!-- <button class="openbtn" onclick="openNav()">&#9776; Accomplice</button> -->
-	<button class="openbtn" onclick="openSidebar(); sendMessages()" style="margin-left: 10px">
+	<button class="openbtn" onclick="openSidebar();" style="margin-left: 10px">
 		<img src="../images/Accomplice.svg" alt="A suspicious looking icon">?
 	</button>
 	<p id="accompliceNotification">&lt;!</p>

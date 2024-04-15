@@ -89,6 +89,12 @@
 	position: fixed;
 	top: -30px;
 	left: 100px;
+	transition: all 0.2s;
+	text-align: center;
+}
+
+#accompliceNotification.emphasis {
+	font-size: 75px;
 }
 
 #accompliceMessage {
