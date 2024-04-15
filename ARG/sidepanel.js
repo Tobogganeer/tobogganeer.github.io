@@ -21,7 +21,7 @@ function showNotification() {
 	
 	try
 	{
-		var audio = new Audio("/audio/notification.wav");
+		var audio = new Audio("/ARG/audio/notification.wav");
 		audio.play();
 	}
 	// Make sure the audio doesn't throw errors
