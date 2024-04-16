@@ -42,7 +42,8 @@
 	
 	color: #65f07c; /* Green text */
 	
-	filter: drop-shadow(0 0 4px #65f07c); /* Add a green glow */
+	/* filter: drop-shadow(0 0 4px #65f07c); */ /* Add a green glow */
+	filter: drop-shadow(0 0 4px #65f07c);
 }
 
 #accompliceContent p {

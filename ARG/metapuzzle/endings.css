@@ -1,19 +1,37 @@
 /* CSS Document */
 
-#accompliceContent .boss {
-	/* Red */
-	color: #F06565;
-	filter: drop-shadow(0 0 1px #F06565);
+#endingContent {
+	/* Super 1337 hacker font */
+	font-family: "Source Code Pro", monospace;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }
 
-#accompliceContent .accomplice {
+#endingContent p {
+	font-size: 16px;
+}
+
+#endingContent .neutral {
+	/* Green */
+	color: #65f07c;
+	filter: drop-shadow(0 0 4px #65f07c);
+}
+
+#endingContent .boss {
+	/* Red */
+	color: #FD3F42;
+	filter: drop-shadow(0 0 4px #FD3F42);
+}
+
+#endingContent .accomplice {
 	/* Blue */
 	color: #4A9CF1;
-	filter: drop-shadow(0 0 0px #4A9CF1);
+	filter: drop-shadow(0 0 4px #4A9CF1);
 }
 
-#accompliceContent .reporter {
+#endingContent .reporter {
 	/* Yellow wow */
 	color: #E7F775;
-	filter: drop-shadow(0 0 0px #E7F775);
+	filter: drop-shadow(0 0 4px #E7F775);
 }
