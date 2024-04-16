@@ -1,13 +1,13 @@
 /* CSS Document */
 
-#accompliceContent.boss {
+#accompliceContent .boss {
 	/* Red */
 	color: #F06565;
-	filter: drop-shadow(0 0 4px #F06565);
+	filter: drop-shadow(0 0 2px #F06565);
 }
 
-#accompliceContent.accomplice {
+#accompliceContent .accomplice {
 	/* Blue */
-	color: #658EF0;
-	filter: drop-shadow(0 0 4px #658EF0);
+	color: #4A9CF1;
+	filter: drop-shadow(0 0 0px #4A9CF1);
 }
