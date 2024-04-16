@@ -3,7 +3,7 @@
 #accompliceContent .boss {
 	/* Red */
 	color: #F06565;
-	filter: drop-shadow(0 0 2px #F06565);
+	filter: drop-shadow(0 0 1px #F06565);
 }
 
 #accompliceContent .accomplice {
