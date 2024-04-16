@@ -24,7 +24,7 @@
 	<script type="text/javascript">
 		function loadMessages()
 		{
-			const mainBody = document.getElementById("accompliceContent");
+			const mainBody = document.getElementById("endingContent");
 			
 			add(mainBody, 1.0, "");
 			add(mainBody, 1.0, "");
@@ -54,6 +54,7 @@
 			
 			add(mainBody, 1.0, "");
 			
+			add(mainBody, 1.0, "");
 			add(mainBody, 1.0, "");
 			add(mainBody, 1.0, "");
 		}
@@ -66,6 +67,7 @@
 				try
 				{
 					var audio = new Audio("/ARG/audio/notification.wav");
+					audio.volume = 0.5;
 					audio.play();
 				}
 				// Make sure the audio doesn't throw errors
@@ -109,6 +111,7 @@
 		
 		<p class="neutral">You have got to be playing with me-</p>
 		<h1 class="neutral">THE END</h1>
+		<br><br><a class="neutral" href="/ARG/index.html">(Go home)</a>
 		-->
 	</div>
 </body>
