@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<!-- ACCOMPLICE SIDEPANEL -->
+	<link rel="stylesheet" href="../sidepanel.css">
+	<!-- END ACCOMPLICE SIDEPANEL -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../arg-style.css">
+	<link rel="stylesheet" href="../../RobotoStyles.css">
+	<link rel="stylesheet" href="endings.css">
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<title>Ending - Cover Up Mireson</title>
+</head>
+
+<body style="background-color: #111;" onLoad="loadMessages()">
+	
+	<script type="text/javascript">
+		function loadMessages()
+		{
+			const mainBody = document.getElementById("endingContent");
+			
+			add(mainBody, 1.0, "<h3 style=\"font-size: 20px;\" class=\"boss\">Boss M</h3>");
+			add(mainBody, 2.5, "<p class=\"boss\">Thank you y/n now you’ll get what I promised and what you deserve.</p>");
+			
+			add(mainBody, 5.0, "<br><span class=\"neutral\">You did it. </span>");
+			add(mainBody, 7.0, "<span class=\"neutral\">You helped the company. </span>");
+			add(mainBody, 10.0, "<span class=\"neutral\">You kept all their secrets and just as Boss M promised you had all the riches. </span>");
+			add(mainBody, 14.0, "<span class=\"neutral\">A really good paying job at the company. A retirement plan.</span>");
+			
+			add(mainBody, 18.0, "<br><br><span class=\"neutral\">The good life.</span>");
+			for (var i = 20; i < 25; i++)
+				add(mainBody, i, "<span class=\"neutral\">.</span>");
+			
+			add(mainBody, 27.0, "<p class=\"neutral\">Right?</p>");
+			for (var i = 28; i < 33; i++)
+				add(mainBody, i, "<span class=\"neutral\">.</span>");
+			add(mainBody, 35.0, "<span class=\"neutral\">WRONG.</span>");
+			
+			add(mainBody, 38.0, "<br><br><p class=\"neutral\">You were chained up, hallucinating from the pain.</p>");
+			add(mainBody, 43.0, "<span class=\"neutral\">As of now, Mireson has destroyed most planetary systems and have no where else to extract energy from. </span>");
+			add(mainBody, 47.0, "<span class=\"neutral\">They are moving onto bigger development plans.</span>");
+			
+			add(mainBody, 53.0, "<br><br><span class=\"neutral\">Mireson Mission 2.</span>");
+			add(mainBody, 56.0, "<span class=\"neutral\"> And you are in luck, as you were Mireson's latest and greatest experiment.</span>");
+			
+			add(mainBody, 62.0, "<br><br><span class=\"neutral\">Extracting</span>");
+			add(mainBody, 63.0, "<span class=\"neutral\"> organic</span>");
+			add(mainBody, 64.0, "<span class=\"neutral\"> energy</span>");
+			add(mainBody, 65.0, "<span class=\"neutral\"> from</span>");
+			add(mainBody, 66.0, "<span class=\"neutral\"> you.</span>");
+			
+			add(mainBody, 70.0, "<h1 class=\"neutral\">THE END</h1>");
+			add(mainBody, 75.0, "<br><br><a class=\"neutral\" href=\"/ARG/index.html\">(Go home)</a>");
+		}
+		
+		function add(mainBody, time, message)
+		{
+			setTimeout(() => 
+		    {
+				mainBody.innerHTML += message;
+				try
+				{
+					var audio = new Audio("/ARG/audio/notification.wav");
+					audio.volume = 0.5;
+					audio.play();
+				}
+				// Make sure the audio doesn't throw errors
+				catch (err) { }
+				},
+			time * 1000.0);
+		}
+	</script>
+	
+	<div id="endingContent" style="padding: 30px 20%;">
+		<!--
+		<h3 style="font-size: 20px;" class="boss">Boss M</h3>
+		<p class="boss">Thank you y/n now you’ll get what I promised and what you deserve.</p>
+		
+		
+		<br><span class="neutral">You did it.</span>
+		<span class="neutral">You helped the company.</span>
+		<span class="neutral">You kept all their secrets and just as Boss M promised you had all the riches.</span>
+		<span class="neutral">A really good paying job at the company. A retirement plan.</span>
+		
+		<br><br><span class="neutral">The good life.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		
+		<p class="neutral">Right?</p>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">.</span>
+		<span class="neutral">WRONG.</span>
+		
+		
+		<br><br><p class="neutral">You were chained up, hallucinating from the pain.</p>
+		<span class="neutral">As of now, Mireson has destroyed most planetary systems and have no where else to extract energy from.</span>
+		<span class="neutral">They are moving onto bigger development plans.</span>
+		
+		<br><br><span class="neutral">Mireson Mission 2.</span>
+		<span class="neutral">And you are in luck, as you were Mireson's latest and greatest experiment.</span>
+		
+		<br><br><span class="neutral">Extracting</span>
+		<span class="neutral"> organic</span>
+		<span class="neutral"> energy</span>
+		<span class="neutral"> from</span>
+		<span class="neutral"> you.</span>
+		
+		<h1 class="neutral">THE END</h1>
+		<br><br><a class="neutral" href="/ARG/index.html">(Go home)</a>
+		-->
+	</div>
+</body>
+</html>

@@ -12,7 +12,20 @@ function closeSidebar() {
 function showNotification() {
 	// Check if the window is hidden
 	if (document.getElementById("accompliceSidepanel").style.width != "0")
-		document.getElementById("accompliceNotification").innerHTML = "&lt;!";
+	{
+		var marker = document.getElementById("accompliceNotification");
+		marker.innerHTML = "&lt;!";
+		marker.classList.add("emphasis");
+		setTimeout(() => marker.classList.remove("emphasis"), 200);
+	}
+	
+	try
+	{
+		var audio = new Audio("/ARG/audio/notification.wav");
+		audio.play();
+	}
+	// Make sure the audio doesn't throw errors
+	catch (err) { }
 }
 
 function hideNotification() {
@@ -20,11 +33,11 @@ function hideNotification() {
 }
 
 function setAccompliceMessage(msg) {
-	showNotification();
 	document.getElementById("accompliceMessage").innerHTML = msg;
+	showNotification();
 }
 
 function addAccompliceMessage(msg) {
+	document.getElementById("accompliceMessage").innerHTML += "<br><br>" + msg;
 	showNotification();
-	document.getElementById("accompliceMessage").innerHTML += "<br>" + msg;
 }
