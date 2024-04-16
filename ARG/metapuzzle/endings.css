@@ -11,3 +11,9 @@
 	color: #4A9CF1;
 	filter: drop-shadow(0 0 0px #4A9CF1);
 }
+
+#accompliceContent .reporter {
+	/* Yellow wow */
+	color: #E7F775;
+	filter: drop-shadow(0 0 0px #E7F775);
+}
