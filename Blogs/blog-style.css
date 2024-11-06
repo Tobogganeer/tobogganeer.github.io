@@ -28,3 +28,19 @@
     height: 280px;
     border: 2px solid #F3E2C6;
 }
+
+.blog-body {
+    text-align: left;
+}
+
+.blog-body > figure {
+    align-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #ada9a0;
+}
+
+.blog-body * a {
+    color: #74b6e2;
+}
