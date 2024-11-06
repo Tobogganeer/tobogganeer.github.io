@@ -1,0 +1,63 @@
+html, body {
+    scroll-behavior: smooth;
+	background: rgb(41, 38, 43);
+	margin: 0;
+	color: #F3E2C6;
+	font-size: 24px;
+	font-family: Roboto, sans-serif;
+}
+
+.header {
+    background-color: rgb(245, 245, 231);
+	color: #333;
+    width: 100%;
+    height: 100px;
+	display: flex;
+    align-items: center;
+}
+
+#tobo-games {
+	width: 50%;
+	margin-left: 20%;
+	text-align: left;
+    padding: 10px;
+}
+
+#tobo-games > a {
+    color: #333;
+    font-size: 75px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* https://developers.google.com/fonts/docs/getting_started */
+
+.container {
+	padding: 15px 20px 20px 20px;
+	width: calc(100% - 50px);
+	text-align: center;
+	border: 5px solid #F3E2C6;
+	border-radius: 25px;
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#header-links {
+	width: 50%;
+	margin-right: 20%;
+	text-align: right;
+    padding: 10px;
+    font-size: 75px;
+	font-weight: bold;
+}
+
+#header-links > a {
+	color: #51515e;
+    font-size: 32px;
+	text-decoration: none;
+}
+
+#header-links > span {
+	font-size: 32px;
+}
