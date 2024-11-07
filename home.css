@@ -3,7 +3,7 @@
     align-items: center;
   }
 
-.download-button {
+.project-button {
     position: relative;
     color: palegoldenrod;
     background-color: transparent;
@@ -24,7 +24,7 @@ a {
     font-size: 32px;
 }
 
-#download-button:hover {
+#project-button:hover {
     border-color:white;
     background-color:#f4fad021;
     -webkit-transition: all 100ms ease-in;
@@ -33,7 +33,7 @@ a {
     color: palegoldenrod;
 }
 
-#download-button:active {
+#project-button:active {
     background-color: palegoldenrod;
     color: rgb(43, 22, 54);
 }

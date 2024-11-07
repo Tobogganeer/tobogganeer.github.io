@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<!-- ACCOMPLICE SIDEPANEL -->
+	<link rel="stylesheet" href="../sidepanel.css">
+	<script src="../sidepanel.js"></script>
+	<!-- END ACCOMPLICE SIDEPANEL -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../arg-style.css">
+	<link rel="stylesheet" href="../../RobotoStyles.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<title>Mireson - Puzzle2</title>
+</head>
+
+<body>
+	
+	<!-- ACCOMPLICE SIDEPANEL -->
+	<div id="accompliceSidepanel" class="sidepanel">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+		<div id="accompliceContent" style="padding: 10px; position: relative; top:-20px;">
+			<h3 style="font-size: 20px;">Accomplice</h3>
+			<p id="accompliceMessage">[Tracking information shows that the person named 'Accomplice' is located  within a remote Mireson lab.]
+				<br>
+				<br>
+				...
+				<br>
+				<br>
+				<br>
+				...
+				<br>
+				There is no response from 'Accomplice'.
+			</p>
+		</div>
+	</div>
+	
+	<!-- <button class="openbtn" onclick="openNav()">&#9776; Accomplice</button> -->
+	<!-- <button class="openbtn" onclick="openNav()">&#9776; Accomplice</button> -->
+	<button class="openbtn" onclick="openSidebar()" style="margin-left: 10px">
+		<img src="../images/Accomplice.svg" alt="A suspicious looking icon">?
+	</button>
+	<p id="accompliceNotification">&lt;!</p>
+	<!-- END ACCOMPLICE SIDEPANEL -->
+	
+	<div class="content center">
+		<header>
+			<a href="/ARG/index.html">Home</a>
+			|
+			<a href="/ARG/employee/index.html">Employee Portal</a>
+		</header>
+		<div class="parent">
+			<img class="fit-image" src="images/map.jpg" alt="This is part of the puzzle">
+		</div>
+		<div style="background-color:black;color:chartreuse;height:400px;overflow-y:scroll;">
+			<pre style="padding:3%;padding-left: 10%">
+| CONFIDENTAL | SECLVL 01 |
+The following is archived internal memos recorded 10/04/24
+...
+...
+...
+...
+DR. M. Maguire -&gt; I. Jeane MARKED URGENT.
+---------------------------------------------------
+Morning.
+You told me there was another one brought in last night? What were they digging for? I'll carry the news to the Chairman.
+
+-- Mary
+
+...
+...
+T. Reily -&gt; M. Hakim
+---------------------------------------------------
+The journalist in '06 is yelling again, it's interfering with my work. Can you send someone to quiet her down?
+
+Thanks,
+Reily
+
+...
+...
+...
+...
+...
+J. Kidman -&gt; Y. Perry
+---------------------------------------------------
+Sorry, I thought I was clear the first time. I can't pass your'space ship' idea up the chain of command. I don't
+want to jeopardize my career. Please don't ask me again.
+Have a nice day!
+-- Jenny Kidman
+
+...
+...
+RE: DR. M. Maguire -&gt; I. Jeane MARKED URGENT.
+I. Jeane -&gt; DR. M. Maguire
+---------------------------------------------------
+I apologize for the delay, Mary. Our new guest is who we believe is behind the recent security breach. We think he's
+a white-hat hacker, or something of that nature. He's volatile, and will need to be held in Cell 03 for a bit longer, 
+though if possible we should transfer him to somewhere secure ASAP. And I know the chairman will ask, so just so you
+know: the doors to the cells are 'random' 12 character passcodes. Near impossible to hack.
+He won't be getting out for a long while.
+Good luck,
+Ivan
+...
+...
+...
+...
+...
+W. Jamison -&gt; T. Vu
+---------------------------------------------------
+Hi Tom, 
+I sorry I'm just a little confused about how I'm supposed to read door codes, is it in rows or columns? And is it supposed
+to be letter-number-letter or letter-number-number?
+Ivan
+---------------------------------------------------
+
+THAT CONCLUDES THE ARCHIVED TEXT. HAVE A NICE DAY.
+			</pre>
+		</div>
+	
+		<form style="margin-top: 20px; padding-bottom: 40px; text-align: center">
+			<label for="password" style="font-size: 28px;">Door Code:</label><br>
+			<input type="text" id="password" name="password"
+				   style="margin-top: 10px; font-size: 20px; width: 250px"><br>
+			<input type="button" name="button" value="Unlock Door" onClick="login(this.form)"
+				   style="margin-top: 10px; font-size: 24px; width: 180px">
+		</form>
+	</div>
+		
+	<script src="Puzzle2password.js"></script>
+
+</body>
+</html>

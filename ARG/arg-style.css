@@ -1,0 +1,115 @@
+/* CSS Document */
+
+body {
+	background: #eaeaed;
+	color: #1a1a1a;
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.3em;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+p {
+	font-size: 14pt;
+}
+
+.hero {
+	background-position: center;
+	background-size: cover;
+	min-height: 300px;
+}
+
+h1, h2, h3 {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 40pt;
+}
+
+section {
+	padding: 30px;
+}
+
+header {
+	font-size: 16pt;
+	padding: 10px 20px;
+}
+
+header a {
+	color: black;
+}
+
+.text-light {
+	color: #F7F7F7;
+}
+
+.text-shadow {
+	filter: drop-shadow(2px 2px 1px #111);
+}
+
+.content {
+	width: min(70%, 100% - 400px); /* Open button is 180px */
+	height: 100%;
+	background: #FFF;
+}
+
+.center {
+	margin: auto;
+}
+.row {
+	display: inline-flex;
+	margin-bottom: 16px;
+}
+
+
+.column {
+	padding-left: 0;
+    padding-right: 0;
+}
+
+.third-col {
+	width: 33.33%;
+	float: left;
+}
+
+.quarter-col {
+	width: 25%;
+	float: left;
+}
+
+.half-col {
+	width: 50%;
+	float: left;
+}
+
+.fit-image {
+	width: 100%;
+    max-width: inherit;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-block {
+    float: none;
+    box-sizing: border-box;
+}
+
+.news-box {
+	border: 5px solid #555;
+	border-width: 3px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: #1a1a1a;
+	transition: 0.1s ease-in-out;
+	top: 0px;
+	position: relative;
+	cursor: pointer;
+}
+.news-box:hover {
+	opacity: 70%;
+	top: -2px;
+}

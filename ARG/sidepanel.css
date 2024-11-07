@@ -1,0 +1,103 @@
+/* Accomplice Sidepanel */
+
+/* https://www.w3schools.com/howto/howto_js_collapse_sidepanel.asp */
+
+/* The sidepanel menu */
+.sidepanel {
+	height: 100%; /* Specify a height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0;
+	left: 0;
+	background-color: #111; /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+	
+	
+}
+
+/* The sidepanel links */
+.sidepanel a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+	color: #f1f1f1;
+}
+
+#accompliceContent {
+	/* Super 1337 hacker font */
+	font-family: "Source Code Pro", monospace;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	
+	color: #65f07c; /* Green text */
+	
+	/* filter: drop-shadow(0 0 4px #65f07c); */ /* Add a green glow */
+	filter: drop-shadow(0 0 4px #65f07c);
+}
+
+#accompliceContent p {
+	font-size: 16px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 5px 5px;
+  	border: none;
+	position: fixed;
+	writing-mode: tb;
+	text-orientation: upright;
+}
+
+.openbtn img {
+	width: 50px;
+	height: 50px;
+}
+
+.openbtn:hover {
+	background-color: #444;
+}
+
+#accompliceNotification {
+	font-size: 60px;
+	color: #0B310C; /* Green text */
+	filter: drop-shadow(0 0 4px #56CB55); /* Add a green glow */
+	padding: 0;
+  	border: none;
+	position: fixed;
+	top: -30px;
+	left: 100px;
+	transition: all 0.2s;
+	text-align: center;
+}
+
+#accompliceNotification.emphasis {
+	font-size: 75px;
+}
+
+#accompliceMessage {
+	/* overflow-y: scroll; */
+}

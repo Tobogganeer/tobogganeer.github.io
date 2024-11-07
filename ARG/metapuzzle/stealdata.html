@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<!-- ACCOMPLICE SIDEPANEL -->
+	<link rel="stylesheet" href="../sidepanel.css">
+	<!-- END ACCOMPLICE SIDEPANEL -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="../arg-style.css">
+	<link rel="stylesheet" href="../../RobotoStyles.css">
+	<link rel="stylesheet" href="endings.css">
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<title>Ending - Leak Mireson Data</title>
+</head>
+
+<body style="background-color: #111;" onLoad="loadMessages()">
+	
+	<script type="text/javascript">
+		function loadMessages()
+		{
+			const mainBody = document.getElementById("endingContent");
+			
+			add(mainBody, 1.0, "<p class=\"neutral\">Out of your own interest and satisfaction, you leaked the information.</p>");
+			add(mainBody, 4.0, "<span class=\"neutral\">Mireson was stopped. </span>");
+			add(mainBody, 6.0, "<span class=\"neutral\">Swatted actually, and Boss M was thrown behind bars. </span>");
+			add(mainBody, 10.0, "<span class=\"neutral\">We won’t be hearing from her anytime soon....</span>");
+			
+			add(mainBody, 15.0, "<h3 style=\"font-size: 20px;\" class=\"accomplice\">Accomplice</h3>");
+			add(mainBody, 17.0, "<span class=\"accomplice\">How could you? After all we’ve been through? I thought you were my friend? </span>");
+			add(mainBody, 20.0, "<span class=\"accomplice\">I told you they needed to be destroyed...</span>");
+			add(mainBody, 22.0, "<span class=\"accomplice\"> all the damage they've done...</span>");
+			add(mainBody, 24.0, "<span class=\"accomplice\"> why didn’t you?</span>");
+			add(mainBody, 26.0, "<span class=\"accomplice\">- what if they come back?</span>");
+			
+			add(mainBody, 30.0, "<br><br><span class=\"accomplice\">I'm done with you</span>");
+			add(mainBody, 33.0, "<span class=\"accomplice\"> - I don't even want my mani-pedi anymore.</span>");
+			
+			add(mainBody, 38.0, "<br><br><p class=\"neutral\"><em>The accomplice blocks you as you didn't follow his instructions.</em></p>");
+			
+			add(mainBody, 44.0, "<p class=\"neutral\">2 weeks later you take a look at the news...</p>");
+			
+			add(mainBody, 50.0, "<br><h3 style=\"font-size: 20px;\" class=\"reporter\">Reporter</h3>");
+			add(mainBody, 52.0, "<p class=\"reporter\">After the allegations that led to the closure of Mireson, a new company that goes by the name of Wireson Corporations, is having a grand opening today!!</p>");
+			
+			add(mainBody, 60.0, "<br><p class=\"neutral\"><em>A message pings on the screen</em></p>");
+			
+			add(mainBody, 63.0, "<p class=\"neutral\">&quot;Here at Wireson we ensure everyone's safety and wellbeing&quot;</p>");
+			
+			add(mainBody, 66.0, "<img src=\"../images/Wireson - White.png\" alt=\"Wireson logo\">");
+			
+			add(mainBody, 72.0, "<p class=\"neutral\">You have got to be playing with me-</p>");
+			add(mainBody, 75.0, "<h1 class=\"neutral\">THE END</h1>");
+			add(mainBody, 80.0, "<br><br><a class=\"neutral\" href=\"/ARG/index.html\">(Go home)</a>");
+		}
+		
+		function add(mainBody, time, message)
+		{
+			setTimeout(() => 
+		    {
+				mainBody.innerHTML += message;
+				try
+				{
+					var audio = new Audio("/ARG/audio/notification.wav");
+					audio.volume = 0.5;
+					audio.play();
+				}
+				// Make sure the audio doesn't throw errors
+				catch (err) { }
+				},
+			time * 1000.0);
+		}
+	</script>
+	
+	<!-- ACCOMPLICE SIDEPANEL -->
+	<div id="endingContent" style="padding: 30px 20%;">
+		<!--
+		<p class="neutral">Out of your own interest and satisfaction, you leaked the information.</p>
+		<span class="neutral">Mireson was stopped.</span>
+		<span class="neutral">Swatted actually, and Boss M was thrown behind bars.</span>
+		<span class="neutral">We won’t be hearing from her anytime soon....</span>
+		
+		<h3 style="font-size: 20px;" class="accomplice">Accomplice</h3>
+		<span class="accomplice">How could you? After all we’ve been through? I thought you were my friend?</span>
+		<span class="accomplice">I told you they needed to be destroyed...</span>
+		<span class="accomplice"> all the damage they've done...</span>
+		<span class="accomplice"> why didn’t you?</span>
+		<span class="accomplice">- what if they come back?</span>
+		
+		<br><br><span class="accomplice">I'm done with you</span>
+		<span class="accomplice">- I don't even want my mani-pedi anymore.</span>
+		
+		
+		<br><br><p class="neutral"><em>The accomplice blocks you as you didn't follow his instructions.</em></p>
+		
+		<p class="neutral">2 weeks later you take a look at the news...</p>
+		
+		<br><h3 style="font-size: 20px;" class="reporter">Reporter</h3>
+		<p class="reporter">After the allegations that led to the closure of Mireson, a new company that goes by the name of Wireson Corporations, is having a grand opening today!!</p>
+		
+		<br><p class="neutral"><em>A message pings on the screen</em></p>
+		
+		<p class="neutral">“Here at Wireson we ensure everyone's safety and wellbeing"</p>
+		
+		<img src="../images/Wireson - White.png" alt="Wireson logo">
+		
+		<p class="neutral">You have got to be playing with me-</p>
+		<h1 class="neutral">THE END</h1>
+		<br><br><a class="neutral" href="/ARG/index.html">(Go home)</a>
+		-->
+	</div>
+</body>
+</html>
