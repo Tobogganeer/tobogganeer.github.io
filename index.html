@@ -18,27 +18,26 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">tobo.games</a>
+		<a class="navbar-brand" href="/index.html">tobo.games</a>
       	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       	<span class="navbar-toggler-icon"></span>
       	</button>
       	<div class="collapse navbar-collapse" id="navbarSupportedContent">
         	<ul class="navbar-nav mr-auto">
-          		<li class="nav-item active">
-            		<a class="nav-link" href="/index.html">Home</a>
-          		</li>
 				<li class="nav-item">
             		<a class="nav-link" href="/Blog/index.html">Blog</a>
           		</li>
 				<li class="nav-item">
-            		<a class="nav-link" href="#">Portfolio</a>
+            		<a class="nav-link" href="/portfolio.html">Portfolio</a>
           		</li>
           		<li class="nav-item dropdown">
             		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             		Projects
             		</a>
             		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  	<a class="dropdown-item" href="#">Design Week</a>
+					  	<a class="dropdown-item" href="/Projects/index.html">Project Home Page</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Design Week</a>
 					  	<a class="dropdown-item" href="#">Teenage Experiments</a>
 					  	<a class="dropdown-item" href="#">School Projects</a>
 						<a class="dropdown-item" href="#">ARG</a>
@@ -47,15 +46,15 @@
             		</div>
           		</li>
 				<li class="nav-item">
-            		<a class="nav-link" href="#">Launcher</a>
+            		<a class="nav-link" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a>
           		</li>
         	</ul>
       	</div>
     </nav>
     <section>
-      	<div class="jumbotron text-center mt-2">
+      	<div class="jumbotron text-center mt-2 p-4">
         	<div class="container">
-          		<div class="row">
+          		<div class="row justify-content-center">
             		<div class="col-12">
               			<h1>Evan Daveikis</h1>
               			<p>
@@ -65,8 +64,15 @@
 							<br>
 							Sheridan Game Design '27
 						</p>
-              			<p><a class="btn btn-primary btn-lg" href="#" role="button">See Portfolio »</a></p>
             		</div>
+					<div class="col-md-4 col-lg-3">
+						<p><a class="btn btn-primary btn-lg" href="#" role="button">See Portfolio »</a></p>
+					</div>
+					<div class="col-md-4 col-lg-3">
+						<p><a class="btn btn-primary btn-lg" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub" role="button">
+					<img src="/images/github-mark-white.svg" width="20" height="20" alt="Github logo">
+					Github Profile</a></p>
+					</div>
           		</div>
 			</div>
       	</div>
@@ -83,7 +89,7 @@
     <section>
   		<div class="container mt-2">
         	<div class="row">
-          		<div class="col-md-4 col-12">
+          		<div class="col-md-4 col-12 card">
             		<ul class="list-unstyled">
               			<li class="media">
                 			<img class="mr-3" src="images/launcher_icon.png" alt="Virtual Void Games Launcher icon" style="max-width: 50%">
@@ -93,9 +99,9 @@
                 			</div>
               			</li>
             		</ul>
-					<p><a class="col btn btn-secondary btn-md" href="VVGamesLauncher.exe" role="button" download>Download Launcher</a></p>
+					<p><a class="col btn btn-secondary btn-md" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a></p>
           		</div>
-		  		<div class="col-md-4 col-12 flex-column">
+		  		<div class="col-md-4 col-12 card">
             		<ul class="list-unstyled">
               			<li class="media">
                 			<img class="mr-3" src="images/blog_icon.jpg" alt="Picture of boids" style="max-width: 50%">
@@ -105,23 +111,24 @@
                 			</div>
               			</li>
             		</ul>
-					<p><a class="col btn btn-secondary btn-md" href="VVGamesLauncher.exe" role="button" download>Download Launcher</a></p>
+					<p><a class="col btn btn-secondary btn-md" href="/Blog/index.html" role="button">Blog »</a></p>
           		</div>
-          		<div class="col-md-4 col-12">
+          		<div class="col-md-4 col-12 card">
             		<ul class="list-unstyled">
               			<li class="media">
-                			<img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" style="max-width: 50%">
+                			<img class="mr-3" src="images/projects-icon.png" alt="Dark Side of Mars screenshot" style="max-width: 50%">
                 			<div class="media-body">
                   				<h5 class="mt-0 mb-1">Projects</h5>
                   				See some of the stuff I've worked on.
                 			</div>
               			</li>
             		</ul>
-					<p><a class="col btn btn-secondary btn-md" href="VVGamesLauncher.exe" role="button" download>Download Launcher</a></p>
+					<p><a class="col btn btn-secondary btn-md" href="/Projects/index.html" role="button">Projects »</a></p>
           		</div>
         	</div>
       	</div>
     </section>
+	<!--
     <section>
       <div class="container">
         <div class="row">
@@ -158,6 +165,8 @@
       </div>
     </section>
     <hr>
+	-->
+	<!--
     <section>
       <div class="container">
         <div class="row">
@@ -169,40 +178,42 @@
         </div>
       </div>
     </section>
+	-->
     <hr>
     <div class="section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-12">
-            <h3 class="text-center">Contact</h3>
-            <p class="text-center">
-              <strong>Evan Daveikis</strong><br>
-				<a class="nav-link p-2" href="mailto:evandaveikis@gmail.com" aria-label="Email">
-					<img src="/images/email-icon.svg" width="20" height="20" alt="Email icon">
-					evandaveikis@gmail.com
-				</a>
-    			<a class="nav-link p-2" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub">
-					<img src="/images/github-mark.svg" width="20" height="20" alt="Github logo">
-					github.com/tobogganeer
-				</a>
-				<a class="nav-link p-2" href="https://itch.io/profile/tobogganeer" target="_blank" rel="noopener" aria-label="Itch.io">
-					<img src="/images/itchio-logo-textless-black.svg" width="20" height="20" alt="Github logo">
-					itch.io/profile/tobogganeer
-				</a>
-            </p>
-          </div>
-        </div>
-      </div>
+      	<div class="container">
+        	<div class="row justify-content-center">
+          		<div class="col-md-6 col-12">
+            		<h3 class="text-center">Contact</h3>
+            		<p class="text-center">
+              			<strong>Evan Daveikis</strong><br>
+						<a class="nav-link p-1" href="mailto:evandaveikis@gmail.com" aria-label="Email">
+							<img src="/images/email-icon.svg" width="20" height="20" alt="Email icon">
+							evandaveikis@gmail.com
+						</a>
+    					<a class="nav-link p-1" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub">
+							<img src="/images/github-mark.svg" width="20" height="20" alt="Github logo">
+							github.com/tobogganeer
+						</a>
+						<a class="nav-link p-1" href="https://itch.io/profile/tobogganeer" target="_blank" rel="noopener" aria-label="Itch.io">
+							<img src="/images/itchio-logo-textless-black.svg" width="20" height="20" alt="Github logo">
+							itch.io/profile/tobogganeer
+						</a>
+            		</p>
+          		</div>
+        	</div>
+      	</div>
     </div>
     <hr>
     <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Evan Daveikis 2025</p>
-          </div>
-        </div>
-      </div>
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-12">
+            		<p class="mb-0">Evan Daveikis 2025</p>
+			  		<small class="mt-0 pb-3">Very clearly not a web designer but I'm trying to learn!</small>
+          		</div>
+        	</div>
+      	</div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -210,6 +221,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
 	
+	<!--
     <header class="header">
 		<div id="tobo-games"><a href="/index.html">Tobo Games</a></div>
 		<div id="header-links">
@@ -239,16 +251,17 @@
             <a href="ARG/index.html">
                 <button class="project-button">ARG</button>
             </a>
-            <!---
+            <!--
 	    	<a href="Prototypes/Blackboard/index.html">
                 <button class="download-button">Blackboard</button>
             </a>
             <a href="PEntityExtraction.zip" download>
                 <button id="pee-button">Download PEntityExtraction</button>
             </a>
-        	-->
+        	->
         </div>
     </div>
+	-->
 
 </body>
 </html>
