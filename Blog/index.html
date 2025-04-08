@@ -2,49 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blogs by Tobogganeer.">
-
-    <link rel="stylesheet" href="/old/style.css">
-    <link rel="stylesheet" href="blog-style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <title>Blog Posts - Tobo Games</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="===DESCRIPTION HERE===">
+	
+	<title>Blogs</title>
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+	
+	<style>
+		.card-img {
+			object-fit: cover;
+			height: 200px;
+		}
+	</style>
 </head>
 
 <body>
-    <header class="header">
-		<div id="tobo-games"><a href="/index.html">Tobo Games</a></div>
-		<div id="header-links">
-            <a href="/Blog/">Blog</a>
-			<span>-</span>
-			<a href="/VVGamesLauncher.exe" download>Launcher</a>
-			<span>-</span>
-			<a href="https://github.com/Tobogganeer" target="_blank">Github</a>
-		</div>
-	</header>
-
-    <div class="container">
-        <div class="blog-post">
-            <a href="06_11_24_Boids/index.html">
-                <div class="blog-text">
-                    <h1>Boids n' Keycards</h1>
-                    <h3>November 6, 2024</h3>
-                    <p>My foray into the world of chaotic lil bird behaviour</p>
-                </div>
-                <img class="blog-img" src="06_11_24_Boids/Thumbnail.png">
-            </a>
-        </div>
-		<div class="blog-post">
-            <a href="27_03_25_WebsiteRedesign/index.html">
-                <div class="blog-text">
-                    <h1>Website Redesign</h1>
-                    <h3>March 27, 2025</h3>
-                    <p>Getting responsive and fresh for Ubisoft NEXT!&nbsp;</p>
-                </div>
-                <img class="blog-img" src="27_03_25_WebsiteRedesign/Thumbnail.png">
-            </a>
-        </div>
-    </div>
-
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/index.html">tobo.games</a>
+      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      	<span class="navbar-toggler-icon"></span>
+      	</button>
+      	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        	<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+            		<a class="nav-link" href="/Blog/index.html">Blog</a>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/portfolio.html">Portfolio</a>
+          		</li>
+          		<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            		Projects
+            		</a>
+            		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  	<a class="dropdown-item" href="/Projects/index.html">Project Home Page</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/Projects/DesignWeek/index.html">Design Week</a>
+					  	<a class="dropdown-item" href="/Projects/Personal/index.html">Personal Projects</a>
+					  	<a class="dropdown-item" href="/Projects/School/index.html">School Projects</a>
+					  	<div class="dropdown-divider"></div>
+					  	<a class="dropdown-item" href="/Projects/Modelling/index.html">3D Modelling</a>
+            		</div>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a>
+          		</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub">
+						<img src="/images/github-mark-white.svg" width="20" height="20" alt="Github logo">
+					</a>
+          		</li>
+        	</ul>
+      	</div>
+    </nav>
+    <section>
+      	<div class="jumbotron text-center mt-2 p-4">
+        	<div class="container">
+          		<div class="row justify-content-center">
+            		<div class="col-12">
+              			<h1>Blogs</h1>
+              			<p>
+							Read about some things I've done
+						</p>
+            		</div>
+          		</div>
+			</div>
+      	</div>
+    </section>
+    <section>
+      	<div class="container">
+			<div class="card mb-3">
+				<a href="27_03_25_WebsiteRedesign/index.html" class="text-dark">
+					<div class="row no-gutters">
+						<div class="col-md-5"> <img src="27_03_25_WebsiteRedesign/Thumbnail.png" class="card-img" alt="..."> </div>
+						<div class="col-md-7">
+							<div class="card-body">
+								<h2 class="card-title">Website Redesign</h2>
+								<p class="card-text">Getting responsive and fresh for Ubisoft NEXT!</p>
+								<p class="card-text"><small class="text-muted">March 27, 2025</small></p>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="card mb-3">
+				<a href="06_11_24_Boids/index.html" class="text-dark">
+					<div class="row no-gutters">
+						<div class="col-md-5"> <img src="06_11_24_Boids/Thumbnail.png" class="card-img" alt="..."> </div>
+						<div class="col-md-7">
+							<div class="card-body">
+								<h2 class="card-title">Boids n' Keycards</h2>
+								<p class="card-text">My foray into the world of chaotic lil bird behaviour</p>
+								<p class="card-text"><small class="text-muted">November 6, 2024</small></p>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+      	</div>
+    </section>
+    <hr>
+    <footer class="text-center">
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-12">
+            		<p class="mb-0">Evan Daveikis 2025</p>
+			  		<small class="mt-0 pb-3 text-muted">Very clearly not a web designer but I'm trying to learn!</small>
+          		</div>
+        	</div>
+      	</div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
 </body>
 </html>
