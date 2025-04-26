@@ -118,7 +118,7 @@
 					<source src="Images/btdemo.mp4" type="video/mp4"/>
 				</video>
 				<figcaption>The setup in action - worked great for a trip</figcaption>
-			</figure>
+			</figure>c
 			<p>Great - the most important "mod" is pretty easily possible... what's next?</p>
 			
 			<hr>
@@ -211,10 +211,26 @@
 			<p>Now that I had access to both buses, I created another scuffed little board to read in the data:</p>
 			
 			<figure>
-				<img src="Images/canboardfront.jpg" style="height: 300px;" alt="Labelled photo of CAN bus wires">
-				<img src="Images/canboardback.jpg" style="height: 300px;" alt="Labelled photo of CAN bus wires">
-				<figcaption>Found the CAN bus wires with some searching online</figcaption>
+				<img src="Images/canboardfront.jpg" style="height: 300px;" alt="Front of CAN bus doohickey">
+				<img src="Images/canboardback.jpg" style="height: 300px;" alt="Back of CAN bus doohickey">
+				<figcaption>Another protoboard doohickey - an ESP8266 with two MCP2515 CAN transceivers.<br>
+					Note: the colour labels (yellow, green, etc.) are not correct here. It caused me a headache later.</figcaption>
 			</figure>
+			
+			<p>The ESP8266 on this module reads in the data from both CAN buses, parses information I want, then broadcasts it out using <a href="https://www.espressif.com/en/solutions/low-power-solutions/esp-now">ESP-NOW</a>
+			 (a wireless communication protocol for ESP8266 and ESP32 based boards) to whatever other modules are listening.</p>
+			
+			<figure>
+				<video controls height="250">
+					<source src="Images/candata.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>Reading CAN messages from the car's buses</figcaption>
+			</figure>
+			<p>I need to finish decoding all the CAN data I want to read in, but then it'll be up to each individual module to listen for the data and do stuff with it.</p>
+			
+			<h5>Carputer</h5>
+			I saw an x86 based router for sale on Facebook marketplace. What really piqued my interest was the power draw of the computer: ~7.5 watts, and the input is 12 volts.
+			Perfect for the car's existing power system! I went and bought the router/computer for $40.
       	</div>
     </section>
     <hr>
