@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="===DESCRIPTION HERE===">
+    <meta name="description" content="Mazda Mods: Part 1">
 	
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48"/>
 	<link rel="shortcut icon" href="/favicon.ico"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 	<link rel="manifest" href="/site.webmanifest"/>
 
-	<title>TITLE HERE (REMEMBER DESCRIPTION TOO)</title>
+	<title>Mazda Mods: Part 1</title>
 	<!-- Bootstrap -->
 	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
 	
@@ -75,8 +75,8 @@
         	<div class="container">
           		<div class="row justify-content-center">
             		<div class="col-12">
-              			<h1 style="text-decoration: underline; font-size: 4em">Blog Name Here</h1>
-						<p>Day Month, Year</p>
+              			<h1 style="text-decoration: underline; font-size: 4em">Mazda Mods: Part 1</h1>
+						<p>April 25, 2025</p>
 						<a href="/Blog/index.html"><button class="btn btn-primary btn-lg" type="button">Back to Blogs »</button></a>
             		</div>
           		</div>
@@ -86,17 +86,135 @@
     <section>
       	<div class="container">
         	<h2>Intro</h2>
-			<p>Hey!</p>
+			<p>This is my car:</p>
+			<figure>
+				<img src="Images/car.jpg" style="height: 300px;" alt="Picture of a white 2010 Mazda 3 Hatchback">
+				<figcaption>2010 Mazda 3 HB</figcaption>
+			</figure>
+			
+			<p>It's about as simple of a hatchback as you can get, while still having every creature comfort you need:</p>
+			<ul>
+				<li>No fancy computers or displays</li>
+				<li>Manual seats and controls</li>
+				<li>CD player and aux port</li>
+				<li>Air conditioning</li>
+				<li>Power windows &amp; locks</li>
+			</ul>
+			<p>It's perfect; exactly what I look for in a car. However, there are a couple of things I miss from my previous car... namely Bluetooth audio and heated seats. Whatever can be done about this!?</p>
+			<hr>
+			
+			<h2>Testing The Waters</h2>
+			<p>I've always loved tinkering, both with physical machines and with electronics. Why not just <em>add</em> the features I want to the car?</p>
+			<p>I started playing around with the idea in February this year. I decided a good place to start was Bluetooth audio - it makes listening to music (or map directions) a lot easier, and it would be a good proof of concept.</p>
+			<p>The ESP32 platform is where I looked immediately because of its support for <a href="https://www.bluetooth.com/learn-about-bluetooth/tech-overview/">Bluetooth Classic</a> (commonly used for audio streaming).
+			A quick search led me to <a href="https://www.instructables.com/Bluetooth-Audio-Digital-Signal-Processing-an-Ardui/">this article</a>, which walked through setting up an ESP32 to act as a Bluetooth audio receiver. Great.</p>
+			<p>Pair that with a digital-to-analog convertor (DAC), and you have a prototype ready to test:</p>
+			<figure>
+				<img src="Images/btprototype.jpg" style="height: 300px;" alt="Picture of a sketchy looking circuit board">
+				<figcaption>ESP32 and a DAC thrown together on a protoboard</figcaption>
+			</figure>
+			<figure>
+				<video controls height="250">
+					<source src="Images/btdemo.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>The setup in action - worked great for a trip</figcaption>
+			</figure>
+			<p>Great - the most important "mod" is pretty easily possible... what's next?</p>
 			
 			<hr>
+			
+			<h2>The Plans</h2>
+			<p>All throughout the school year my tinkering urge was killing me. I'd take breaks from working to go learn about CAN buses or plan out little projects.
+				Here's a non-comprehensive list of stuff I <em>might</em> want to do to the car:</p>
+			<ul>
+				<li>Bluetooth audio</li>
+				<ul>
+					<li>... hooked up to the cars controls (for skipping, rewinding)?</li>
+					<li>... with a landline phone hooked up as a car phone?</li>
+				</ul>
+				<li>Custom fuse box setup with switched and battery power</li>
+				<li>Speedometer HUD like <a href="https://www.youtube.com/watch?v=hjuuoNBPwUE">this one</a></li>
+				<li>Gear indicator using <a href="https://www.youtube.com/watch?v=QixtxaAda18">Hall effect sensors</a></li>
+				<li>Custom gauges/displays for things like coolant temperature, fuel economy</li>
+				<li>Smaller, less "angry" secondary horn for giving cars/pedestrians a little nudge</li>
+				<li>Nixie tubes!</li>
+				<li>CB Radio</li>
+				<li>Ceiling mounted TV (like in a minivan)</li>
+				<ul>
+					<li>... that would be connected to a computer (a car-puter)?</li>
+				</ul>
+				<li>Extra lights (e.g. LED lights inside the engine bay for working at night)</li>
+				<li>Ultrasonic parking range beepers</li>
+				<li>Heated seats</li>
+				<li>USB ports</li>
+				<ul>
+					<li>... with a built-in battery to charge stuff when car is off (not the car battery)?</li>
+					<li>... with a solar panel to charge this extra battery?</li>
+				</ul>
+			</ul>
+			
+			<hr>
+			
+			<h2>From Conceptual to Physical</h2>
+			<p>That's a lot of ideas. How will I actually get any off the ground? Well, I've already started.</p>
+			
+			<h5>Bluetooth Prototype</h5>
+			<p>As seen above, I've already made a prototype for the bluetooth audio system. What if I want to hook it up to the car's controls?</p>
+			
+			<h5>The CAN bus(es)</h5>
+			<p>Cars use what's called a <a href="https://en.wikipedia.org/wiki/CAN_bus">CAN bus</a> to allow all sorts of systems to communicate. The Mazda has 2:
+				a high speed bus for critical systems (e.g. engine), and a medium speed bus for less critical systems (like the stereo).</p>
+			<p>I spliced in to both buses (busses?) at the OBD2 port:</p>
+			
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/identifycanbus.jpg" style="height: 300px;" alt="Labelled photo of CAN bus wires">
+						<figcaption>Found the CAN bus wires with some searching online</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/braidedwires.jpg" style="height: 300px;" alt="Two braided cables with connectors on the end">
+						<figcaption>Created some extra wires to splice into the existing harness</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/removetrim.png" style="height: 300px;" alt="Photo of car wires behind the steering wheel">
+						<figcaption>Removed a bunch of trim to access OBD2 harness</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/canwires.png" style="height: 300px;" alt="Wires inside wire loom">
+						<figcaption>Found the wires inside the loom</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/cutwires.jpg" style="height: 300px;" alt="Four cut cables, two from each CAN bus">
+						<figcaption>Chop chop</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/splicewires.jpg" style="height: 300px;" alt="One CAN bus with a wire spliced into it">
+						<figcaption>Solder in the extra wires and clean everything up</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			<p>Now that I had access to both buses, I created another scuffed little board to read in the data:</p>
+			
 			<figure>
-				<img src="Images/example.jpg" style="height: 300px;" alt="alt text here - an image of (blank)">
-				<figcaption>Text description here.
-				  Can be multiple lines too!</figcaption>
+				<img src="Images/canboardfront.jpg" style="height: 300px;" alt="Labelled photo of CAN bus wires">
+				<img src="Images/canboardback.jpg" style="height: 300px;" alt="Labelled photo of CAN bus wires">
+				<figcaption>Found the CAN bus wires with some searching online</figcaption>
 			</figure>
-
-            <p>More text!</p>
-            <p>A link to <a href="https://example.com">something interesting</a>...</p>
       	</div>
     </section>
     <hr>
