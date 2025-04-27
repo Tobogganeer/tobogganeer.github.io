@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mazda Mods: Part 1">
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+	<link rel="manifest" href="/site.webmanifest"/>
+
+	<title>Mazda Mods: Part 1</title>
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+	
+	<style>
+		figure > img {
+			height: 280px;
+			border: 3px solid #888;
+		}
+
+		figure {
+			align-content: center;
+			text-align: center;
+			font-size: 1em;
+			font-style: italic;
+			color: #666;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/index.html">tobo.games</a>
+      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      	<span class="navbar-toggler-icon"></span>
+      	</button>
+      	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        	<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+            		<a class="nav-link" href="/Blog/index.html">Blog</a>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/portfolio.html">Portfolio</a>
+          		</li>
+          		<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            		Projects
+            		</a>
+            		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  	<a class="dropdown-item" href="/Projects/index.html">Project Home Page</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/Projects/DesignWeek/index.html">Design Week</a>
+					  	<a class="dropdown-item" href="/Projects/Personal/index.html">Teenage Experiments</a>
+					  	<a class="dropdown-item" href="/Projects/School/index.html">School Projects</a>
+					  	<div class="dropdown-divider"></div>
+					  	<a class="dropdown-item" href="/Projects/Modelling/index.html">3D Modelling</a>
+            		</div>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a>
+          		</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub">
+						<img src="/images/github-mark-white.svg" width="20" height="20" alt="Github logo">
+					</a>
+          		</li>
+        	</ul>
+      	</div>
+    </nav>
+    <section>
+      	<div class="jumbotron text-center mt-2 p-4">
+        	<div class="container">
+          		<div class="row justify-content-center">
+            		<div class="col-12">
+              			<h1 style="text-decoration: underline; font-size: 4em">Mazda Mods: Part 1</h1>
+						<p>April 25, 2025</p>
+						<a href="/Blog/index.html"><button class="btn btn-primary btn-lg" type="button">Back to Blogs »</button></a>
+            		</div>
+          		</div>
+			</div>
+      	</div>
+    </section>
+    <section>
+      	<div class="container">
+        	<h2>Intro</h2>
+			<p>This is my car:</p>
+			<figure>
+				<img src="Images/car.jpg" style="height: 300px;" alt="Picture of a white 2010 Mazda 3 Hatchback">
+				<figcaption>2010 Mazda 3 HB</figcaption>
+			</figure>
+			
+			<p>It's about as simple of a hatchback as you can get, while still having every creature comfort you need:</p>
+			<ul>
+				<li>No fancy computers or displays</li>
+				<li>Manual seats and controls</li>
+				<li>CD player and aux port</li>
+				<li>Air conditioning</li>
+				<li>Power windows &amp; locks</li>
+			</ul>
+			<p>It's perfect; exactly what I look for in a car. However, there are a couple of things I miss from my previous car... namely Bluetooth audio and heated seats. Whatever can be done about this!?</p>
+			<hr>
+			
+			<h2>Testing The Waters</h2>
+			<p>I've always loved tinkering, both with physical machines and with electronics. Why not just <em>add</em> the features I want to the car?</p>
+			<p>I started playing around with the idea in February this year. I decided a good place to start was Bluetooth audio - it makes listening to music (or map directions) a lot easier, and it would be a good proof of concept.</p>
+			<p>The ESP32 platform is where I looked immediately because of its support for <a href="https://www.bluetooth.com/learn-about-bluetooth/tech-overview/">Bluetooth Classic</a> (commonly used for audio streaming).
+			A quick search led me to <a href="https://www.instructables.com/Bluetooth-Audio-Digital-Signal-Processing-an-Ardui/">this article</a>, which walked through setting up an ESP32 to act as a Bluetooth audio receiver. Great.</p>
+			<p>Pair that with a digital-to-analog convertor (DAC), and you have a prototype ready to test:</p>
+			<figure>
+				<img src="Images/btprototype.jpg" style="height: 300px;" alt="Picture of a sketchy looking circuit board">
+				<figcaption>ESP32 and a DAC thrown together on a protoboard</figcaption>
+			</figure>
+			<figure>
+				<video controls height="250">
+					<source src="Images/btdemo.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>The setup in action - worked great for a trip</figcaption>
+			</figure>c
+			<p>Great - the most important "mod" is pretty easily possible... what's next?</p>
+			
+			<hr>
+			
+			<h2>The Plans</h2>
+			<p>All throughout the school year my tinkering urge was killing me. I'd take breaks from working to go learn about CAN buses or plan out little projects.
+				Here's a non-comprehensive list of stuff I <em>might</em> want to do to the car:</p>
+			<ul>
+				<li>Bluetooth audio</li>
+				<ul>
+					<li>... hooked up to the cars controls (for skipping, rewinding)?</li>
+					<li>... with a landline phone hooked up as a car phone?</li>
+				</ul>
+				<li>Custom fuse box setup with switched and battery power</li>
+				<li>Speedometer HUD like <a href="https://www.youtube.com/watch?v=hjuuoNBPwUE">this one</a></li>
+				<li>Gear indicator using <a href="https://www.youtube.com/watch?v=QixtxaAda18">Hall effect sensors</a></li>
+				<li>Custom gauges/displays for things like coolant temperature, fuel economy</li>
+				<li>Smaller, less "angry" secondary horn for giving cars/pedestrians a little nudge</li>
+				<li>Nixie tubes!</li>
+				<li>CB Radio</li>
+				<li>Ceiling mounted TV (like in a minivan)</li>
+				<ul>
+					<li>... that would be connected to a computer (a car-puter)?</li>
+				</ul>
+				<li>Extra lights (e.g. LED lights inside the engine bay for working at night)</li>
+				<li>Ultrasonic parking range beepers</li>
+				<li>Heated seats</li>
+				<li>USB ports</li>
+				<ul>
+					<li>... with a built-in battery to charge stuff when car is off (not the car battery)?</li>
+					<li>... with a solar panel to charge this extra battery?</li>
+				</ul>
+			</ul>
+			
+			<hr>
+			
+			<h2>From Conceptual to Physical</h2>
+			<p>That's a lot of ideas. How will I actually get any off the ground? Well, I've already started.</p>
+			
+			<h5>Bluetooth Prototype</h5>
+			<p>As seen above, I've already made a prototype for the bluetooth audio system. What if I want to hook it up to the car's controls?</p>
+			
+			<h5>The CAN bus(es)</h5>
+			<p>Cars use what's called a <a href="https://en.wikipedia.org/wiki/CAN_bus">CAN bus</a> to allow all sorts of systems to communicate. The Mazda has 2:
+				a high speed bus for critical systems (e.g. engine), and a medium speed bus for less critical systems (like the stereo).</p>
+			<p>I spliced in to both buses (busses?) at the OBD2 port:</p>
+			
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/identifycanbus.jpg" style="height: 300px;" alt="Labelled photo of CAN bus wires">
+						<figcaption>Found the CAN bus wires with some searching online</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/braidedwires.jpg" style="height: 300px;" alt="Two braided cables with connectors on the end">
+						<figcaption>Created some extra wires to splice into the existing harness</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/removetrim.png" style="height: 300px;" alt="Photo of car wires behind the steering wheel">
+						<figcaption>Removed a bunch of trim to access OBD2 harness</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/canwires.png" style="height: 300px;" alt="Wires inside wire loom">
+						<figcaption>Found the wires inside the loom</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/cutwires.jpg" style="height: 300px;" alt="Four cut cables, two from each CAN bus">
+						<figcaption>Chop chop</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/splicewires.jpg" style="height: 300px;" alt="One CAN bus with a wire spliced into it">
+						<figcaption>Solder in the extra wires and clean everything up</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			<p>Now that I had access to both buses, I created another scuffed little board to read in the data:</p>
+			
+			<figure>
+				<img src="Images/canboardfront.jpg" style="height: 300px;" alt="Front of CAN bus doohickey">
+				<img src="Images/canboardback.jpg" style="height: 300px;" alt="Back of CAN bus doohickey">
+				<figcaption>Another protoboard doohickey - an ESP8266 with two MCP2515 CAN transceivers.<br>
+					Note: the colour labels (yellow, green, etc.) are not correct here. It caused me a headache later.</figcaption>
+			</figure>
+			
+			<p>The ESP8266 on this module reads in the data from both CAN buses, parses information I want, then broadcasts it out using <a href="https://www.espressif.com/en/solutions/low-power-solutions/esp-now">ESP-NOW</a>
+			 (a wireless communication protocol for ESP8266 and ESP32 based boards) to whatever other modules are listening.</p>
+			
+			<figure>
+				<video controls height="250">
+					<source src="Images/candata.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>Reading CAN messages from the car's buses</figcaption>
+			</figure>
+			<p>I need to finish decoding all the CAN data I want to read in, but then it'll be up to each individual module to listen for the data and do stuff with it.</p>
+			
+			<h5>Carputer</h5>
+			<p>I saw an x86 based router for sale on Facebook marketplace. Recent enough 4 core processor and 2GB of DDR3. What really piqued my interest was the power draw of the computer: ~7.5 watts, and the input is 12 volts.
+				Perfect for the car's existing power system! I went and bought the router/computer for $40.</p>
+			<p>The biggest hurdle to get over initially was the storage: It had 4gb of EMMC storage. Perfect for installing RouterOS, but not great if I want to watch movies or play some games.
+			I decided to see what I could do with this limited space:</p>
+			<figure>
+				<img src="Images/puppylinux.jpg" style="height: 300px;" alt="Computer booting up">
+				<figcaption>Puppy Linux!</figcaption>
+			</figure>
+			<p>Puppy linux seemed like a great way to test whether it was even feasible to turn this router into a car-puter. It was easy enough: clear CMOS to get into the BIOS, then just boot from a USB.</p>
+			<p>My initial plan was to install puppy linux onto the 4GB internal drive, then bring movies to the carputer on a USB drive. After a bit of deliberation, I thought that seemed a bit boring.
+				If it doesn't have fragile, janky wiring, does it truly have my touch?</p>
+			
+			<div class="row">
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/carputerparts.jpg" style="height: 300px;" alt="Computer parts: keyboard, display, SSD">
+						<figcaption>Wireless keyboard, small display, and a 128GB SSD</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/carputervoltage.jpg" style="height: 300px;" alt="Reading voltage of some pins">
+						<img src="Images/carputersatapower.jpg" style="height: 300px;" alt="Cut off sATA power cable">
+						<figcaption>I'm not sure what this connector is - it isn't a fan header like I thought.<br>
+							However, it has 5v and 12v, so it seems like it's meant for SATA power?</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/carputerpowersetup.jpg" style="height: 300px;" alt="Wires connected to pins">
+						<figcaption>No connector I had was small enough to fit in here, so I just crimped terminals onto the ends and put them directly in. Hopefully they stay insulated?</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/carputerbooting.jpg" style="height: 300px;" alt="Carputer booting up">
+						<figcaption>It boots mwahahaha</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			<p>I ran into some odd issues with the little display: everything would work great on my desktop monitors, but when I was only connected to the little display it would be scaled wrong
+				(looked like the computer thought it was larger than it was - things were cut off, I couldn't see my windows, etc.).</p>
+			<p>After switching to linux mint didn't fix these issues, I discovered the actual cause - it was the cheap HDMI cable that came with the display.
+				Another HDMI cable fixed the issues immediately. Occam's Razor, huh?</p>
+			<p>With the carputer having the storage space and ability to play movies, I decided to give it WiFi as a final touch:</p>
+			
+			<div class="row">
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/carputerwifi.jpg" style="height: 300px;" alt="WiFi card installed in carputer">
+						<figcaption>I replaced the old networking card with a little WiFi card and routed the antennas to the side</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/carputerfinal.jpg" style="height: 300px;" alt="Carputer connected to display">
+						<figcaption>The final little device</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			<p>Now I should be able to park in a driveway or parking lot and stream/download videos, catch up on emails, even play some basic games. Not bad, huh?</p>
+			
+			<hr>
+			
+			<h2>So... What's Next?</h2>
+			<p>I've got plans, and I've already tinkered around with a couple of tricky pieces. I don't have a concrete idea of what I want to start with, but I've got all summer to play around and learn along the way.
+			Here's my basic idea of how I want to do things (subject to change):</p>
+			
+			<h5>Prerequisites</h5>
+			<p>Most electronic mods depend on some core work being done first:</p>
+			<ol>
+				<li>Get the custom fusebox installed and wired correctly and safely. All of the electronic mods will get power from here.</li>
+				<li>Get the CAN data sender module installed. This will involve a lot more sniffing (deciphering what packets have what data) and finishing up the firmware.</li>
+				<li>Add some OLED modules to the dash (for things like Bluetooth, car data like coolant temp, backup proximity sensors, etc.)</li>
+				<li>Create an audio multiplexer. All audio I want to feed to the car is going through the aux port, so I need a way to switch between a ton of source inputs.</li>
+			</ol>
+			<h5>Projects</h5>
+			<ol>
+				<li>Hardwire my dash cam to the custom fuse box and install the back cam</li>
+				<li>Get the Bluetooth module fully integrated, including getting hooked up into the car's controls. This will probably be the largest QOL mod for me</li>
+				<li>Custom gauges/data displays so I can see coolant temp and fuel economy</li>
+				<li>Add USB ports to the car to charge devices</li>
+				<li>Speedometer HUD</li>
+				<li>Gear indicator (maybe a shift indicator too?)</li>
+				<li>Carputer installed into car</li>
+				<li>CB Radio</li>
+				<li>Backup proximity display/indicator/beeper</li>
+				<li>... etc</li>
+			</ol>
+			
+			<h2>Summary</h2>
+			<p>I want to do lots to this car. I get to learn about tons of electronic components, make my ride a little nicer, and it's a ton of fun.</p>
+			<p>I have lots of plans, have done some tinkering and experimenting, and am ready to jump into it with the warm weather.</p>
+      	</div>
+    </section>
+    <hr>
+    <footer class="text-center">
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-12">
+            		<p class="mb-0">Evan Daveikis 2025</p>
+			  		<small class="mt-0 pb-3 text-muted">Very clearly not a web designer but I'm trying to learn!</small>
+          		</div>
+        	</div>
+      	</div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
