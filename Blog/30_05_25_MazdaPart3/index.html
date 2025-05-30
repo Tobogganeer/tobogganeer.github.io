@@ -102,13 +102,47 @@
 			
 			<figure>
 				<img src="Images/controlsv1.png" style="height: 300px;" alt="3D model of a bunch of switches and buttons">
+				<img src="Images/controlsv1print.jpg" style="height: 300px;" alt="3D print of the model with switches and a button in place">
 				<figcaption>Sizing out how many buttons, switches, etc. can fit on the panel. Can you spot my mistake?</figcaption>
 			</figure>
 			
-			<p>One error I made with the first iteration was making it the size of the <em>entire</em> top panel I pulled off. </p>
+			<p>One error I made with the first iteration was making it the size of the <em>entire</em> top panel I pulled off - I don't actually have that much room!</p>
 
-            <p>More text!</p>
-            <p>A link to <a href="https://example.com">something interesting</a>...</p>
+			<figure>
+				<img src="Images/controlsizeerror.png" style="height: 300px;" alt="Labelled diagram of the entire panel vs the small section I can work with">
+				<figcaption>Unless I want to start cutting the OEM trim, I need to fit in the green area.</figcaption>
+			</figure>
+			
+			<p>With that, I started on V2:</p>
+			
+			<figure>
+				<img src="Images/controlsv2cad.png" style="height: 300px;" alt="3D model of a bunch of switches and buttons">
+				<img src="Images/controlsv2pla.jpg" style="height: 300px;" alt="3D print of the model with switches and a button in place">
+				<img src="Images/controlsv2petg.jpg" style="height: 300px;" alt="3D print of the model with switches and a button in place">
+				<figcaption>V2 is smaller, and also angles the display for easier viewing. Test print in PLA, final print in PETG for temperature resistance.</figcaption>
+			</figure>
+			
+			<p>The switches will toggle components on and off, the large button is for a horn, the small buttons are extra, and the dial/rotary encoder is for controlling the info display.</p>
+			
+			<p>I still need to decide how to mount this to the trim - should I replace the top ABS piece, cut into it, etc.? I'm not sure yet.</p>
+			
+			<hr>
+			
+			<h2>Fuse Box(es)</h2>
+			<p>All the new stuff I'm adding needs power. To make it easy and safe to deliver, I'm going to add two new fuseboxes: a small one fed directly from the battery, and a larger one running on switches power (only on when the car's on).</p>
+			<p>I'm no electrical engineer and not great when it comes to electricity. I want to make sure I don't light the car on fire, so here's my plan for keeping things safe:</p>
+			
+			<ul>
+				<li>All systems I'm adding shouldn't draw more than ~25A, so I'll use 8 AWG wire from the battery to the fuse box</li>
+				<li>Put a 40A fuse right next to the battery just in case things go terribly wrong</li>
+				<li>Put a breaker inside the car so I can cut power to the battery-fed box (moreso for leaving the car off for long periods of time)</li>
+				<li>Relay between the battery and accessory box, activated by a tap into the cigarette lighter fuse</li>
+				<li>Fuses for each individual circuit</li>
+				<li>Most circuits will run on 5V using switch-mode buck convertors</li>
+			</ul>
+			
+			<p>From there it's just running wires from the components back to the fuse box, using wire loom and tape where necessary.</p>
+			
       	</div>
     </section>
     <hr>
