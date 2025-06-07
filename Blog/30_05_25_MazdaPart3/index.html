@@ -206,7 +206,7 @@
 			<div class="row">
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/audioswitcher.jpg" style="height: 300px;" alt="">
+						<img src="Images/audioswitcher.jpg" style="height: 300px;" alt="A bunch of wires and chips">
 						<figcaption>Display, rotary encoder, ESP8266, two CD4052B's, and some aux ports for testing</figcaption>
 					</figure>
 				</div>
@@ -223,6 +223,26 @@
 			<hr>
 			<p>It remains to be seen whether this solution will have noise, or work at all, but it's a good start.</p>
 			
+			<hr>
+			
+			<h2>CAN Sniffing</h2>
+			<p>I found two great sources for the <a href="https://docs.google.com/spreadsheets/d/1SKfXAyo6fbAfMUENw1KR3w4Fvx_Ihj6sTPSVXBdOXKk/edit?gid=0#gid=0">HS</a> and <a href="https://docs.google.com/spreadsheets/d/1wjpo5WGLxsswjUi0MUDwKySKp3XejPfE5vdeieBFiGY/edit?gid=0#gid=0">MS</a> CAN buses online.
+			They have some decoded CAN packets and were a great place to start, though not entirely accurate to my car (e.g. the MS CAN bus runs at 125kbps rather than 250, some CAN IDs don't match up, etc.</p>
+			
+			<p>All I really have to say about it is that I'm working on parsing in the data so I can send it out to all other modules:</p>
+			
+			<figure>
+				<img src="Images/extractingdata.jpg" style="height: 300px;" alt="Data printed from the car (speed, RPM, etc)">
+				<img src="Images/extractingrpm.png" style="height: 300px;" alt="Excel sheet graphing RPM over time">
+				<figcaption>I made a little Python script to export the serial data as a CSV file so I can analyze it in Excel</figcaption>
+			</figure>
+			
+			<p>I have a couple things I want to see if I can find like oil pressure, what doors are opened, and if the clutch is pressed.</p>
+			
+			<hr>
+			<h2>Summary</h2>
+			<p>I've been doing a lot of 3D printing! My poor print bed looks like a minefield - about 15% of it is unusable by now (maybe I can replace it with painter's tape?). There's still more to do - figure out a working fuse box mount, panel for the audio switcher display and controls, panel for a gear indicator display, USB port panels, etc. But I'm making stuff, learning, having fun and getting there!</p>
+			<p>Even if all I accomplish is Bluetooth audio and a way to see my fuel economy I'll be happy. I just like tinkering :)</p>
       	</div>
     </section>
     <hr>
