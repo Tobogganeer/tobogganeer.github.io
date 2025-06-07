@@ -143,6 +143,86 @@
 			
 			<p>From there it's just running wires from the components back to the fuse box, using wire loom and tape where necessary.</p>
 			
+			<p>I'm currently working on prototyping the fuse box mounting, but here's where I'm at so far:</p>
+			
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseboxsizing.jpg" style="height: 300px;" alt="Fuse box loosely placed in car frame">
+						<figcaption>This seems like a good place to put the boxes</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseboxv1cad.png" style="height: 300px;" alt="Blender model of fuse box mounting">
+						<figcaption>Version 1 in Blender</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseboxv1.jpg" style="height: 300px;" alt="3D printed mounting with fuse boxes attached">
+						<figcaption>Rough print of V1 with boxes and relay mounted</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseboxv1size.jpg" style="height: 300px;" alt="Printed and mounted box placed in car for sizing">
+						<figcaption>Not a great fit, and this isn't even both boxes...</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseboxv2cad.png" style="height: 300px;" alt="Second version of mounting in Blender">
+						<figcaption>Version two, mounting on front and back</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseboxv2.jpg" style="height: 300px;" alt="Second version printed out">
+						<figcaption>Relay and battery fuse box are mounted on the backside</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<p>I haven't sized this one up in the car yet, so that's about where the power situation lies for now. If the fit is good, I'll add a way to attach the mounting bracket to that metal rail and print it in PETG. Then there's some wiring to the battery and a fuse tap, and then I'm good to start adding things (exciting!).</p>
+			
+			<hr>
+			
+			<h2>Audio Switcher</h2>
+			<p>I'm going to have a million (5) different audio sources I need to get into the car (aux, USB, Lightning, Bluetooth, carputer). I'm going to hijack the car's aux port, selecting which input I want to feed in through a little control knob. So... how am I gonna do this?</p>
+			
+			<p>Starting out, my idea was to make a switchboard with a million aux cables that you manually plug into one port.<br>
+				Pros: Cool n fun<br>
+				Cons: You need to take your eyes off the road and hands off the wheel<br>
+			So I looked into digital (or should I say analog) options.</p>
+			
+			<p>Relays seemed like a good first step, and in the <a href="https://forum.arduino.cc/t/using-an-arduino-uno-as-an-audio-switch/679015/3">comments of a forum post</a> I learned about the existence of solid-state analog relays (analog multi and de-multiplexers. I looked up datasheets for a bunch of different demultiplexers and settled on the <a href="https://www.ti.com/lit/ds/symlink/cd4051b.pdf">CD4052B</a> from TI. The 4052 specifically has 4 sets of stereo inputs that I'm feeding into one output. I have two of these chips, with one hooked into the other. This means I have 7 total inputs (giving me two extra if I ever add any more audio tomfoolery).</p>
+			
+			<p>That's a lot of text, here are some pretty pictures:</p>
+			<div class="row">
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/audioswitcher.jpg" style="height: 300px;" alt="">
+						<figcaption>Display, rotary encoder, ESP8266, two CD4052B's, and some aux ports for testing</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-6">
+					<figure>
+						<video controls height="250">
+							<source src="Images/audioworking.mp4" type="video/mp4"/>
+						</video>
+						<figcaption>Hard to hear, but when I switch to Aux you can hear audio coming through</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			<p>It remains to be seen whether this solution will have noise, or work at all, but it's a good start.</p>
+			
       	</div>
     </section>
     <hr>
