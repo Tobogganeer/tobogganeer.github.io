@@ -192,7 +192,7 @@
 			
 			<hr>
 			
-			<h2>Audio Switcher</h2>
+			<h2 id="audioswitcher">Audio Switcher</h2>
 			<p>I'm going to have a million (5) different audio sources I need to get into the car (aux, USB, Lightning, Bluetooth, carputer). I'm going to hijack the car's aux port, selecting which input I want to feed in through a little control knob. So... how am I gonna do this?</p>
 			
 			<p>Starting out, my idea was to make a switchboard with a million aux cables that you manually plug into one port.<br>
@@ -200,7 +200,7 @@
 				Cons: You need to take your eyes off the road and hands off the wheel<br>
 			So I looked into digital (or should I say analog) options.</p>
 			
-			<p>Relays seemed like a good first step, and in the <a href="https://forum.arduino.cc/t/using-an-arduino-uno-as-an-audio-switch/679015/3">comments of a forum post</a> I learned about the existence of solid-state analog relays (analog multi and de-multiplexers. I looked up datasheets for a bunch of different demultiplexers and settled on the <a href="https://www.ti.com/lit/ds/symlink/cd4051b.pdf">CD4052B</a> from TI. The 4052 specifically has 4 sets of stereo inputs that I'm feeding into one output. I have two of these chips, with one hooked into the other. This means I have 7 total inputs (giving me two extra if I ever add any more audio tomfoolery).</p>
+			<p>Relays seemed like a good first step, and in the <a href="https://forum.arduino.cc/t/using-an-arduino-uno-as-an-audio-switch/679015/3" target="_blank">comments of a forum post</a> I learned about the existence of solid-state analog relays (analog multi and de-multiplexers. I looked up datasheets for a bunch of different demultiplexers and settled on the <a href="https://www.ti.com/lit/ds/symlink/cd4051b.pdf" target="_blank">CD4052B</a> from TI. The 4052 specifically has 4 sets of stereo inputs that I'm feeding into one output. I have two of these chips, with one hooked into the other. This means I have 7 total inputs (giving me two extra if I ever add any more audio tomfoolery).</p>
 			
 			<p>That's a lot of text, here are some pretty pictures:</p>
 			<div class="row">
@@ -226,7 +226,7 @@
 			<hr>
 			
 			<h2>CAN Sniffing</h2>
-			<p>I found two great sources for the <a href="https://docs.google.com/spreadsheets/d/1SKfXAyo6fbAfMUENw1KR3w4Fvx_Ihj6sTPSVXBdOXKk/edit?gid=0#gid=0">HS</a> and <a href="https://docs.google.com/spreadsheets/d/1wjpo5WGLxsswjUi0MUDwKySKp3XejPfE5vdeieBFiGY/edit?gid=0#gid=0">MS</a> CAN buses online.
+			<p>I found two great sources for the <a href="https://docs.google.com/spreadsheets/d/1SKfXAyo6fbAfMUENw1KR3w4Fvx_Ihj6sTPSVXBdOXKk/edit?gid=0#gid=0" target="_blank">HS</a> and <a href="https://docs.google.com/spreadsheets/d/1wjpo5WGLxsswjUi0MUDwKySKp3XejPfE5vdeieBFiGY/edit?gid=0#gid=0" target="_blank">MS</a> CAN buses online.
 			They have some decoded CAN packets and were a great place to start, though not entirely accurate to my car (e.g. the MS CAN bus runs at 125kbps rather than 250, some CAN IDs don't match up, etc.</p>
 			
 			<p>All I really have to say about it is that I'm working on parsing in the data so I can send it out to all other modules:</p>
