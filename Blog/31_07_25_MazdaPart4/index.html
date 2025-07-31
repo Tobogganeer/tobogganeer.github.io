@@ -90,14 +90,82 @@
 			<p>So I worked my butt off and got a bunch of stuff installed. Let's have a look!</p>
 			
 			<hr>
+			
+			<h2>Power</h2>
+			<p>The mods need power, so I started by finishing up the installation of the custom fuse box. As a refresher, the power system...</p>
+			<ul>
+				<li>Has battery and switched power (power only on when the car is on)</li>
+				<li>Uses separate, custom fuse boxes (not the car's fuse boxes)</li>
+				<li>Has fuses and a breaker (to avoid going up in flames)</li>
+			</ul>
+			
+			<p>The V3 fuse box looks like this:</p>
+			
 			<figure>
-				<img src="Images/example.jpg" style="height: 300px;" alt="alt text here - an image of (blank)">
-				<figcaption>Text description here.
-				  Can be multiple lines too!</figcaption>
+				<img src="Images/fusev3.png" style="height: 300px;" alt="Blender screenshot of the fuse box mounting bracket">
+				<img src="Images/fusewiring.jpg" style="height: 300px;" alt="Fuse boxes mounted to the bracket">
+				<figcaption>V3 mount with boxes mounted. The relay (for switched power) taps into the car's 12v outlet.</figcaption>
 			</figure>
 
-            <p>More text!</p>
-            <p>A link to <a href="https://example.com">something interesting</a>...</p>
+            <p>And here's what it looks like in the car:</p>
+			
+			<figure>
+				<img src="Images/fuserelay.jpg" style="height: 400px;" alt="Fuse box mounted inside car">
+				<figcaption>Note: This isn't what the final install looks like.</figcaption>
+			</figure>
+			
+			<p>The trickier part of the install was wiring into the car's battery. I had to take off wipers (and motor), the cowling, and remove a bunch of crud just to get at the firewall. Here are some pretty pictures:</p>
+			
+			<div class="row">
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/fusedisassembly.jpg" style="height: 300px;" alt="Inside engine bay with bits hanging off">
+						<figcaption>A bunch had to come out of the engine bay to get at the firewall</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-6">
+					<figure>
+						<img src="Images/fusegrommet.jpg" style="height: 300px;" alt="Wires running through rubber grommet">
+						<figcaption>I routed my wires along the factory harness</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fusebatterycable.jpg" style="height: 300px;" alt="Wire hooked up to car battery">
+						<figcaption>Zip ties and wire loom to keep it safe. Note the fuse under the battery handle</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fusebreaker.jpg" style="height: 300px;" alt="Breaker installed in car">
+						<figcaption>Breaker mounted in car for quick access</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/fuseshroudedcables.jpg" style="height: 300px;" alt="Wires inside wire loom running from breaker">
+						<figcaption>Everything gets loomed and heatshrunk(shrinked?)</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<p>A voltmeter showed me that the battery and switched power was working as expected. With that, I had power all sorted out.</p>
+			
+			<hr>
+			<h2>Bluetooth</h2>
+			<p>An early prototype of the Bluetooth module was the first thing I made - it just used sample code from a library, a cigar lighter power adapter and an aux cord. I wanted something more sophisticated and integrated into the car.</p>
+			
+			<p>I decided to split the Bluetooth functionality into two modules - the audio portion which handles device connection and audio streaming, and the controller which handles user input and displaying information. I started on the hardware side first:</p>
+			
+			<figure>
+				<img src="Images/display3d.png" style="height: 300px;" alt="Blender screenshot of car dash with displays">
+				<img src="Images/fittedpanels.jpg" style="height: 300px;" alt="Car dash piece with 3d printed display mounts">
+				<figcaption>A 20x4 LCD display for bluetooth, and a small OLED display for the audio switcher</figcaption>
+			</figure>
       	</div>
     </section>
     <hr>
