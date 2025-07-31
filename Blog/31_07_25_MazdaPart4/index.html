@@ -157,7 +157,8 @@
 			
 			<hr>
 			<h2>Bluetooth</h2>
-			<p>An early prototype of the Bluetooth module was the first thing I made - it just used sample code from a library, a cigar lighter power adapter and an aux cord. I wanted something more sophisticated and integrated into the car.</p>
+			<p>An early prototype of the Bluetooth module was the first thing I made - it just used <a href="https://github.com/tierneytim/btAudio/blob/master/examples/minimalAudio/minimalAudio.ino" target="_blank">
+				sample code from a library</a>, a cigar lighter power adapter and an aux cord. I wanted something more sophisticated and integrated into the car.</p>
 			
 			<p>I decided to split the Bluetooth functionality into two modules - the audio portion which handles device connection and audio streaming, and the controller which handles user input and displaying information. I started on the hardware side first:</p>
 			
@@ -165,6 +166,134 @@
 				<img src="Images/display3d.png" style="height: 300px;" alt="Blender screenshot of car dash with displays">
 				<img src="Images/fittedpanels.jpg" style="height: 300px;" alt="Car dash piece with 3d printed display mounts">
 				<figcaption>A 20x4 LCD display for bluetooth, and a small OLED display for the <a href="../30_05_25_MazdaPart3/index.html#audioswitcher" target="_blank">audio switcher</a></figcaption>
+			</figure>
+			
+			<figure>
+				<img src="Images/assembleddisplays.jpg" style="height: 300px;" alt="Back of display modules with wires visible">
+				<img src="Images/installeddisplays.jpg" style="height: 300px;" alt="Displays installed and working in car">
+				<figcaption>Both modules are just a display and a rotary encoder/button</figcaption>
+			</figure>
+			
+			<p>The install isn't the prettiest on account of my filament or CAD skills (Blender), but it works.</p>
+			
+			<p>The software side was a whole other story. I wanted something that felt like a car bluetooth system - remember multiple devices, menus to connect and switch devices, display song info, etc.</p>
+			
+			<figure>
+				<img src="Images/btdisplaybug.jpg" style="height: 200px;" alt="LCD display showing song info and jarbled icons">
+				<figcaption>Testing song info. There was some weird corruption with custom characters - could never replicate</figcaption>
+			</figure>
+			
+			<p>I don't have many pretty pictures to show on the software development side of things - you can check the <a href="https://github.com/Tobogganeer/ToboArduino" target="_blank">Github repo</a> to see how it developed over time.</p>
+			
+			<p>To talk briefly about how the system functions...</p>
+			<ul>
+				<li><a href="https://www.espressif.com/en/products/socs/esp32" target="_blank">ESP32</a> to handle Bluetooth connection and audio streaming, <a href="https://www.espressif.com/en/products/socs/esp8266" target="_blank">ESP8266</a> to handle display</li>
+				<li>Modules communicate wirelessly via <a href="https://www.espressif.com/en/solutions/low-power-solutions/esp-now" target="_blank">ESP-NOW</a></li>
+				<li>Audio module sends information (song info, saved device address and names) and callbacks (connected, play state)</li>
+				<li>Controller module issues commands (pause, play, connect, disconnect, etc.)</li>
+				<li>Controller uses a state machine internally (<a href="https://github.com/Tobogganeer/ToboArduino/blob/main/BluetoothController/Bluetooth%20Flow%20Diagram.pdf" target="_blank">link to diagram</a>) to manage menus, display, etc</li>
+			</ul>
+			
+			<p>One thing that disappointed me was that I can't seem to get the current play time of playing songs - it seems like either my phone or the ESP32 I am using <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/bluetooth/esp_avrc.html#_CPPv440esp_avrc_ct_send_get_rn_capabilities_cmd7uint8_t" target="_blank">doesn't support it</a>. Oh well.</p>
+			
+			<p>Keep reading or <a href="#displays">jump down</a> to see the Bluetooth in action.</p>
+			
+			<hr>
+			<h2>Info Display</h2>
+			<p>I wanted to see my fuel economy, estimated range, and coolant temperature - especially important when you are driving across the country. I'd done all the CAN sniffing I need to do - I just needed to hook up a display and install the CAN data sender. So I did.</p>
+			
+			<div class="row">
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/datasender.jpg" style="height: 300px;" alt="PCB sticking out side of exposed panel in car">
+						<figcaption>The CAN info sender sticks out the side for easy access</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/reprogramming.jpg" style="height: 300px;" alt="USB cable hooked into exposed PCB">
+						<figcaption>... Easy access is useful when you need to update the software :)</figcaption>
+					</figure>
+				</div>
+				<div class="col col-md-4">
+					<figure>
+						<img src="Images/reprogrammingdisplay.jpg" style="height: 300px;" alt="Info display pried up with USB cable running into hole">
+						<figcaption>The display microcontroller (ESP8266) is also easy to access</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<p>None of the buttons or switched on the panel are functional yet - I was in a rush to get everything installed before the trip and didn't care much to hook anything up yet. I had the breaker installed when I wanted to turn everything off.</p>
+			
+			<p>Here's the info display and Bluetooth in action:</p>
+			
+			<figure id="displays">
+				<video controls height="300">
+					<source src="Images/complete.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>The dials are used to navigate through menus</figcaption>
+			</figure>
+			
+			<hr>
+			<h2>Reverse Camera</h2>
+			<p>I have a dashcam in my car. It has a front and rear camera, but I was waiting to install the rear camera so I could get a clean installation. I had some downtime on the farm so I tore apart the car and installed it:</p>
+			
+			<figure>
+				<img src="Images/reversecam.jpg" style="height: 350px;" alt="Trunk of car with trim removed and wires visible">
+				<img src="Images/reversecam2.jpg" style="height: 350px;" alt="Car side doors open with weatherstripping hanging off">
+				<figcaption>The camera wires run all along the trim and <u>behind</u> the airbags</figcaption>
+			</figure>
+			
+			<hr>
+			<h2>What's Next?</h2>
+			<p>I'm happy with the install so far - things are finally coming together. However, it is a bit haphazard and needs some work:</p>
+			<ul>
+				<li>Bug fixes, especially for Bluetooth (some are done, just waiting for me to install the updates)</li>
+				<ul>
+					<small><li>Disconnecting doesn't work great, favouriting is buggy, display can bug when no song is playing</li></small>
+				</ul>
+				<li>Hook up switches on control panel where needed</li>
+				<li>Make audio switcher functional (Bluetooth is hardwired into AUX port at the moment)</li>
+			</ul>
+			
+			<h4>Audio Switcher</h4>
+			<p>I started work on the audio switcher before the trip, but didn't have time to finish it:<br>
+			<small>(I should probably learn a proper program for doing circuit diagrams :P)</small></p>
+			
+			<figure>
+				<img src="Images/audioswitcherwip.jpg" style="height: 300px;" alt="Protoboard with components attached - no wires">
+				<img src="Images/audioswitcherwiring.jpg" style="height: 300px;" alt="Wiring diagram overlay for components">
+				<figcaption>Five inputs, one output, two demultiplexers, microcontroller (ESP8266)</figcaption>
+			</figure>
+			
+			<h4>CAN Sniffing</h4>
+			<p>I also did a bit more CAN sniffing - I found a program called SavvyCAN and edited my logging code to <a href="https://github.com/Tobogganeer/ToboArduino/commit/1373c0aceec09ff0af0098155ae7f945575fa00e" target="_blank">emulate GVRET messages</a> (by ripping code from <a href="https://github.com/collin80/ESP32RET" target="_blank">here</a>).</p>
+			<p>That let my goofy data center talk to SavvyCAN in realtime - much more useful than reading log files. Take a look:</p>
+			
+			<figure>
+				<video controls height="300">
+					<source src="Images/cansniffing.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>You can see bits changing as I fiddle with the controls</figcaption>
+			</figure>
+			
+			<p>What I learned from this is that there are no CAN messages when you press steering wheel buttons, meaning I can't use the CAN bus to detect when I try to skip, pause, rewind a song - I'll need to physically find which wires going into the radio control these (unless it is using some sort of <a href="https://en.wikipedia.org/wiki/Local_Interconnect_Network" target="_blank">LIN bus</a>, which would be a huge PITA).</p>
+			
+			<p>On the bright side, I found the CAN message for the odometer, which I will use to add a service/oil change reminder to the info display. On the not-bright side again, SavvyCAN likes to freeze as soon as I unleash the high-speed CAN bus onto it, which is annoying because I need to sniff the HS-CAN bus too. I might end up logging it to a file and loading it OR blacklisting certain IDs in the microcontroller if I can't get it to stop freezing.</p>
+			
+			<p>I want to find the CAN messages for doors being opened (and show them on the info display), and other stuff I can't remember right now. If only I had blogs to look back at to see what I wanted to do...</p>
+			
+			<h4>Other Stuff</h4>
+			<p>I'm not really sure what to do next. The audio switcher is a good place to start, or I could install the PA system, or the reverse proximity sensors, or the carputer, or this or that. Free country.</p>
+			
+			<hr>
+			<h2>Closing/Conclusion/Summary</h2>
+			<p>I have Bluetooth now and I can see how inefficiently I am driving (7.8L/100km). There's still a billion things I could do to the car...</p>
+			<p>But the summer is ending soon enough and I get to go back to school. I should probably update my portfolio. Or study C++ for Ubisoft NEXT and work on my engine. Or work on a game. Or simply explode.</p>
+			
+			<figure>
+				<img src="Images/cat.jpg" style="height: 300px;" alt="Cat chilling on dash">
+				<figcaption>Meow</figcaption>
 			</figure>
       	</div>
     </section>
