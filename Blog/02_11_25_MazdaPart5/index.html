@@ -76,7 +76,7 @@
           		<div class="row justify-content-center">
             		<div class="col-12">
               			<h1 style="text-decoration: underline; font-size: 4em">Mazda Mods V: Quality of Life</h1>
-						<p>Day Month, Year</p>
+						<p>November 2, 2025</p>
 						<a href="/Blog/index.html"><button class="btn btn-primary btn-lg" type="button">Back to Blogs »</button></a>
             		</div>
           		</div>
@@ -86,17 +86,77 @@
     <section>
       	<div class="container">
         	<h2>Intro</h2>
-			<p>Hey!</p>
+			<p>We just had reading week, followed by Design Week. Over reading week I figured it was a good idea to do some work on the Mazda before winter comes and hits. I swapped over to my winter tires and gave her an oil change, but this blog is about the cool tech I've added!</p>
+			
+			<br>
+			<h2>Heated Seats</h2>
+			<p>The first thing I wanted was heated seats. I had seen videos of people installing kits, so I had one sitting around for a few months before I decided that now was the ideal time to install them.</p>
+			
+			<p>I started by removing the seats and ripping off the upholstery (carefully, following instructions from the shop manual):</p>
+			
+			<figure>
+				<img src="Images/removingseats.jpg" style="height: 300px;" alt="Car seats sitting on bed">
+				<img src="Images/strippedseats.jpg" style="height: 300px;" alt="Car seats with upholstery removed">
+				<img src="Images/hogrings.jpg" style="height: 300px;" alt="Bunch of cut hog rings">
+				<figcaption>I'll be a happy man if I never have to cut hog rings with snips again. Ugh.</figcaption>
+			</figure>
+			
+			<p>It was a bit weird when I needed to take a trip to the store (for parts for a tank controller - story for another time):</p>
+			
+			<figure>
+				<img src="Images/triptothestore.jpg" style="height: 300px;" alt="Frame of a seat installed in the car">
+				<figcaption>Definitely not the safest in case of whiplash, but I survived</figcaption>
+			</figure>
+			
+			<p>The heated seat kit I got came with 4 heating pads (butt and back), along with the buttons and a control module. When this model of Mazda 3 comes with factory heated seats, they put the buttons next to the cigarette lighter. So I decided to put mine there too.</p>
+			
+			<figure>
+				<img src="Images/buttonmodel.jpg" style="height: 300px;" alt="3D model of button mount">
+				<img src="Images/printedbuttonmount.jpg" style="height: 300px;" alt="Printed button mount">
+				<figcaption>Designed and printed a piece to hold the buttons</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="Images/installedbuttonmount.jpg" style="height: 300px;" alt="Buttons and mount installed in removed trim piece">
+				<img src="Images/functionalbuttons.jpg" style="height: 300px;" alt="Piece hooked up and functional in car">
+				<figcaption>The 3D printed piece just slips in and sits nicely</figcaption>
+			</figure>
+			
+			<p>That's about it for the seats. I had to hook them up to my fusebox (which meant removing all the interior again, joy), and I routed the wire around and stuffed it where it needed to go. I ended up with a pretty neat and tidy install, and the seats work great (a bit too well - even the lowest setting is pretty warm for me!)</p>
 			
 			<hr>
+			<h2>Gear Sensor</h2>
+			<p>I had the idea for a while of having a heads up display to show me my speed and gear - inspired by <a href="https://www.youtube.com/watch?v=hjuuoNBPwUE" target="_blank">this HUD</a> and <a href="https://www.youtube.com/watch?v=QixtxaAda18" target="_blank">this gear sensor</a>.</p>
+			
+			<p>My setup is a bit different from both. I have my wireless data network to get data to the HUD, and there isn't enough room by my gearshift lever to detect it in the same way - but I came up with something different.</p>
+			
 			<figure>
-				<img src="Images/example.jpg" style="height: 300px;" alt="alt text here - an image of (blank)">
-				<figcaption>Text description here.
-				  Can be multiple lines too!</figcaption>
+				<img src="Images/geartheory.jpg" style="height: 300px;" alt="Sketches of the gear detector">
+				<img src="Images/gearrods.jpg" style="height: 300px;" alt="What the shift rods in the car look like">
+				<figcaption>I sketched this before I even started on any mods - the idea just came to me really early</figcaption>
 			</figure>
-
-            <p>More text!</p>
-            <p>A link to <a href="https://example.com">something interesting</a>...</p>
+			
+			<p>My shifter mechanism has two linkages to the transmission: one for left and right movement, and one for forwards and backwards. The front-to-back one has more travel, but both or just linear slides. I figured I could put a magnet onto the rod and, inspired by the video above, use hall effect sensors to see where they are at. And that's what I did.</p>
+			
+			<figure>
+				<img src="Images/gearsensormodels.jpg" style="height: 300px;" alt="Model of the gear detector housings">
+				<img src="Images/geardetectors.jpg" style="height: 300px;" alt="Assembled gear detectors">
+				<img src="Images/geardetectorinstalled.jpg" style="height: 300px;" alt="Installed gear detectors">
+				<figcaption>The mounts constrain the magnets to a track and have a sensor at each end</figcaption>
+			</figure>
+			
+			<p>It's just 4 hall effect sensors read by and ESP32 and sent wirelessly to the rest of the car. It all took a bunch of iteration - changing thresholds in the code and at least 3 redesigns of the mounts (moving the sensors around). In the end it works pretty good.</p>
+			
+			<p>One of the goofier issues I ran into was the fact that the hall effect sensors take and send back 5V logic, but the ESP32's analog pins only accept up to 3.3V. I had interpreted a graph incorrect in the hall effect sensor datasheet, and thought the max voltage would be 3.3V. So I had to splice in this monstrosity:</p>
+			
+			<figure>
+				<img src="Images/gearvoltagedropdown.jpg" style="height: 350px;" alt="Voltage divider spliced in with resistors">
+				<figcaption>Did someone say voltage divider?</figcaption>
+			</figure>
+			
+			<p>Yeah, I soldered in 8 resistors to drop each line to 3.3V. Yes, it works perfectly.</p>
+			<p>With that, I could tell what gear I was in. So it was time to start on the HUD!</p>
+			
       	</div>
     </section>
     <hr>
