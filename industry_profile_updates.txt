@@ -1,0 +1,13 @@
+Navbar: Contact | Resume | About | Projects | (Blog?)
+
+=== LANDING PAGE
+Make sure name is prominent on home page
+Title(s) on home page
+Put PROJECTS on home page (make sure very easy and quick to find featured work)
+3 prominent projects
+
+=== CONTACT
+Just direct mailto:
+Dropdown with email, github, itch?
+
+=== RESUME
