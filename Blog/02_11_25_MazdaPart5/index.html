@@ -157,6 +157,60 @@
 			<p>Yeah, I soldered in 8 resistors to drop each line to 3.3V. Yes, it works perfectly.</p>
 			<p>With that, I could tell what gear I was in. So it was time to start on the HUD!</p>
 			
+			<hr>
+			<h2>Heads Up Display (HUD)</h2>
+			<p>I had the gear. I had the speed (from the CAN bus). I just needed to display it.</p>
+			<p>Much like the <a href="https://www.youtube.com/watch?v=hjuuoNBPwUE" target="_blank">this HUD</a>, I decided to go with 7 segment displays. Back when I thought of this idea (before any mods even started), I ordered some 7 segment displays for this exact purpose. Luckily, I also got some <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/max7219-max7221.pdf" target="_blank">MAX7219 LED Display Drivers</a>. These came in very handy, letting my control all 6 of my segments and also the brightness of my HUD.</p>
+			
+			<figure>
+				<img src="Images/hudtest.jpg" style="height: 300px;" alt="7 segment displays controlled by a breadboard">
+				<figcaption>Sanity check to make sure my modules and wiring were correct</figcaption>
+			</figure>
+			
+			<p>After testing out my leds and MAX7219, I was pondering the best way to assemble the final thing and decided to just directly solder every wire to each pin.</p>
+			
+			<figure>
+				<img src="Images/hudmax7219wired.jpg" style="height: 300px;" alt="Tons of wires soldered to the MAX7219 chip">
+				<img src="Images/hud3dprint.jpg" style="height: 300px;" alt="Said mess of wires coming out of a 3D printed part">
+				<figcaption>This took forever...</figcaption>
+			</figure>
+			
+			<p>The MAX7219 is only wired to the two 3 digit displays and the ESP8266. No reason to use a protoboard or bread board. I got a $25 lable maker which really helped me keep things in order. Some of the labels fell off, but only after I had them attached.</p>
+			
+			<p>The wires are directly soldered to the MAX7219, but the ends going to the ESP8266 have dupont connector ends crimped onto them. Just made it easy to install instead of soldering. I also obviously heatshrunk/heatshrinked the wires so they wouldn't touch each other and implode.</p>
+			
+			<p>The 3D printed case/enclosure is so simple that I'm not going to cover it :P</p>
+			
+			<figure>
+				<img src="Images/hudpreinstall.jpg" style="height: 300px;" alt="Testing segments before install">
+				<img src="Images/hudinstalled.jpg" style="height: 300px;" alt="Lining up HUD module on a dash piece before cutting">
+				<figcaption>Double checking everything works, then lining it up to cut the dash</figcaption>
+			</figure>
+			
+			<p>I had to take out the instrument cluster to get at this bit of dash I wanted to install on. Then I just lined it up, drilled a million holes and filed the hole smooth. Pass the wires and modules through and Bob's your uncle.</p>
+			
+			<p>At this stage I put a bunch of epoxy all the wiring and on the digit displays. I did <b>not</b> want any of these wires making their way lose because getting to the dash is a massive pain.</p>
+			
+			<p>On the code side of things, there is nothing remarkable. The MAX7219 is easy to interface with, and the only thing to keep in mind is you want to write all the characters upside down (since they are reflecting off the windshield). The entire source file is less than 100 lines of code, including the CarComms stuff to receive things wirelessly.</p>
+			
+			<p>One little quality of life thing: Since this is reflecting off the windshield, I want it to get dimmer at night (I'm not trying to blind myself and it has to be pretty bright in direct sunlight). I considered hooking up a light sensor and calibrating that and blah blah blah, but I figured a better approach would just be to check when the car's lights were on. If that was possible.</p>
+			
+			<p>I hooked up my laptop to the CAN data center and sniffed some packets. The car <em>did</em> tell you when the lights were on - not lights vs headlights, but either was fine for me. While I was at it I also found what the CAN IDs and values were for the doors being open (the IDs I found online were not correct). I eventually want my little info display (or maybe the HUD?) show what doors are open, and now I have that data.</p>
+			
+			<p>So now the module dims itself when the car's lights are on. Thanks MAX7219 for making this very easy (I should've used a larger resistor as my lights are a tad bright at night - but not distractingly).</p>
+			
+			<p>Here's a rough video of it in action.</p>
+			
+			<figure>
+				<video controls height="350">
+					<source src="Images/hudworking.mp4" type="video/mp4"/>
+				</video>
+				<figcaption>Speed in white, gear in blue. This is merging onto the 403.</figcaption>
+			</figure>
+			
+			<hr>
+			<h2>Audio Switcher</h2>
+			
       	</div>
     </section>
     <hr>
