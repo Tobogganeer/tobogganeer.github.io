@@ -119,6 +119,7 @@
 			<figure>
 				<img src="Images/installedbuttonmount.jpg" style="height: 300px;" alt="Buttons and mount installed in removed trim piece">
 				<img src="Images/functionalbuttons.jpg" style="height: 300px;" alt="Piece hooked up and functional in car">
+				<img src="Images/buttonsinstalled.jpg" style="height: 300px;" alt="Buttons installed in car fully">
 				<figcaption>The 3D printed piece just slips in and sits nicely</figcaption>
 			</figure>
 			
@@ -210,6 +211,30 @@
 			
 			<hr>
 			<h2>Audio Switcher</h2>
+			<p>The end goal is to have a bunch of audio sources in the car (Bluetooth, the Carputer, AUX, IOS, USB-C). Since I'm just stealing the car's AUX input, I need a way to switch between my 5 sources.</p>
+			
+			<p>I've mentioned the audio switcher in previous devlogs, but my original plan was to hand solder it all on protoboard. This would've been a huge pain, and I was going to do it just because I didn't know how to design PCBs and it looked scary. But then I tried it anyways.</p>
+			
+			<figure>
+				<img src="Images/audioswitcherdesign.png" style="height: 300px;" alt="Schematic of audio switcher PCB">
+				<img src="Images/audioswitcherpcb.jpg" style="height: 300px;" alt="The PCB in the (metaphorical) flesh">
+				<img src="Images/audioswitcherwired.jpg" style="height: 300px;" alt="PCB with all components soldered to it">
+				<figcaption>First PCB, and it wasn't even that bad!</figcaption>
+			</figure>
+			
+			<p>The switcher uses two <a href="https://www.ti.com/lit/ds/symlink/cd4052b.pdf" target="_blank">CD4052B</a> modules to multiplex the 5 audio inputs down to one output, which goes into the hijacked AUX input. The module for displaying the current audio source and switching it has been installed in the car for ages, blindly sending out its signal like a space probe long out of reach.</p>
+			
+			<figure>
+				<img src="Images/audioswitcherinstalled.jpg" style="height: 350px;" alt="Audio switcher installed in car">
+				<figcaption>Fits nicely above the airbag module. Note the Bluetooth module at the bottom of the image</figcaption>
+			</figure>
+			
+			<hr>
+			<h2>Teaser</h2>
+			<figure>
+				<img src="Images/compressor.jpg" style="height: 400px;" alt="Compressor installed in trunk">
+				<figcaption>A compressor... what could that be for?</figcaption>
+			</figure>
 			
       	</div>
     </section>
