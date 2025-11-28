@@ -5,7 +5,6 @@ const listOfDefinitions = [ "Affect-as-Information Theory: When your feelings gi
     "Broaden-and-Build Theory: When having positive emotions, it helps you think more openly (broaden part) and allows you to develop new skills and strengths over time (build part)."
 ];
 let currentDefinitionNum = 0;
-
 function updateDefinition() {
     document.getElementById("definitionSentence").innerText = listOfDefinitions[currentDefinitionNum];
 }
@@ -27,3 +26,4 @@ function clickRightDefinition() {
     }
     updateDefinition();
 }
+
