@@ -97,6 +97,13 @@
 				<li><a href="../06_12_25_NetcodeTips/index.html">Netcode: Tips</a></li>
 			</ul>
 			
+			<h2>Overview - TL;DR</h2>
+			<p>In a basic client-server architecture, the clients are essentially boxes that send input and display server state. However, this feels awful with any latency - press an input, wait for the server to receive and process it, then wait for the server to send the state back.</p>
+			
+			<p>To improve this, we are going to locally <em><b>predict</b></em> what effect our input will have - e.g. moving and shooting. This is known as <em>client-side prediction</em>, or just prediction. However, we won't always predict correctly - what if we are moving along, but we've actually been killed? We won't know until the server tells us, so we keep on predicting our movement while we are actually dead on the floor.</p>
+			
+			<p>That's where <em>reconciliation</em> comes in. <em>Server reconciliation</em> (bit of a misnomer in my opinion) is where the client receives the server's authoritative state and corrects (or reconciles) their previous predictions. In the best case, the prediction matches the server's state and no corrections are needed - but you <b>cannot</b> always predict correctly.</p>
+			
 			<h2>Intro</h2>
 			<p>Hey!</p>
 			

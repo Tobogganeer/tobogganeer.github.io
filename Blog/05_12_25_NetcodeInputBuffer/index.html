@@ -97,6 +97,13 @@
 				<li><a href="../06_12_25_NetcodeTips/index.html">Netcode: Tips</a></li>
 			</ul>
 			
+			<h2>Overview - TL;DR</h2>
+			<p>In the case of FPS games, we typically want as little latency as possible. When we get input from a client, we want the server to run it as soon as possible. However, we are dealing with the network here. Packets won't be evenly spaced - we might get 1, then 0, then 2 over the span of three ticks (jitter). They might arrive out of order, some might get dropped all together, you get the idea - it's unpredictable.</p>
+			
+			<p>That is why we want to keep a <em>buffer</em> of inputs from the client. We want this to be as small as possible - ideally 1-2 ticks - in order to minimize latency, while still alleviating the effects of jitter, packet loss and out-of-order packets. If we notice the client's connection quality dropping, we can buffer <em>more</em> inputs to smooth things out until the quality goes back up.</p>
+			
+			<p>There are techniques that other games/genres also use to reduce latency - things like <a href="https://en.wikipedia.org/wiki/Netcode#Rollback" target="_blank">rollback netcode</a>, popular with fighter games. We could also use some of these ourselves... Read on.</p>
+			
 			<h2>Intro</h2>
 			<p>Hey!</p>
 			

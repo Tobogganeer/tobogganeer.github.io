@@ -97,6 +97,11 @@
 				<li><a href="../06_12_25_NetcodeTips/index.html">Netcode: Tips</a></li>
 			</ul>
 			
+			<h2>Overview - TL;DR</h2>
+			<p>The systems we are going to implement - prediction, reconciliation, and lag compensation/rollback - depend on being able to quantize time into discrete steps. We (or at least I) call these <b>ticks</b>, and they occur at fixed intervals - a set amount per second. We need to keep the client and server in-time with each other to ensure our lag-compensating techiques work as intended.</p>
+			
+			<p>We also need to know the approximate latency between the client and server to be able to estimate what the current "time" is on each end, e.g. to roll back hitboxes so a client's shot lines up with what they see.</p>
+			
 			<h2>Intro</h2>
 			<p>Hey!</p>
 			

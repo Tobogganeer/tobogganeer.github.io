@@ -97,6 +97,11 @@
 				<li><a href="../06_12_25_NetcodeTips/index.html">Netcode: Tips</a></li>
 			</ul>
 			
+			<h2>Overview - TL;DR</h2>
+			<p>Our time is quantized into <em>ticks</em>; the client sends their inputs on each tick, the server sends state on each tick. However, we don't want the display the world's state in "ticks", each object snapping from state to state. Instead, we <em>interpolate</em> between two states, and extrapolate if need be.</p>
+			
+			<p>In an ideal world, we would interpolate <em>just enough</em> that the next state arrives exactly when we need it. However, the network doesn't like giving us an ideal world (packet loss, jitter, etc.), so we give ourselves some extra time. If we are running at 100 ticks per second - 10ms per tick - we would <em>ideally</em> have 10ms of interpolation, but we might use 20ms or 30ms instead. We can also extrapolate the last received state, but when we are wrong things look <em>really</em> wrong.</p>
+			
 			<h2>Intro</h2>
 			<p>Hey!</p>
 			

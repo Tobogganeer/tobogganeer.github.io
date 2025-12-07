@@ -97,6 +97,12 @@
 				<li><a href="../06_12_25_NetcodeTips/index.html">Netcode: Tips</a></li>
 			</ul>
 			
+			<h2>Overview - TL;DR</h2>
+			<p>The client see the world in past. The server simulates the world's state and sends it to the client, but by the time that message gets to the client, the server has already simulated a few more ticks. That means that if I line up my crosshair on a moving object and fire, I'm actually firing at where that object was some time in the past (equal to half of my <a href="../05_12_25_NetcodeTime/index.html">round-trip time (RTT)</a> + the delay of any <a href="../06_12_25_NetcodeInterpolation/index.html">interpolation</a>). This means I need to "lead" my shots, trying to take my RTT into account. Yuck.</p>
+			
+			<p><em>Lag compensation*</em> is a technique where the server <em>rewinds time</em> (or "roll back"), moving hitboxes and other important state back to match what the client actually sees. Then the server simulates the action (e.g. shooting) and fast-forwards everything back to the present.</p>
+			<small>Side note: sometimes "lag compensation" is used both to describe all the techniques I am describing (i.e. prediction, reconciliation, rollback, etc.), and to describe just this technique (rolling back time). It be a bit confusing. I'll try to use "lag-compensating techniques" to describe everything and save "lag compensation" just for this rollback stuff.</small>
+			
 			<h2>Intro</h2>
 			<p>Hey!</p>
 			
