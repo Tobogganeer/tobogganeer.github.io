@@ -28,6 +28,10 @@
 			font-style: italic;
 			color: #666;
 		}
+		
+		.dashed-list {
+			list-style-type: "- ";
+		}
 	</style>
 </head>
 
@@ -85,7 +89,7 @@
     </section>
     <section>
       	<div class="container">
-			<h2>Netcode Articles</h2>
+			<h2 id="articles">Netcode Articles</h2>
 			
 			<ul>
 				<li>Netcode: Intro</li>
@@ -114,7 +118,73 @@
 			</ul>
 			
 			<hr>
-			<h2>Server Authoritative? FPS?</h2>
+			<h2>Netcode?</h2>
+			<p>If you want to play games with other people across a network - like online or at a LAN party - you need some way to facilitate connection and communication between different computers or "clients". In games, the stack that handles this connection, communication, and synchronization is called "netcode" (and probably a million other terms).</p>
+			
+			<hr>
+			<h2>Server? FPS?</h2>
+			<p>There are a few different ways of structuring your netcode, each with benefits and drawbacks depending on what kind of game you are making.</p>
+			
+			<p>To start, you need to choose how you want clients/computers to communicate: Directly to each other (Peer to Peer or P2P), or between each client and a server (client-server).</p>
+			
+			<figure>
+				<img src="Images/p2p.png" style="height: 200px;" alt="P2P connection diagram">
+				<img src="Images/clientserver.png" style="height: 200px;" alt="Client-server connection diagram">
+				<figcaption>Either clients/peers talk to all other peers, or one "server" connects them all</figcaption>
+			</figure>
+			
+			<p>For the type of games I make, client-server architecture is the way to go. We want one central source of truth who controls the game and handles sorting out the game and keeping everyone in sync. For the small, first-person shooters I make, I elect one player the "host" who runs the server <em>and</em> plays as a client*. This means anyone can host a server and play - no dedicated servers (though they are possible).</p>
+			<small class="text-muted">*You could get into semantics about P2P and player-hosted servers but I won't.</small>
+			
+			<hr>
+			<h2>Authority</h2>
+			<p><em>"We want one central source of truth".</em> Cheaters are no fun in games, and we'd like to prevent cheating where possible. To make this easier, the server has "authority", meaning it controls the state of all objects in the game. Why does this matter? Let's look at client vs server authority.</p>
+			
+			<h5>Client Authority</h5>
+			<p>The client has control over certain objects in the game - typically their player. They move/shoot/interact and tell the server what they did.</p>
+			
+			<ul class="dashed-list">
+				<li>Client: "Hello, I just moved 1 meter forward."</li>
+				<li>Server: "Perfect! I'll let everyone else know."</li>
+				<li>Client: "Hello, I just shot player 2 fifteen times in the head through 3 walls."</li>
+				<li>Server: "Perfect! I'll let everyone else know."</li>
+			</ul>
+			
+			<p>Obviously this is exaggerated and the server can try and run some "sanity checks" to prevent obvious cheats, but it's much easier to cheat when the client has authority. Look at a game like Rust - the client has authority over their player, and some cheats allow you to climb up walls <em>even while the server checks on its end.</em></p>
+			<p>Apart from that negative, it feels <em>really good</em> when you have authority over your player. Your inputs apply instantly and you never feel "cheated" out of an action.</p>
+			
+			<h5>Server Authority</h5>
+			<p>The clients just tell the server what they'd <em>like</em> to do. They tell the server what buttons they are pressing and the server tells them what happened.</p>
+			
+			<ul class="dashed-list">
+				<li>Client: "Hello, I'm pressing W and A"</li>
+				<li>Server: "Perfect! You are now at position (3, 2), and I let everyone else know too."</li>
+				<li>Client: "Hello, I just shot 15 times in one frame."</li>
+				<li>Server: "??? I'll let you shoot once. Nice try though."</li>
+			</ul>
+			
+			<p>Many cheats are very difficult or impossible when the server has authority over everything. Flyhacking, speed cheats, shooting through walls, etc. are gone (aimbots and wallhacking are still issues). However, there is one problem: the network.</p>
+			
+			<figure>
+				<img src="Images/latency.gif" style="height: 200px;" alt="Gif showing packets going from client to server and back">
+				<figcaption>Taken from <a href="https://youtu.be/W3aieHjyNvw?t=1638">Overwatch Netcode GDC talk</a></figcaption>
+			</figure>
+			
+			<p>I tell the server I am pressing W. It takes 100ms for my packet to get there. The server moves me and tells me where I went. Another 100ms for that packet to get to me. I press W and only see myself move 200ms later. Terrible! How can we get around this?</p>
+			
+			<hr>
+			<h2>Prediction, Reconciliation, and Lag Compensation</h2>
+			<small><em>Sometimes called "Lag Compensation"</em></small>
+			
+			<p>These are the methods used to deal with network conditions and make server-authoritative games feel good to play. They are discussed in the next couple of articles.</p>
+			
+			<ul>
+				<li>Prediction: When you send an input to the server, locally predict what will happen.</li>
+				<li>Reconciliation: The server processes your input and tells you the authoritative state. Reconciliation is comparing the result to your prediction and correcting where necessary.</li>
+				<li>Lag Compensation: The server is the only one seeing the game in the "present". Since you see the game - e.g. other clients - in the past, the server needs to compensate for that. In my case, this involves rolling back hitboxes and colliders to the client's time so their shots are accurate.</li>
+			</ul>
+			
+			<a href="#articles"><h4>Scroll up to article links</h4></a>
 			
 			<hr>
 			<h2>Additional Resources</h2>
