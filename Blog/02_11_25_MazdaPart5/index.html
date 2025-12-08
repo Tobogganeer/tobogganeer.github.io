@@ -146,7 +146,7 @@
 				<figcaption>The mounts constrain the magnets to a track and have a sensor at each end</figcaption>
 			</figure>
 			
-			<p>It's just 4 hall effect sensors read by and ESP32 and sent wirelessly to the rest of the car. It all took a bunch of iteration - changing thresholds in the code and at least 3 redesigns of the mounts (moving the sensors around). In the end it works pretty good.</p>
+			<p>It's just 4 hall effect sensors read by an ESP32 and sent wirelessly to the rest of the car. It all took a bunch of iteration - changing thresholds in the code and at least 3 redesigns of the mounts (moving the sensors around). In the end it works pretty good.</p>
 			
 			<p>One of the goofier issues I ran into was the fact that the hall effect sensors take and send back 5V logic, but the ESP32's analog pins only accept up to 3.3V. I had interpreted a graph incorrect in the hall effect sensor datasheet, and thought the max voltage would be 3.3V. So I had to splice in this monstrosity:</p>
 			
@@ -176,7 +176,7 @@
 				<figcaption>This took forever...</figcaption>
 			</figure>
 			
-			<p>The MAX7219 is only wired to the two 3 digit displays and the ESP8266. No reason to use a protoboard or bread board. I got a $25 lable maker which really helped me keep things in order. Some of the labels fell off, but only after I had them attached.</p>
+			<p>The MAX7219 is only wired to the two 3 digit displays and the ESP8266. No reason to use a protoboard or bread board. I got a $25 label maker which really helped me keep things in order. Some of the labels fell off, but only after I had them attached.</p>
 			
 			<p>The wires are directly soldered to the MAX7219, but the ends going to the ESP8266 have dupont connector ends crimped onto them. Just made it easy to install instead of soldering. I also obviously heatshrunk/heatshrinked the wires so they wouldn't touch each other and implode.</p>
 			
