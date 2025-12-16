@@ -11,3 +11,64 @@ Just direct mailto:
 Dropdown with email, github, itch?
 
 === RESUME
+Link to PDF
+Skills and abilities
+Education
+Work history
+
+=== ABOUT
+Cultural fit
+"What else"? - Hobbies, interests, mission statement, clubs
+
+=== PROJECTS
+*Curated* selection
+3-5 min, 12 max
+Brief description on card to entice reader to continue
+Most important projects first (left to right, top to bottom)
+Show breadth and skill of my experience (excel? level design?)
+
+=== PROJECT PAGES (DATA SHEETS)
+For every project
+What is the project, how did you make it, why did you make it
+Illustrate *MY* involvement, contribution, and process that went into making the project
+Avoid includiong other members
+Be humble and accurate
+Celebrate/acknowledge success or accolades
+Don't *sell* the project, show how your skills were important to the *process* of production
+Compelling images (50% process, 50% product)
+-> Sketches, diagrams, greybox, layout
+Title
+-> Title and responsibilities (in simple terms)
+-> Don't exaggerate
+Tools
+-> Let reader determine the skill level
+Description (brief)
+-> Purpose or intention of the project (competition, targetted audience, etc)
+-> Don't sell project, sell your skills
+-> How was it a success?
+Takeaways
+-> Skills learned, how it helped as a designer, what does it motivate you to do more of?
+-> How are you better after completing?
+-> Be positive - avoid negativity towards project or yourself
+-> Should be *MORE THAN HALF* of the page
+  -> Why did you work on it?
+  -> Why is it being shown?
+  -> Why is it relevant?
+  -> Why should you be hired?
+
+AVOID Unfinished work
+
+=== INSIDE-OUT PROJECTS
+WHy, then How, then What
+WHY: This project investigates mapping for CS2 and how to use Hammer 5
+HOW: Sketches, greyboxing, playtesting
+WHAT: Collection of images and video play through
+
+AVOID Outside-In (What, How, Why)
+What: Here are 6 images of my level
+How: Maya, unreal, photoshop
+Why: Assignment for level design
+
+=== OTHER
+Make images expand when clicked
+Alt controllers? Mazda?
