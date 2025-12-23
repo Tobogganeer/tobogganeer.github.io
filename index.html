@@ -21,7 +21,7 @@
 	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
 	<link href="/css/util.css" rel="stylesheet">
 </head>
-
+	
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="/index.html">tobo.games</a>
@@ -123,48 +123,44 @@
     <section>
   		<div class="container mt-2">
         	<div class="row">
-          		<div class="col-md-4 col-12 card">
-            		<ul class="list-unstyled">
-              			<li class="media">
-                			<img class="mr-3" src="images/launcher_icon.png" alt="Virtual Void Games Launcher icon" style="max-width: 50%">
-                			<div class="media-body">
-                  				<h5 class="mt-0 mb-1">Games Launcher</h5>
-                  				Based on <a href="https://github.com/tom-weiland/csharp-game-launcher">Tom Weiland's game launcher</a>. Play my older projects.
-                			</div>
-              			</li>
-            		</ul>
-					<p><a class="col btn btn-secondary btn-md" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a></p>
-          		</div>
-		  		<div class="col-md-4 col-12 card">
-            		<ul class="list-unstyled">
-              			<li class="media">
-                			<img class="mr-3" src="images/blog_icon.jpg" alt="Picture of boids" style="max-width: 50%">
-                			<div class="media-body">
-                  				<h5 class="mt-0 mb-1">Blog</h5>
-                  				Read what I've been up to. I'll write when I find the time.
-                			</div>
-              			</li>
-            		</ul>
-					<p><a class="col btn btn-secondary btn-md" href="/Blog/index.html" role="button">Blog »</a></p>
-          		</div>
-          		<div class="col-md-4 col-12 card">
-            		<ul class="list-unstyled">
-              			<li class="media">
-                			<img class="mr-3" src="images/projects-icon.png" alt="Dark Side of Mars screenshot" style="max-width: 50%">
-                			<div class="media-body">
-                  				<h5 class="mt-0 mb-1">Projects</h5>
-                  				See some of the stuff I've worked on.
-                			</div>
-              			</li>
-            		</ul>
-					<p><a class="col btn btn-secondary btn-md" href="/Projects/index.html" role="button">Projects »</a></p>
-          		</div>
+				
+				<div class="col-lg-4 col-md-6 col-12 card hover-card">
+					<a href="#" class="link-to-default text-dark">
+						<img class="card-img-top fit-img height-200" src="images/netcode.jpg" alt="FPS game with debug gizmos">
+						<div class="card-body">
+							<h5 class="card-title">Authoritative Netcode</h5>
+							<p class="card-text">Prediction, Reconciliation, and Lag Compensation implemented on top of my custom networking stack in Unity</p>
+						</div>
+					</a>
+				</div>
+				
+          		<div class="col-lg-4 col-md-6 col-12 card hover-card">
+					<a href="#" class="link-to-default text-dark">
+						<img class="card-img-top fit-img height-200" src="images/screentime.jpg" alt="Game screen showing a hand swiping through notifications">
+						<div class="card-body">
+							<h5 class="card-title">Screen Time!</h5>
+							<p class="card-text">Get to bed on time. Created for the 2025 ToJam in 60 hours with my roommates</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 card hover-card">
+					<a href="#" class="link-to-default text-dark">
+						<img class="card-img-top fit-img height-200" src="images/patientr21.jpg" alt="Menu of a game showing a gloomy hospital room">
+						<div class="card-body">
+							<h5 class="card-title">Patient R-21</h5>
+							<p class="card-text">Point-and-Click game created by a team of 5 over the course of two semesters</p>
+						</div>
+					</a>
+				</div>
         	</div>
       	</div>
     </section>
 	
-	<div class="separator"></div>
+	
 	<!-- Other page links -->
+	<div class="separator"></div>
+	
+	
 	
 	<section>
       <div class="container">
@@ -178,22 +174,22 @@
     <section>
   		<div class="container mt-2">
         	<div class="row">
-          		<div class="col-md-4 col-12 card">
+          		<div class="col-lg-4 col-md-6 col-12 card">
             		<ul class="list-unstyled">
               			<li class="media">
-                			<img class="mr-3" src="images/launcher_icon.png" alt="Virtual Void Games Launcher icon" style="max-width: 50%">
+                			<img class="mr-3 half-width height-125 fit-img" src="images/launcher_icon.png" alt="Virtual Void Games Launcher icon">
                 			<div class="media-body">
                   				<h5 class="mt-0 mb-1">Games Launcher</h5>
-                  				Based on <a href="https://github.com/tom-weiland/csharp-game-launcher">Tom Weiland's game launcher</a>. Play my older projects.
+                  				Play some of my older projects. Being rewritten.
                 			</div>
               			</li>
             		</ul>
 					<p><a class="col btn btn-secondary btn-md" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a></p>
           		</div>
-		  		<div class="col-md-4 col-12 card">
+		  		<div class="col-lg-4 col-md-6 col-12 card">
             		<ul class="list-unstyled">
               			<li class="media">
-                			<img class="mr-3" src="images/blog_icon.jpg" alt="Picture of boids" style="max-width: 50%">
+                			<img class="mr-3 half-width height-125 fit-img" src="images/blog_icon.jpg" alt="Picture of boids">
                 			<div class="media-body">
                   				<h5 class="mt-0 mb-1">Blog</h5>
                   				Read what I've been up to. I'll write when I find the time.
@@ -202,10 +198,10 @@
             		</ul>
 					<p><a class="col btn btn-secondary btn-md" href="/Blog/index.html" role="button">Blog »</a></p>
           		</div>
-          		<div class="col-md-4 col-12 card">
+          		<div class="col-lg-4 col-md-6 col-12 card">
             		<ul class="list-unstyled">
               			<li class="media">
-                			<img class="mr-3" src="images/projects-icon.png" alt="Dark Side of Mars screenshot" style="max-width: 50%">
+                			<img class="mr-3 half-width height-125 fit-img" src="images/projects-icon.png" alt="Dark Side of Mars screenshot">
                 			<div class="media-body">
                   				<h5 class="mt-0 mb-1">Projects</h5>
                   				See some of the stuff I've worked on.
