@@ -62,3 +62,23 @@
 .carousel-bg {
 	background: linear-gradient(#AAA0, #000D)
 }
+
+/* Used when you click on an image */
+/* https://stackoverflow.com/questions/67815853/how-do-i-make-an-image-full-screen-on-click */
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}
+
+.click-to-zoom {
+	cursor: zoom-in;
+}
