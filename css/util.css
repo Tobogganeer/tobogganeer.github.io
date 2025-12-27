@@ -98,46 +98,67 @@
 
 /* Handle image grids for project pages */
 .img-box {
-  width: 100%;
-  overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 }
 
 .img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /* TODO: Refine these based on vibes */
 /* Small (Phone) */
 .img-big {
-  height: 220px;
+	height: 220px;
 }
 
 .img-small {
-  height: 200px;
+	height: 200px;
 }
 
 /* XL is 1200 */
 
 /* Large */
 @media (min-width: 992px) {
-  .img-big {
-    height: 500px;
-  }
+	.img-big {
+		height: 500px;
+  	}
 
-  .img-small {
-    height: 250px;
-  }
+	.img-small {
+		height: 250px;
+	}
 }
 
 /* Medium */
 @media (min-width: 768px) and (max-width: 991px) {
-  .img-big {
-    height: 350px;
-  }
+	.img-big {
+		height: 350px;
+	}
 
-  .img-small {
-    height: 300px;
-  }
+	.img-small {
+		height: 300px;
+	}
+}
+
+/* Overlaid on top of images on project page */
+.img-label {
+	position: absolute;
+	right: 5%;
+	bottom: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 1rem;
+	border-radius: 4px;
+
+	/* Less visible unless hovering */
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.img-box:hover .img-label {
+	opacity: 1;
 }
