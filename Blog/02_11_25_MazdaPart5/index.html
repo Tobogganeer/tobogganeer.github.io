@@ -114,31 +114,31 @@
 			<p>I started by removing the seats and ripping off the upholstery (carefully, following instructions from the shop manual):</p>
 			
 			<figure>
-				<img src="Images/removingseats.jpg" style="height: 300px;" alt="Car seats sitting on bed">
-				<img src="Images/strippedseats.jpg" style="height: 300px;" alt="Car seats with upholstery removed">
-				<img src="Images/hogrings.jpg" style="height: 300px;" alt="Bunch of cut hog rings">
+				<img src="Images/removingseats.jpg" style="height: 300px;" class="click-to-zoom" alt="Car seats sitting on bed">
+				<img src="Images/strippedseats.jpg" style="height: 300px;" class="click-to-zoom" alt="Car seats with upholstery removed">
+				<img src="Images/hogrings.jpg" style="height: 300px;" class="click-to-zoom" alt="Bunch of cut hog rings">
 				<figcaption>I'll be a happy man if I never have to cut hog rings with snips again. Ugh.</figcaption>
 			</figure>
 			
 			<p>It was a bit weird when I needed to take a trip to the store (for parts for a tank controller - story for another time):</p>
 			
 			<figure>
-				<img src="Images/triptothestore.jpg" style="height: 300px;" alt="Frame of a seat installed in the car">
+				<img src="Images/triptothestore.jpg" style="height: 300px;" class="click-to-zoom" alt="Frame of a seat installed in the car">
 				<figcaption>Definitely not the safest in case of whiplash, but I survived</figcaption>
 			</figure>
 			
 			<p>The heated seat kit I got came with 4 heating pads (butt and back), along with the buttons and a control module. When this model of Mazda 3 comes with factory heated seats, they put the buttons next to the cigarette lighter. So I decided to put mine there too.</p>
 			
 			<figure>
-				<img src="Images/buttonmodel.jpg" style="height: 300px;" alt="3D model of button mount">
-				<img src="Images/printedbuttonmount.jpg" style="height: 300px;" alt="Printed button mount">
+				<img src="Images/buttonmodel.jpg" style="height: 300px;" class="click-to-zoom" alt="3D model of button mount">
+				<img src="Images/printedbuttonmount.jpg" style="height: 300px;" class="click-to-zoom" alt="Printed button mount">
 				<figcaption>Designed and printed a piece to hold the buttons</figcaption>
 			</figure>
 			
 			<figure>
-				<img src="Images/installedbuttonmount.jpg" style="height: 300px;" alt="Buttons and mount installed in removed trim piece">
-				<img src="Images/functionalbuttons.jpg" style="height: 300px;" alt="Piece hooked up and functional in car">
-				<img src="Images/buttonsinstalled.jpg" style="height: 300px;" alt="Buttons installed in car fully">
+				<img src="Images/installedbuttonmount.jpg" style="height: 300px;" class="click-to-zoom" alt="Buttons and mount installed in removed trim piece">
+				<img src="Images/functionalbuttons.jpg" style="height: 300px;" class="click-to-zoom" alt="Piece hooked up and functional in car">
+				<img src="Images/buttonsinstalled.jpg" style="height: 300px;" class="click-to-zoom" alt="Buttons installed in car fully">
 				<figcaption>The 3D printed piece just slips in and sits nicely</figcaption>
 			</figure>
 			
@@ -151,17 +151,17 @@
 			<p>My setup is a bit different from both. I have my wireless data network to get data to the HUD, and there isn't enough room by my gearshift lever to detect it in the same way - but I came up with something different.</p>
 			
 			<figure>
-				<img src="Images/geartheory.jpg" style="height: 300px;" alt="Sketches of the gear detector">
-				<img src="Images/gearrods.jpg" style="height: 300px;" alt="What the shift rods in the car look like">
+				<img src="Images/geartheory.jpg" style="height: 300px;" class="click-to-zoom" alt="Sketches of the gear detector">
+				<img src="Images/gearrods.jpg" style="height: 300px;" class="click-to-zoom" alt="What the shift rods in the car look like">
 				<figcaption>I sketched this before I even started on any mods - the idea just came to me really early</figcaption>
 			</figure>
 			
 			<p>My shifter mechanism has two linkages to the transmission: one for left and right movement, and one for forwards and backwards. The front-to-back one has more travel, but both or just linear slides. I figured I could put a magnet onto the rod and, inspired by the video above, use hall effect sensors to see where they are at. And that's what I did.</p>
 			
 			<figure>
-				<img src="Images/gearsensormodels.jpg" style="height: 300px;" alt="Model of the gear detector housings">
-				<img src="Images/geardetectors.jpg" style="height: 300px;" alt="Assembled gear detectors">
-				<img src="Images/geardetectorinstalled.jpg" style="height: 300px;" alt="Installed gear detectors">
+				<img src="Images/gearsensormodels.jpg" style="height: 300px;" class="click-to-zoom" alt="Model of the gear detector housings">
+				<img src="Images/geardetectors.jpg" style="height: 300px;" class="click-to-zoom" alt="Assembled gear detectors">
+				<img src="Images/geardetectorinstalled.jpg" style="height: 300px;" class="click-to-zoom" alt="Installed gear detectors">
 				<figcaption>The mounts constrain the magnets to a track and have a sensor at each end</figcaption>
 			</figure>
 			
@@ -170,7 +170,7 @@
 			<p>One of the goofier issues I ran into was the fact that the hall effect sensors take and send back 5V logic, but the ESP32's analog pins only accept up to 3.3V. I had interpreted a graph incorrect in the hall effect sensor datasheet, and thought the max voltage would be 3.3V. So I had to splice in this monstrosity:</p>
 			
 			<figure>
-				<img src="Images/gearvoltagedropdown.jpg" style="height: 350px;" alt="Voltage divider spliced in with resistors">
+				<img src="Images/gearvoltagedropdown.jpg" style="height: 350px;" class="click-to-zoom" alt="Voltage divider spliced in with resistors">
 				<figcaption>Did someone say voltage divider?</figcaption>
 			</figure>
 			
@@ -183,15 +183,15 @@
 			<p>Much like the <a href="https://www.youtube.com/watch?v=hjuuoNBPwUE" target="_blank">this HUD</a>, I decided to go with 7 segment displays. Back when I thought of this idea (before any mods even started), I ordered some 7 segment displays for this exact purpose. Luckily, I also got some <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/max7219-max7221.pdf" target="_blank">MAX7219 LED Display Drivers</a>. These came in very handy, letting my control all 6 of my segments and also the brightness of my HUD.</p>
 			
 			<figure>
-				<img src="Images/hudtest.jpg" style="height: 300px;" alt="7 segment displays controlled by a breadboard">
+				<img src="Images/hudtest.jpg" style="height: 300px;" class="click-to-zoom" alt="7 segment displays controlled by a breadboard">
 				<figcaption>Sanity check to make sure my modules and wiring were correct</figcaption>
 			</figure>
 			
 			<p>After testing out my leds and MAX7219, I was pondering the best way to assemble the final thing and decided to just directly solder every wire to each pin.</p>
 			
 			<figure>
-				<img src="Images/hudmax7219wired.jpg" style="height: 300px;" alt="Tons of wires soldered to the MAX7219 chip">
-				<img src="Images/hud3dprint.jpg" style="height: 300px;" alt="Said mess of wires coming out of a 3D printed part">
+				<img src="Images/hudmax7219wired.jpg" style="height: 300px;" class="click-to-zoom" alt="Tons of wires soldered to the MAX7219 chip">
+				<img src="Images/hud3dprint.jpg" style="height: 300px;" class="click-to-zoom" alt="Said mess of wires coming out of a 3D printed part">
 				<figcaption>This took forever...</figcaption>
 			</figure>
 			
@@ -202,8 +202,8 @@
 			<p>The 3D printed case/enclosure is so simple that I'm not going to cover it :P</p>
 			
 			<figure>
-				<img src="Images/hudpreinstall.jpg" style="height: 300px;" alt="Testing segments before install">
-				<img src="Images/hudinstalled.jpg" style="height: 300px;" alt="Lining up HUD module on a dash piece before cutting">
+				<img src="Images/hudpreinstall.jpg" style="height: 300px;" class="click-to-zoom" alt="Testing segments before install">
+				<img src="Images/hudinstalled.jpg" style="height: 300px;" class="click-to-zoom" alt="Lining up HUD module on a dash piece before cutting">
 				<figcaption>Double checking everything works, then lining it up to cut the dash</figcaption>
 			</figure>
 			
@@ -235,23 +235,23 @@
 			<p>I've mentioned the audio switcher in previous devlogs, but my original plan was to hand solder it all on protoboard. This would've been a huge pain, and I was going to do it just because I didn't know how to design PCBs and it looked scary. But then I tried it anyways.</p>
 			
 			<figure>
-				<img src="Images/audioswitcherdesign.png" style="height: 300px;" alt="Schematic of audio switcher PCB">
-				<img src="Images/audioswitcherpcb.jpg" style="height: 300px;" alt="The PCB in the (metaphorical) flesh">
-				<img src="Images/audioswitcherwired.jpg" style="height: 300px;" alt="PCB with all components soldered to it">
+				<img src="Images/audioswitcherdesign.png" style="height: 300px;" class="click-to-zoom" alt="Schematic of audio switcher PCB">
+				<img src="Images/audioswitcherpcb.jpg" style="height: 300px;" class="click-to-zoom" alt="The PCB in the (metaphorical) flesh">
+				<img src="Images/audioswitcherwired.jpg" style="height: 300px;" class="click-to-zoom" alt="PCB with all components soldered to it">
 				<figcaption>First PCB, and it wasn't even that bad!</figcaption>
 			</figure>
 			
 			<p>The switcher uses two <a href="https://www.ti.com/lit/ds/symlink/cd4052b.pdf" target="_blank">CD4052B</a> modules to multiplex the 5 audio inputs down to one output, which goes into the hijacked AUX input. The module for displaying the current audio source and switching it has been installed in the car for ages, blindly sending out its signal like a space probe long out of reach.</p>
 			
 			<figure>
-				<img src="Images/audioswitcherinstalled.jpg" style="height: 350px;" alt="Audio switcher installed in car">
+				<img src="Images/audioswitcherinstalled.jpg" style="height: 350px;" class="click-to-zoom" alt="Audio switcher installed in car">
 				<figcaption>Fits nicely above the airbag module. Note the Bluetooth module at the bottom of the image</figcaption>
 			</figure>
 			
 			<hr>
 			<h2>Teaser</h2>
 			<figure>
-				<img src="Images/compressor.jpg" style="height: 400px;" alt="Compressor installed in trunk">
+				<img src="Images/compressor.jpg" style="height: 400px;" class="click-to-zoom" alt="Compressor installed in trunk">
 				<figcaption>A compressor... what could that be for?</figcaption>
 			</figure>
 			
