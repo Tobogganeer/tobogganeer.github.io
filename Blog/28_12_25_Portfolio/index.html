@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How I've been updating my website to show off my work">
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+	<link rel="manifest" href="/site.webmanifest"/>
+
+	<title>Updating Website - Portfolio</title>
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="/css/util.css" rel="stylesheet">
+
+	<link href="../blog-style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="fullpage" onclick="this.style.display='none';" style="cursor:zoom-out" tabindex="-1" aria-hidden="true"></div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/index.html">tobo.games</a>
+      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      	<span class="navbar-toggler-icon"></span>
+      	</button>
+      	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        	<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+            		<a class="nav-link" href="/Blog/index.html">Blog</a>
+          		</li>
+				<!--
+				<li class="nav-item">
+            		<a class="nav-link" href="/portfolio.html">Portfolio</a>
+          		</li>
+				-->
+          		<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            		Projects
+            		</a>
+            		<div class="dropdown-menu" aria-labelledby="projectDropdown">
+					  	<a class="dropdown-item" href="/Projects/index.html">Projects Home Page</a>
+						<div class="dropdown-divider"></div>
+					  	<a class="dropdown-item" href="/Projects/Personal/index.html">Game Dev - Personal</a>
+					  	<a class="dropdown-item" href="/Projects/School/index.html">Game Dev - School</a>
+						<a class="dropdown-item" href="/Projects/Engineering/index.html">Engineering</a>
+            		</div>
+          		</li>
+				<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            		Contact
+            		</a>
+            		<div class="dropdown-menu" aria-labelledby="contactDropdown">
+					  	<a class="dropdown-item p-1" href="mailto:evandaveikis@gmail.com" aria-label="Email">
+							<img src="/images/email-icon.svg" width="20" height="20" alt="Email icon">
+							Send Email
+						</a>
+    					<a class="dropdown-item p-1" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub">
+							<img src="/images/github-mark.svg" width="20" height="20" alt="Github logo">
+							GitHub Profile
+						</a>
+						<a class="dropdown-item p-1" href="https://itch.io/profile/tobogganeer" target="_blank" rel="noopener" aria-label="Itch.io">
+							<img src="/images/itchio-logo-textless-black.svg" width="20" height="20" alt="Github logo">
+							Itch.io Page
+						</a>
+            		</div>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/about.html">About</a>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a>
+          		</li>
+        	</ul>
+      	</div>
+    </nav>
+    <section>
+      	<div class="jumbotron text-center mt-2 p-4">
+        	<div class="container">
+          		<div class="row justify-content-center">
+            		<div class="col-12">
+              			<h1 style="text-decoration: underline; font-size: 4em">Updating Website - Portfolio</h1>
+						<p>December 28, 2025</p>
+						<a href="/Blog/index.html"><button class="btn btn-primary btn-lg" type="button">Back to Blogs »</button></a>
+            		</div>
+          		</div>
+			</div>
+      	</div>
+    </section>
+    <section>
+      	<div class="container">
+        	<h2>Intro</h2>
+			<p>It's almost time for us 3rd year game design students to start applying for coop jobs. I suppose we should've been doing it already, but I haven't :P</p>
+			<p>One of our most important tools as prospective designers are our portfolios - a place to show employers that we can actually <em>do</em> things. This website is mine (I guess).</p>
+			<p>Over the break I've been trying to update my website a bit, making the layout better suited to showing off my work. I'm gonna write a little bit about what I've been doing.</p>
+			
+			<hr>
+			
+			<h2>New Layout</h2>
+			<p>Basic change, but the home page and nav bar got a refresh:</p>
+			
+			<figure>
+				<img src="Images/oldindex.jpg" class="click-to-zoom" alt="Old home page">
+				<img src="Images/newindex.jpg" class="click-to-zoom" alt="New home page">
+				<figcaption>Home page: Old (first) vs new (second)</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="Images/oldnav.jpg" class="click-to-zoom" style="max-width: 500px; height: auto" alt="Old navbar">
+				<img src="Images/newnav.jpg" class="click-to-zoom" style="max-width: 500px; height: auto" alt="New navbar">
+				<figcaption>Navbar: Old (first) vs new (second)</figcaption>
+			</figure>
+			
+			<p>Taking inspiration from other portfolio websites, I decided to add an "about" page so people can learn a bit about, yknow, me. I also got rid of the "portfolio" sub-page, and moved some featured projects to the home page instead.</p>
+			
+			<hr>
+			
+			<h2>Projects</h2>
+			<p>I've done a <em>lot</em> of game dev over the years. The problem is that most of my projects are half-finished prototypes. I go in to explore one concept - maybe procedural generation, or FPS weapon systems, or bullet physics, or heavy IO, or AI, etc. So what should I show off?</p>
+			
+			<p>In school we are given lots of advice on what to put on our portfolios - things that are complete or published, things that are recent, game jams, personal projects. They suggest against school projects, unfinished projects, or old things. But that's a pickle for me! Most of my personal projects are unfinished and older, and most of my recent or complete stuff was done for school! Gah!</p>
+			
+			<p>I also want to show off my strong suits - programming and 3d modelling. I did a CS2 level recently - quite a complete project - but that is level design.</p>
+			
+			<p>Anyways. I'm not sure at this point what I will feature and what I will include on the website at all, but I just need to show that yes, I have been doing this for a while and yes, I can do it pretty well (ego, I know).</p>
+			
+			<hr>
+			
+			<h2>Web Design</h2>
+			<p>I don't know much about html, css, or javascript. I'm basically learning as I go along ("learning" meaning stackoverflow). But I want to talk about some of my theory behind my site (web design vs web development):</p>
+			
+			<ul>
+				<li>Lists and images. They add some variety to the blocks of text and draw the eye. For projects, images are especially important</li>
+				<li>Visually distinct "categories" of pages. If you look at how the blogs are formatted vs the home page vs a project page, you'll notice the layout it quite different. I want people to make sure they can recognize that what they are looking at has changed.</li>
+				<li>Simplicity. Look at these pages - lots of white, not much distraction. Easy enough.</li>
+			</ul>
+			
+			<hr>
+			
+			<h2>Images</h2>
+			<p>Images are better across the site now. I finally added the ability to click on images to zoom in on them - the images on all the blogs and projects <em>should</em> be zoomable now (though I may have missed some)</p>
+			<p>Images also scale better with screen size now. I try to clamp images to a max height, but that means they can run off the edge of the screen if they are wide enough. I learned about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using" target="_blank">CSS media queries</a> and made it so images should get smaller on smaller screens.</p>
+			
+			<hr>
+			
+			<h2>That's it</h2>
+			<p>Just wanted write about the evolution of the site, moreso so I can look back on it later. Cya.</p>
+			
+      	</div>
+    </section>
+    <hr>
+    <footer class="text-center">
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-12">
+            		<p class="mb-0">Evan Daveikis 2026</p>
+			  		<small class="mt-0 pb-3 text-muted">Very clearly not a web designer but I'm trying to learn!</small>
+          		</div>
+        	</div>
+      	</div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
+	<script src="/js/fullscreen-images.js"></script>
+</body>
+</html>
