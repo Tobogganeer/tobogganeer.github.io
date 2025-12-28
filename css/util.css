@@ -108,6 +108,12 @@
 	object-fit: cover;
 }
 
+.img-box video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 /* TODO: Refine these based on vibes */
 /* Small (Phone) */
 .img-big {
@@ -172,7 +178,6 @@
 
 /* Same as the blog images */
 .gallery > figure > img {
-	height: 280px;
 	border: 3px solid #888;
 }
 
@@ -182,4 +187,20 @@
 	font-size: 1em;
 	font-style: italic;
 	color: #666;
+}
+
+.height-300-scale-mobile {
+	height: 300px;
+}
+
+@media (max-width: 768px) {
+	.height-300-scale-mobile {
+		height: 250px;
+	}
+}
+
+@media (max-width: 576px) {
+	.height-300-scale-mobile {
+		height: 200px;
+	}
 }

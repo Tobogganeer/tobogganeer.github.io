@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Patient R-21 is a point-and-click puzzle game made in a team of 6 over 8 months (1 class)">
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+	<link rel="manifest" href="/site.webmanifest"/>
+
+	<title>Patient R-21</title>
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="/css/util.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="fullpage" onclick="this.style.display='none';" style="cursor:zoom-out" tabindex="-1" aria-hidden="true"></div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/index.html">tobo.games</a>
+      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      	<span class="navbar-toggler-icon"></span>
+      	</button>
+      	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        	<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+            		<a class="nav-link" href="/Blog/index.html">Blog</a>
+          		</li>
+				<!--
+				<li class="nav-item">
+            		<a class="nav-link" href="/portfolio.html">Portfolio</a>
+          		</li>
+				-->
+          		<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            		Projects
+            		</a>
+            		<div class="dropdown-menu" aria-labelledby="projectDropdown">
+					  	<a class="dropdown-item" href="/Projects/index.html">Projects Home Page</a>
+						<div class="dropdown-divider"></div>
+					  	<a class="dropdown-item" href="/Projects/Personal/index.html">Game Dev - Personal</a>
+					  	<a class="dropdown-item" href="/Projects/School/index.html">Game Dev - School</a>
+						<a class="dropdown-item" href="/Projects/Engineering/index.html">Engineering</a>
+            		</div>
+          		</li>
+				<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            		Contact
+            		</a>
+            		<div class="dropdown-menu" aria-labelledby="contactDropdown">
+					  	<a class="dropdown-item p-1" href="mailto:evandaveikis@gmail.com" aria-label="Email">
+							<img src="/images/email-icon.svg" width="20" height="20" alt="Email icon">
+							Send Email
+						</a>
+    					<a class="dropdown-item p-1" href="https://github.com/tobogganeer" target="_blank" rel="noopener" aria-label="GitHub">
+							<img src="/images/github-mark.svg" width="20" height="20" alt="Github logo">
+							GitHub Profile
+						</a>
+						<a class="dropdown-item p-1" href="https://itch.io/profile/tobogganeer" target="_blank" rel="noopener" aria-label="Itch.io">
+							<img src="/images/itchio-logo-textless-black.svg" width="20" height="20" alt="Github logo">
+							Itch.io Page
+						</a>
+            		</div>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/about.html">About</a>
+          		</li>
+				<li class="nav-item">
+            		<a class="nav-link" href="/VVGamesLauncher.exe" role="button" download>Download Launcher</a>
+          		</li>
+        	</ul>
+      	</div>
+    </nav>
+    <section>
+      	<div class="jumbotron text-center mt-2 p-4">
+        	<div class="container">
+          		<div class="row justify-content-center">
+            		<div class="col-12">
+           			  	<h1 style="font-size: 4rem">Patient R-21</h1>
+						<p style="font-size: 1.25rem">Patient R-21 is a first-person point-and-click horror puzzle game.<br>
+								Follow the story of a doctor experimenting on a captive patient, solving puzzles to escape once the patient breaks free.<br>
+								My team, <em>The Sillies</em>, created an MVP of the game (2 levels) in 8 months (1 class across 2 semesters).<br>
+								<a href="https://github.com/Tobogganeer/SilliesBigGame" target="_blank">See the source on Github</a></p>
+						<p><a class="btn btn-secondary" href="../index.html" role="button">&lt; Back to project list</a></p>
+            		</div>
+          		</div>
+			</div>
+      	</div>
+    </section>
+    <section>
+		<div class="container">
+			
+			<!-- Images -->
+			<div class="row">
+
+				<!-- Big image -->
+				<div class="col-12 col-lg-6">
+					<div class="img-box img-big">
+						<span class="img-label">Gameplay</span>
+						<video controls class="img-border">
+							Video showing gameplay of the first room
+							<source src="Images/gameplay.mp4" type="video/mp4"/>
+						</video>
+						<!-- <img src="Images/" class="click-to-zoom img-border" alt=""> -->
+					</div>
+				</div>
+
+				<!-- Medium images -->
+				<div class="col-12 col-lg-3">
+					<div class="row no-gutters">
+						<div class="col-6 col-lg-12">
+							<div class="img-box img-small">
+								<span class="img-label">Cam System</span>
+								<img src="Images/camsystem.jpg" class="click-to-zoom img-border" alt="Unity inspector showing camera system">
+							</div>
+						</div>
+						<div class="col-6 col-lg-12">
+							<div class="img-box img-small">
+								<span class="img-label">Main Menu</span>
+								<img src="Images/mainmenu.jpg" class="click-to-zoom img-border" alt="The main menu">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-3">
+					<div class="row no-gutters">
+						<div class="col-6 col-lg-12">
+							<div class="img-box img-small">
+								<span class="img-label">Jira Sprints</span>
+								<img src="Images/jira.jpg" class="click-to-zoom img-border" alt="Screenshot of Jira sprint board">
+							</div>
+						</div>
+						<div class="col-6 col-lg-12">
+							<div class="img-box img-small">
+								<span class="img-label">Debug Tools</span>
+								<img src="Images/cheats.gif" class="click-to-zoom img-border" alt="Gif showing debug cheats">
+							</div>
+						</div>
+					</div>
+				</div>
+
+		  	</div>
+			
+			<!-- Text -->
+			<hr>
+			
+			<div class="row">
+				
+				<div class="col-md-5 col-lg-2 card">
+					<div class="card-body px-0">
+						<h2>Tools</h2>
+						<ul class="list-group">
+							<li class="list-group-item py-1 pl-3">Unity Engine</li>
+							<li class="list-group-item py-1 pl-3">Photoshop</li>
+							<li class="list-group-item py-1 pl-3">Audacity</li>
+							<li class="list-group-item py-1 pl-3">Confluence &amp; Jira</li>
+							<li class="list-group-item py-1 pl-3">Github</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-7 col-lg-4 card">
+					<div class="card-body px-0">
+						<h2>Roles</h2>
+						<h5>Tools Programmer</h5>
+						<ul>
+							<li>Create editor scripts to easily edit audio, movement systems</li>
+							<li>Teach group members about tools</li>
+						</ul>
+						<h5>Gameplay Programmer</h5>
+						<ul>
+							<li>Create movement, interaction, camera, audio systems</li>
+							<li>Code and integrate various puzzles</li>
+						</ul>
+						<h5>Integration</h5>
+						<ul>
+							<li>Handle import of audio and textures</li>
+							<li>Place props and models in level</li>
+							<li>Set up light probes and reflection probes, baking</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6 card">
+					<div class="card-body px-0">
+						<h2>Challenges</h2>
+
+						<h5>Scope</h5>
+						<p>Most games suffer from their scope, especially towards the end of development. Stuck with 2 weeks left in development,
+							we decided to cut 1 room and 2 puzzles from our final level. We finished on time.
+						</p>
+						<h5>Time Management</h5>
+						<p>This project was created for one class - all team members had many more classes adding on to our workload.
+							It was difficult to manage work on this project in parallel with other projects, but served as good experience in managing time effectively.
+						</p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<hr>
+			
+			<div class="row">
+				
+				<div class="col-12 col-lg-6">
+					<h2>Skills Gained</h2>
+					<h5>New Tools</h5>
+					<p>I got to use Confluence and Jira for the first time. The team decided to force ourselves to learn these tools despite
+						being unfamiliar. It ended up being a great aid in our organization and documentation, and will serve just as useful in the future.
+					</p>
+					<h5>Team Management and Dynamics</h5>
+					<p>The whole purpose of this course - Design Practice - is to gain insights into how dynamics in team projects
+						differ from solo projects. I got first hand experience having meetings stall and deadlock, and learned how to keep them moving.<br>
+						I learned how to choose between competing ideas effectively. The importance of communication was once again highlighted. I got experience collaborating in Unity with Github while working in the same scene.<br>
+						I learned lots that can only be learned by going through an entire project with a team.
+					</p>
+				</div>
+				<div class="col-12 col-lg-6">
+					<h2>Takeaways</h2>
+					<h5>Time and Money</h5>
+					<p>
+						You always have less than you think. This is my first long-term team project, and I got to experience first-hand how the pressure set in when we started approaching the deadline.
+						<br>
+						Going forward I'll have this project to reference when I'm planning the scope for time-limited projects.
+					</p>
+					
+					<h5>Prioritization</h5>
+					<p>
+						Some things are more important than others, and you need to know what those things are. When the team had to cut down our scope, we went back to our pillars to decide what was crucial for the MVP.
+						<br>
+						For future projects, I want to assign items/mechanics/features "priorities" from the get go to make sure that I focus on my unknowns and my core features first. This should make it easier to de-scope when the time inevitably comes.
+					</p>
+				</div>
+				
+			</div>
+			
+			<div class="separator"></div>
+			
+			<h1 class="text-center">Gallery</h1>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/roomplanning1.png" class="click-to-zoom height-300-scale-mobile" alt="Diagram showing a room layout">
+						<img src="Images/roomplanning2.jpg" class="click-to-zoom height-300-scale-mobile" alt="Overhead diagrams of room layouts">
+						<figcaption>Room planning using whiteboard tools on Confluence</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/whiteboard.jpg" class="click-to-zoom height-300-scale-mobile" alt="Digital whiteboard with images and dot votes">
+						<figcaption>References, dot voting, ideation on Confluence</figcaption>
+					</figure>
+				</div>
+				<div class="col gallery">
+					<figure>
+						<img src="Images/cutscene.gif" class="click-to-zoom height-300-scale-mobile" alt="Cutscene showing patient escaping">
+						<figcaption>Cutscene between levels 1 and 2</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/room1.jpg" class="click-to-zoom height-300-scale-mobile" alt="Screenshot of the first room">
+						<figcaption>Screenshot of the first room</figcaption>
+					</figure>
+				</div>
+				<div class="col gallery">
+					<figure>
+						<img src="Images/patient.jpg" class="click-to-zoom height-300-scale-mobile" alt="Screenshot of the patient">
+						<figcaption>Screenshot of the patient</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/bigflashlight.jpg" class="click-to-zoom height-300-scale-mobile" alt="Scene view showing massive flashlight">
+						<figcaption>Before I added debug tools (console commands) I just placed giant items in the level</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+      	</div>
+    </section>
+    <hr>
+    <footer class="text-center">
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-12">
+            		<p class="mb-0">Evan Daveikis 2026</p>
+			  		<small class="mt-0 pb-3 text-muted">Very clearly not a web designer but I'm trying to learn!</small>
+          		</div>
+        	</div>
+      	</div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
+	<script src="/js/fullscreen-images.js"></script>
+</body>
+</html>
