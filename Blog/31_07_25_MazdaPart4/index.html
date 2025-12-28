@@ -16,20 +16,7 @@
 	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
 	<link href="/css/util.css" rel="stylesheet">
 	
-	<style>
-		figure > img {
-			height: 280px;
-			border: 3px solid #888;
-		}
-
-		figure {
-			align-content: center;
-			text-align: center;
-			font-size: 1em;
-			font-style: italic;
-			color: #666;
-		}
-	</style>
+	<link href="../blog-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -121,15 +108,15 @@
 			<p>The V3 fuse box looks like this:</p>
 			
 			<figure>
-				<img src="Images/fusev3.png" style="height: 300px;" class="click-to-zoom" alt="Blender screenshot of the fuse box mounting bracket">
-				<img src="Images/fusewiring.jpg" style="height: 300px;" class="click-to-zoom" alt="Fuse boxes mounted to the bracket">
+				<img src="Images/fusev3.png" class="click-to-zoom" alt="Blender screenshot of the fuse box mounting bracket">
+				<img src="Images/fusewiring.jpg" class="click-to-zoom" alt="Fuse boxes mounted to the bracket">
 				<figcaption>V3 mount with boxes mounted. The relay (for switched power) taps into the car's 12v outlet.</figcaption>
 			</figure>
 
             <p>And here's what it looks like in the car:</p>
 			
 			<figure>
-				<img src="Images/fuserelay.jpg" style="height: 400px;" class="click-to-zoom" alt="Fuse box mounted inside car">
+				<img src="Images/fuserelay.jpg" class="click-to-zoom height-400-scale-mobile" alt="Fuse box mounted inside car">
 				<figcaption>Note: This isn't what the final install looks like.</figcaption>
 			</figure>
 			
@@ -138,13 +125,13 @@
 			<div class="row">
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/fusedisassembly.jpg" style="height: 300px;" class="click-to-zoom" alt="Inside engine bay with bits hanging off">
+						<img src="Images/fusedisassembly.jpg" class="click-to-zoom" alt="Inside engine bay with bits hanging off">
 						<figcaption>A bunch had to come out of the engine bay to get at the firewall</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/fusegrommet.jpg" style="height: 300px;" class="click-to-zoom" alt="Wires running through rubber grommet">
+						<img src="Images/fusegrommet.jpg" class="click-to-zoom" alt="Wires running through rubber grommet">
 						<figcaption>I routed my wires along the factory harness</figcaption>
 					</figure>
 				</div>
@@ -152,19 +139,19 @@
 			<div class="row">
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/fusebatterycable.jpg" style="height: 300px;" class="click-to-zoom" alt="Wire hooked up to car battery">
+						<img src="Images/fusebatterycable.jpg" class="click-to-zoom" alt="Wire hooked up to car battery">
 						<figcaption>Zip ties and wire loom to keep it safe. Note the fuse under the battery handle</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/fusebreaker.jpg" style="height: 300px;" class="click-to-zoom" alt="Breaker installed in car">
+						<img src="Images/fusebreaker.jpg" class="click-to-zoom" alt="Breaker installed in car">
 						<figcaption>Breaker mounted in car for quick access</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/fuseshroudedcables.jpg" style="height: 300px;" class="click-to-zoom" alt="Wires inside wire loom running from breaker">
+						<img src="Images/fuseshroudedcables.jpg" class="click-to-zoom" alt="Wires inside wire loom running from breaker">
 						<figcaption>Everything gets loomed and heatshrunk(shrinked?)</figcaption>
 					</figure>
 				</div>
@@ -182,14 +169,14 @@
 			<p>I decided to split the Bluetooth functionality into two modules - the audio portion which handles device connection and audio streaming, and the controller which handles user input and displaying information. I started on the hardware side first:</p>
 			
 			<figure>
-				<img src="Images/display3d.png" style="height: 300px;" class="click-to-zoom" alt="Blender screenshot of car dash with displays">
-				<img src="Images/fittedpanels.jpg" style="height: 300px;" class="click-to-zoom" alt="Car dash piece with 3d printed display mounts">
+				<img src="Images/display3d.png" class="click-to-zoom" alt="Blender screenshot of car dash with displays">
+				<img src="Images/fittedpanels.jpg" class="click-to-zoom" alt="Car dash piece with 3d printed display mounts">
 				<figcaption>A 20x4 LCD display for bluetooth, and a small OLED display for the <a href="../30_05_25_MazdaPart3/index.html#audioswitcher" target="_blank">audio switcher</a></figcaption>
 			</figure>
 			
 			<figure>
-				<img src="Images/assembleddisplays.jpg" style="height: 300px;" class="click-to-zoom" alt="Back of display modules with wires visible">
-				<img src="Images/installeddisplays.jpg" style="height: 300px;" class="click-to-zoom" alt="Displays installed and working in car">
+				<img src="Images/assembleddisplays.jpg" class="click-to-zoom" alt="Back of display modules with wires visible">
+				<img src="Images/installeddisplays.jpg" class="click-to-zoom" alt="Displays installed and working in car">
 				<figcaption>Both modules are just a display and a rotary encoder/button</figcaption>
 			</figure>
 			
@@ -224,19 +211,19 @@
 			<div class="row">
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/datasender.jpg" style="height: 300px;" class="click-to-zoom" alt="PCB sticking out side of exposed panel in car">
+						<img src="Images/datasender.jpg" class="click-to-zoom" alt="PCB sticking out side of exposed panel in car">
 						<figcaption>The CAN info sender sticks out the side for easy access</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/reprogramming.jpg" style="height: 300px;" class="click-to-zoom" alt="USB cable hooked into exposed PCB">
+						<img src="Images/reprogramming.jpg" class="click-to-zoom" alt="USB cable hooked into exposed PCB">
 						<figcaption>... Easy access is useful when you need to update the software :)</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/reprogrammingdisplay.jpg" style="height: 300px;" class="click-to-zoom" alt="Info display pried up with USB cable running into hole">
+						<img src="Images/reprogrammingdisplay.jpg" class="click-to-zoom" alt="Info display pried up with USB cable running into hole">
 						<figcaption>The display microcontroller (ESP8266) is also easy to access</figcaption>
 					</figure>
 				</div>
@@ -280,8 +267,8 @@
 			<small>(I should probably learn a proper program for doing circuit diagrams :P)</small></p>
 			
 			<figure>
-				<img src="Images/audioswitcherwip.jpg" style="height: 300px;" class="click-to-zoom" alt="Protoboard with components attached - no wires">
-				<img src="Images/audioswitcherwiring.jpg" style="height: 300px;" class="click-to-zoom" alt="Wiring diagram overlay for components">
+				<img src="Images/audioswitcherwip.jpg" class="click-to-zoom" alt="Protoboard with components attached - no wires">
+				<img src="Images/audioswitcherwiring.jpg" class="click-to-zoom" alt="Wiring diagram overlay for components">
 				<figcaption>Five inputs, one output, two demultiplexers, microcontroller (ESP8266)</figcaption>
 			</figure>
 			
@@ -311,7 +298,7 @@
 			<p>But the summer is ending soon enough and I get to go back to school. I should probably update my portfolio. Or study C++ for Ubisoft NEXT and work on my engine. Or work on a game. Or simply explode.</p>
 			
 			<figure>
-				<img src="Images/cat.jpg" style="height: 300px;" class="click-to-zoom" alt="Cat chilling on dash">
+				<img src="Images/cat.jpg" class="click-to-zoom" alt="Cat chilling on dash">
 				<figcaption>Meow</figcaption>
 			</figure>
       	</div>

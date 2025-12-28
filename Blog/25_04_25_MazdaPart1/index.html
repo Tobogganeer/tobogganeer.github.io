@@ -16,20 +16,7 @@
 	<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
 	<link href="/css/util.css" rel="stylesheet">
 	
-	<style>
-		figure > img {
-			height: 280px;
-			border: 3px solid #888;
-		}
-
-		figure {
-			align-content: center;
-			text-align: center;
-			font-size: 1em;
-			font-style: italic;
-			color: #666;
-		}
-	</style>
+	<link href="../blog-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -107,7 +94,7 @@
         	<h2>Intro</h2>
 			<p>This is my car:</p>
 			<figure>
-				<img src="Images/car.jpg" style="height: 300px;" class="click-to-zoom" alt="Picture of a white 2010 Mazda 3 Hatchback">
+				<img src="Images/car.jpg" class="click-to-zoom" alt="Picture of a white 2010 Mazda 3 Hatchback">
 				<figcaption>2010 Mazda 3 HB</figcaption>
 			</figure>
 			
@@ -129,7 +116,7 @@
 			A quick search led me to <a href="https://www.instructables.com/Bluetooth-Audio-Digital-Signal-Processing-an-Ardui/">this article</a>, which walked through setting up an ESP32 to act as a Bluetooth audio receiver. Great.</p>
 			<p>Pair that with a digital-to-analog convertor (DAC), and you have a prototype ready to test:</p>
 			<figure>
-				<img src="Images/btprototype.jpg" style="height: 300px;" class="click-to-zoom" alt="Picture of a sketchy looking circuit board">
+				<img src="Images/btprototype.jpg" class="click-to-zoom" alt="Picture of a sketchy looking circuit board">
 				<figcaption>ESP32 and a DAC thrown together on a protoboard</figcaption>
 			</figure>
 			<figure>
@@ -188,19 +175,19 @@
 			<div class="row">
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/identifycanbus.jpg" style="height: 300px;" class="click-to-zoom" alt="Labelled photo of CAN bus wires">
+						<img src="Images/identifycanbus.jpg" class="click-to-zoom" alt="Labelled photo of CAN bus wires">
 						<figcaption>Found the CAN bus wires with some searching online</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/braidedwires.jpg" style="height: 300px;" class="click-to-zoom" alt="Two braided cables with connectors on the end">
+						<img src="Images/braidedwires.jpg" class="click-to-zoom" alt="Two braided cables with connectors on the end">
 						<figcaption>Created some extra wires to splice into the existing harness</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/removetrim.png" style="height: 300px;" class="click-to-zoom" alt="Photo of car wires behind the steering wheel">
+						<img src="Images/removetrim.png" class="click-to-zoom" alt="Photo of car wires behind the steering wheel">
 						<figcaption>Removed a bunch of trim to access OBD2 harness</figcaption>
 					</figure>
 				</div>
@@ -208,19 +195,19 @@
 			<div class="row">
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/canwires.png" style="height: 300px;" class="click-to-zoom" alt="Wires inside wire loom">
+						<img src="Images/canwires.png" class="click-to-zoom" alt="Wires inside wire loom">
 						<figcaption>Found the wires inside the loom</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/cutwires.jpg" style="height: 300px;" class="click-to-zoom" alt="Four cut cables, two from each CAN bus">
+						<img src="Images/cutwires.jpg" class="click-to-zoom" alt="Four cut cables, two from each CAN bus">
 						<figcaption>Chop chop</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-4">
 					<figure>
-						<img src="Images/splicewires.jpg" style="height: 300px;" class="click-to-zoom" alt="One CAN bus with a wire spliced into it">
+						<img src="Images/splicewires.jpg" class="click-to-zoom" alt="One CAN bus with a wire spliced into it">
 						<figcaption>Solder in the extra wires and clean everything up</figcaption>
 					</figure>
 				</div>
@@ -230,8 +217,8 @@
 			<p>Now that I had access to both buses, I created another scuffed little board to read in the data:</p>
 			
 			<figure>
-				<img src="Images/canboardfront.jpg" style="height: 300px;" class="click-to-zoom" alt="Front of CAN bus doohickey">
-				<img src="Images/canboardback.jpg" style="height: 300px;" class="click-to-zoom" alt="Back of CAN bus doohickey">
+				<img src="Images/canboardfront.jpg" class="click-to-zoom" alt="Front of CAN bus doohickey">
+				<img src="Images/canboardback.jpg" class="click-to-zoom" alt="Back of CAN bus doohickey">
 				<figcaption>Another protoboard doohickey - an ESP8266 with two MCP2515 CAN transceivers.<br>
 					Note: the colour labels (yellow, green, etc.) are not correct here. It caused me a headache later.</figcaption>
 			</figure>
@@ -253,7 +240,7 @@
 			<p>The biggest hurdle to get over initially was the storage: It had 4gb of EMMC storage. Perfect for installing RouterOS, but not great if I want to watch movies or play some games.
 			I decided to see what I could do with this limited space:</p>
 			<figure>
-				<img src="Images/puppylinux.jpg" style="height: 300px;" class="click-to-zoom" alt="Computer booting up">
+				<img src="Images/puppylinux.jpg" class="click-to-zoom" alt="Computer booting up">
 				<figcaption>Puppy Linux!</figcaption>
 			</figure>
 			<p>Puppy linux seemed like a great way to test whether it was even feasible to turn this router into a car-puter. It was easy enough: clear CMOS to get into the BIOS, then just boot from a USB.</p>
@@ -263,14 +250,14 @@
 			<div class="row">
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/carputerparts.jpg" style="height: 300px;" class="click-to-zoom" alt="Computer parts: keyboard, display, SSD">
+						<img src="Images/carputerparts.jpg" class="click-to-zoom" alt="Computer parts: keyboard, display, SSD">
 						<figcaption>Wireless keyboard, small display, and a 128GB SSD</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/carputervoltage.jpg" style="height: 300px;" class="click-to-zoom" alt="Reading voltage of some pins">
-						<img src="Images/carputersatapower.jpg" style="height: 300px;" class="click-to-zoom" alt="Cut off sATA power cable">
+						<img src="Images/carputervoltage.jpg" class="click-to-zoom" alt="Reading voltage of some pins">
+						<img src="Images/carputersatapower.jpg" class="click-to-zoom" alt="Cut off sATA power cable">
 						<figcaption>I'm not sure what this connector is - it isn't a fan header like I thought.<br>
 							However, it has 5v and 12v, so it seems like it's meant for SATA power?</figcaption>
 					</figure>
@@ -279,13 +266,13 @@
 			<div class="row">
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/carputerpowersetup.jpg" style="height: 300px;" class="click-to-zoom" alt="Wires connected to pins">
+						<img src="Images/carputerpowersetup.jpg" class="click-to-zoom" alt="Wires connected to pins">
 						<figcaption>No connector I had was small enough to fit in here, so I just crimped terminals onto the ends and put them directly in. Hopefully they stay insulated?</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/carputerbooting.jpg" style="height: 300px;" class="click-to-zoom" alt="Carputer booting up">
+						<img src="Images/carputerbooting.jpg" class="click-to-zoom" alt="Carputer booting up">
 						<figcaption>It boots mwahahaha</figcaption>
 					</figure>
 				</div>
@@ -301,13 +288,13 @@
 			<div class="row">
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/carputerwifi.jpg" style="height: 300px;" class="click-to-zoom" alt="WiFi card installed in carputer">
+						<img src="Images/carputerwifi.jpg" class="click-to-zoom" alt="WiFi card installed in carputer">
 						<figcaption>I replaced the old networking card with a little WiFi card and routed the antennas to the side</figcaption>
 					</figure>
 				</div>
 				<div class="col col-md-6">
 					<figure>
-						<img src="Images/carputerfinal.jpg" style="height: 300px;" class="click-to-zoom" alt="Carputer connected to display">
+						<img src="Images/carputerfinal.jpg" class="click-to-zoom" alt="Carputer connected to display">
 						<figcaption>The final little device</figcaption>
 					</figure>
 				</div>

@@ -193,14 +193,34 @@
 	height: 300px;
 }
 
+.height-400-scale-mobile {
+	height: 400px;
+}
+
+.height-500-scale-mobile {
+	height: 500px;
+}
+
 @media (max-width: 768px) {
 	.height-300-scale-mobile {
 		height: 250px;
+	}
+	.height-400-scale-mobile {
+		height: 300px;
+	}
+	.height-500-scale-mobile {
+		height: 325px;
 	}
 }
 
 @media (max-width: 576px) {
 	.height-300-scale-mobile {
 		height: 200px;
+	}
+	.height-400-scale-mobile {
+		height: 225px;
+	}
+	.height-500-scale-mobile {
+		height: 250px;
 	}
 }
