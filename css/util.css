@@ -162,3 +162,24 @@
 .img-box:hover .img-label {
 	opacity: 1;
 }
+
+/* Always show on mobile (instead of fading on hover) */
+@media (max-width: 768px) {
+	.img-label {
+		opacity: 1;
+	}
+}
+
+/* Same as the blog images */
+.gallery > figure > img {
+	height: 280px;
+	border: 3px solid #888;
+}
+
+.gallery > figure {
+	align-content: center;
+	text-align: center;
+	font-size: 1em;
+	font-style: italic;
+	color: #666;
+}
