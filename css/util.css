@@ -68,7 +68,7 @@
 /* https://stackoverflow.com/questions/67815853/how-do-i-make-an-image-full-screen-on-click */
 #fullpage {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
