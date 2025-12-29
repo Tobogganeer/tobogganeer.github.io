@@ -231,28 +231,78 @@
 			
 			<div class="separator"></div>
 			
-			<h1 class="text-center">Gallery</h1>
+			<h1 class="text-center">Example of helpful visualizations</h1>
 			
 			<div class="row">
 				<div class="col gallery">
 					<figure>
-						<img src="Images/placeholder.jpg" class="click-to-zoom height-300-scale-mobile" alt="alt text here - an image of (blank)">
-						<img src="Images/placeholder.jpg" class="click-to-zoom height-300-scale-mobile" alt="alt text here - an image of (blank)">
-						<figcaption>Big image</figcaption>
+						<img src="Images/novis.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif showing player needing to lead shots">
+						<figcaption>Rollback should be working here - why do I need to lead my shots? Let's make some visualizations to find out</figcaption>
 					</figure>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col gallery">
 					<figure>
-						<img src="Images/placeholder.jpg" class="click-to-zoom height-300-scale-mobile" alt="alt text here - an image of (blank)">
-						<figcaption>Small image</figcaption>
+						<img src="Images/rollbackvisualization.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif showing hitbox colliders all over the place">
+						<figcaption>The server positions (red) are overlapping the rolled back positions (blue)... and they are all over the place.
+						<br>
+						This suggested two problems: rolling back time was incorrect (rolled back position is the same as present), and the rollback buffer was being used incorrectly (positions from hundreds of ticks ago still in the buffer)</figcaption>
 					</figure>
 				</div>
 				<div class="col gallery">
 					<figure>
-						<img src="Images/placeholder.jpg" class="click-to-zoom height-300-scale-mobile" alt="alt text here - an image of (blank)">
-						<figcaption>Small image</figcaption>
+						<img src="Images/rollback.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif showing correct hitbox colliders">
+						<figcaption>After fixing those issues, it works as expected. Colliders are rolled back to where I am aiming (there is simulated lag)</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<h1 class="text-center">Gallery</h1>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/inputbug.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif showing snappy incorrect movement">
+						<figcaption>A change to player movment led to a regression bug with reconciliation. It led to this snappy movement - the velocity that was being re-predicted was incorrect</figcaption>
+					</figure>
+				</div>
+				<div class="col gallery">
+					<figure>
+						<img src="Images/jumpreconciliationbug.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif showing lots of gizmos when in the air">
+						<figcaption>Similar story - incorrect syncing of vertical velocity meant mispredictions</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/ragdollshot.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif showing a ragdoll spawning when a player is shot">
+						<figcaption>Adding ragdolls when shooting players. The y position is clearly not quite correct here</figcaption>
+					</figure>
+				</div>
+				<div class="col gallery">
+					<figure>
+						<img src="Images/netgunanims.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif of a player looking around and playing animations">
+						<figcaption>Syncing animations over the network. Crouching is procedural</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col gallery">
+					<figure>
+						<img src="Images/reloadquick.gif" class="click-to-zoom height-300-scale-mobile" alt="Gif in blender showing reload animation">
+						<figcaption>Third-person reload animation made in ~30 mins (I'm not known for my amazing animation skills)</figcaption>
+					</figure>
+				</div>
+				<div class="col gallery">
+					<figure>
+						<img src="Images/timebug.gif" class="click-to-zoom height-300-scale-mobile" alt="">
+						<figcaption>Bug with input buffer - I was resetting the tick timer instead of carrying over the difference, i.e. values were clamped to 16.6ms even if the frame took 10ms. This meant trying tp slightly speed up each tick did nothing, and it fell far behind.</figcaption>
 					</figure>
 				</div>
 			</div>
