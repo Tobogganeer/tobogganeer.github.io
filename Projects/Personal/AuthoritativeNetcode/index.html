@@ -81,8 +81,10 @@
             		<div class="col-12">
            			  	<h1 style="font-size: 4rem">Authoritative Netcode</h1>
 						<p style="font-size: 1.25rem">Prediction, Reconciliation, and Lag Compensation implemented on top of my custom networking stack in Unity.
-						<br>
-						Read the <a href="/Blog/04_12_25_NetcodeIntro/index.html" target="_blank">blog posts</a> or check out the <a href="https://github.com/Tobogganeer/AuthoritativeNetcode" target="_blank">source code on GitHub</a>.</p>
+							<br>
+							General purpose high-level API demonstrated with a small FPS demo.
+							<br>
+							Read the <a href="/Blog/04_12_25_NetcodeIntro/index.html" target="_blank">blog posts</a> or check out the <a href="https://github.com/Tobogganeer/AuthoritativeNetcode" target="_blank">source code on GitHub</a>.</p>
 						<p><a class="btn btn-secondary" href="../index.html" role="button">&lt; Back to project list</a></p>
             		</div>
           		</div>
@@ -149,19 +151,32 @@
 						<h2>Tools</h2>
 						<ul class="list-group">
 							<li class="list-group-item py-1 pl-3">Unity Engine</li>
-							<li class="list-group-item py-1 pl-3">Photoshop</li>
-							<li class="list-group-item py-1 pl-3">Audacity</li>
-							<li class="list-group-item py-1 pl-3">Confluence &amp; Jira</li>
-							<li class="list-group-item py-1 pl-3">Github REMEMBER TO CHANGE THESE =============</li>
+							<li class="list-group-item py-1 pl-3">Blender &amp; Substance Painter</li>
+							<li class="list-group-item py-1 pl-3">Excel (task tracking)</li>
+							<li class="list-group-item py-1 pl-3">Github</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-7 col-lg-4 card">
 					<div class="card-body px-0">
 						<h2>Roles</h2>
-						<h5>Role Name</h5>
+						<h5>Programming</h5>
 						<ul>
-							<li>List tasks and responsibilities</li>
+							<li>Research and implement lag-compensating techniques on top of my netcode stack</li>
+							<li>Make API easy to use for future projects</li>
+						</ul>
+						
+						<h5>Research &amp; Documentation</h5>
+						<ul>
+							<li>Compile lag-compensating techniques from online articles and GDC talks</li>
+							<li>Explain system architecture on blogs to other people can learn from it</li>
+						</ul>
+						
+						<h5>Everything else</h5>
+						<ul>
+							<li>It is a personal project</li>
+							<li>Models, textures, audio, etc. by me*</li>
+							<li><small>*shotgun geometry created by my roommate</small></li>
 						</ul>
 					</div>
 				</div>
@@ -169,8 +184,11 @@
 					<div class="card-body px-0">
 						<h2>Challenges</h2>
 
-						<h5>Name of challenge #1</h5>
-						<p>Give the problem/challenge. Then discuss how it was overcome. Then say what happened (resolution, takeaways)</p>
+						<h5>Mental Models</h5>
+						<p>Lag compensation (and netcode overall) is a large topic with many different approaches. It took a lot of research to wrap my head around what we use to overcome lag in server-authoritative games and <em>why</em> we use these techniques. Once everything "clicked" together in my head, the code itself came naturally.</p>
+						
+						<h5>Obscure Bugs</h5>
+						<p>Some bugs were difficult to track down - a missing "+" in the tick accumulation in TickManager.cs would break server reconciliation. What really helped track down these bugs were useful debugging visualizations - suddenly I could see that old state was being applied. Creating various visualizations helped me track down all these tricky bugs.</p>
 					</div>
 				</div>
 				
@@ -180,15 +198,33 @@
 			
 			<div class="row">
 				
-				<div class="col-12 col-lg-6">
+				<div class="col-12 col-lg-4">
 					<h2>Skills Gained</h2>
-					<h5>Name of skill #1</h5>
-					<p>Here's what the skill is. Here's me expanding on that idea (explain what it is and how I gained it). Here's why it will be useful in the future.</p>
+					<h5>Server-Authoritative Netcode</h5>
+					<p>I've finally wrapped my head around prediction, reconciliation, and lag compensation. Instead of building client-authoritative games, I can make responsive games that are much more resilient to cheating.</p>
+					
+					<h5>Use of Tobo.Net</h5>
+					<p>Every time I use my netcoe library (Tobo.Net), I find aspects that are annoying or hard to use and fix them. Making a different kind of project with my netcode let me iron out more bugs and identify some shortcomings (like excessive garbage allocation). The library will continue to improve with every project I make.</p>
 				</div>
-				<div class="col-12 col-lg-6">
+				<div class="col-12 col-lg-8">
 					<h2>Takeaways</h2>
-					<h5>Name of takeaway #1</h5>
-					<p>Here's the valuable thing you can take away yourself. Here's more detail expanding on how I came across it. Here's why it's valuable, or how I used it.</p>
+					<h5>Visualizations are extremely helpful for debugging</h5>
+					<p>Especially for complex, interwoven systems, being able to <em>see</em> what is going on under-the-hood helps you identify the root causes of a problem.</p>
+					
+					<h5>Netcode is Complex</h5>
+					<p>It takes time, effort, and research. You need all the pieces in place to get actual results - without reconciliation your prediction won't feel good. You will run into frustrating bugs.</p>
+					
+					<h5>Netcode is Theory Heavy</h5>
+					<p>Understanding how each concept works and why it is needed is the important part to implement this netcode. The actual code comes naturally from the theory.</p>
+					
+					<h5>Netcode is Bespoke</h5>
+					<p>Creating netcode for a platform fighter is very different from an open world MMORPG, and you’ll need to tailor it to your project. However, the theory is similar and useful no matter what direction you go.</p>
+					
+					<h5>... But you can make server-authoritative netcode too</h5>
+					<p>I might make it sound daunting, but once you understand the theory it is a fun challenge. There are <a href="/Blog/04_12_25_NetcodeIntro/index.html#resources" target="_blank">plenty of resources</a> out there to learn from.</p>
+					
+					<h5>Overcoming challenge is satisfying</h5>
+					<p>I love programming because it lets me solve problems. If get satisfaction from solving puzzles or overcoming challenge, fixing a bug or seeing everything come together with your netcode will have you jumping in your chair.</p>
 				</div>
 				
 			</div>
