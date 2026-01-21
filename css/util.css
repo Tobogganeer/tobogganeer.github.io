@@ -120,8 +120,16 @@
 	height: 220px;
 }
 
+.img-medium {
+	height: 210px;
+}
+
 .img-small {
 	height: 200px;
+}
+
+.img-tiny {
+	height: 190px;
 }
 
 /* XL is 1200 */
@@ -131,6 +139,10 @@
 	.img-big {
 		height: 500px;
   	}
+	
+	.img-medium {
+		height: 380px;
+	}
 
 	.img-small {
 		height: 250px;
@@ -141,6 +153,10 @@
 @media (min-width: 768px) and (max-width: 991px) {
 	.img-big {
 		height: 350px;
+	}
+	
+	.img-medium {
+		height: 325px;
 	}
 
 	.img-small {
